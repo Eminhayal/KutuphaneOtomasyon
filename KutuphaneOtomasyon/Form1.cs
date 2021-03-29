@@ -19,12 +19,17 @@ namespace KutuphaneOtomasyon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Kutuphane Otomasyonu.");
-        }
+            int nowWidth = 1920;
+            int nowHeight = 1080;
+            Rectangle ClientCozunurluk = new Rectangle();
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            sadasd
-        }
+            ClientCozunurluk = System.Windows.Forms.Screen.GetBounds(ClientCozunurluk);
+
+            float OranWidth = ((float) ClientCozunurluk.Width / (float) nowWidth);
+            float OranHeight = ((float)ClientCozunurluk.Height / (float)nowHeight);
+
+            this.Scale(OranWidth, OranHeight);
+        } 
+   
     }
 }
