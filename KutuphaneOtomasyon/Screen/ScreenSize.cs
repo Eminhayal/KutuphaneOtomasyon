@@ -11,21 +11,7 @@ namespace KutuphaneOtomasyon.Screen
     {
         int SimdikiWidth = 1280;
 
-        int SimdikiHeight = 800;
-
-        
-
-
-            Rectangle Cozunurluk = new Rectangle();
-
-            Cozunurluk = Screen.GetBounds(ClientCozunurluk);
-
-            float OranWidth = ((float)ClientCozunurluk.Width / (float)SimdikiWidth);
-
-            float OranHeight = ((float)ClientCozunurluk.Height / (float)SimdikiHeight);
-
-
-            this.Scale(OranWidth, OranHeight);
+        private int SimdikiHeight = 800;
 
 
 
