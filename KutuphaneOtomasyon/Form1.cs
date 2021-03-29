@@ -21,5 +21,10 @@ namespace KutuphaneOtomasyon
         {
             Console.WriteLine("Kutuphane Otomasyonu.");
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            sadasd
+        }
     }
 }
