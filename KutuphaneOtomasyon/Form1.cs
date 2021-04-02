@@ -19,16 +19,18 @@ namespace KutuphaneOtomasyon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int nowWidth = 1920;
-            int nowHeight = 1080;
-            Rectangle ClientCozunurluk = new Rectangle();
+           
+            Width = System.Windows.Forms.SystemInformation.PrimaryMonitorMaximizedWindowSize.Width;
+            Height = System.Windows.Forms.SystemInformation.PrimaryMonitorMaximizedWindowSize.Height;
 
-            ClientCozunurluk = System.Windows.Forms.Screen.GetBounds(ClientCozunurluk);
+            //Rectangle ClientCozunurluk = new Rectangle();
 
-            float OranWidth = ((float) ClientCozunurluk.Width / (float) nowWidth);
-            float OranHeight = ((float)ClientCozunurluk.Height / (float)nowHeight);
+            //ClientCozunurluk = System.Windows.Forms.Screen.GetBounds(ClientCozunurluk);
 
-            this.Scale(OranWidth, OranHeight);
+            //float OranWidth = ((float) ClientCozunurluk.Width / (float) nowWidth);
+            //float OranHeight = ((float)ClientCozunurluk.Height / (float)nowHeight);
+
+            //this.Scale(OranWidth, OranHeight);
         } 
    
     }
