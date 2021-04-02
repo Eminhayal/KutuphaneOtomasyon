@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class Giris : Form
+    public partial class AnasayfaYonetici : Form
     {
-        public Giris()
+        public AnasayfaYonetici()
         {
             InitializeComponent();
         }
-
     }
 }
