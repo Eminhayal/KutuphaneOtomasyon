@@ -46,22 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anasayfa.cs">
+    <Compile Include="Form\Anasayfa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Anasayfa.Designer.cs">
+    <Compile Include="Form\Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnasayfaYonetici.cs">
+    <Compile Include="Form\AnasayfaYonetici.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnasayfaYonetici.Designer.cs">
+    <Compile Include="Form\AnasayfaYonetici.Designer.cs">
       <DependentUpon>AnasayfaYonetici.cs</DependentUpon>
     </Compile>
-    <Compile Include="Giris.cs">
+    <Compile Include="Form\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Giris.Designer.cs">
+    <Compile Include="Form\Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -71,13 +71,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Anasayfa.resx">
+    <EmbeddedResource Include="Form\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AnasayfaYonetici.resx">
+    <EmbeddedResource Include="Form\AnasayfaYonetici.resx">
       <DependentUpon>AnasayfaYonetici.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Giris.resx">
+    <EmbeddedResource Include="Form\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -98,11 +98,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screen\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\%24this.BackgroundImage.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
