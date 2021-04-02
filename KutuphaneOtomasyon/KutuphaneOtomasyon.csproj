@@ -91,16 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Varlk_60.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Varlk_80.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Varlk_10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\varlık ana.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
