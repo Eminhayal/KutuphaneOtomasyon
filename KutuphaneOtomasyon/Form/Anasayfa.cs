@@ -16,5 +16,13 @@ namespace KutuphaneOtomasyon
         {
             InitializeComponent();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
+            this.Hide();
+
+        }
     }
 }
