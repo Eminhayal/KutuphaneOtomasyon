@@ -65,7 +65,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Screen\ScreenSize.cs" />
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,7 +89,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Screen\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\%24this.BackgroundImage.png" />
   </ItemGroup>
