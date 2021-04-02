@@ -56,6 +56,7 @@ namespace KutuphaneOtomasyon
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Giris";
+            this.Opacity = 0D;
             this.Text = "Form2";
             this.ResumeLayout(false);
 
