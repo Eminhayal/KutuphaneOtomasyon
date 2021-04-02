@@ -16,5 +16,10 @@ namespace KutuphaneOtomasyon
         {
             InitializeComponent();
         }
+
+        private void AnasayfaYonetici_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
