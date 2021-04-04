@@ -46,10 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Panel Form\Profil.cs">
+    <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Panel Form\Profil.Designer.cs">
+    <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.Designer.cs">
+      <DependentUpon>EmanetBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapEklemeDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapEklemeDuzenleme.Designer.cs">
+      <DependentUpon>KitapEklemeDuzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapTeslimOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapTeslimOnay.Designer.cs">
+      <DependentUpon>KitapTeslimOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapAraAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapAraAl.Designer.cs">
+      <DependentUpon>KitapAraAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\Profil.Designer.cs">
       <DependentUpon>Profil.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Giris Form\Anasayfa.cs">
@@ -70,6 +94,24 @@
     <Compile Include="Form\Giris Form\Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapTeslimEtme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapTeslimEtme.Designer.cs">
+      <DependentUpon>KitapTeslimEtme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapAlimOnayi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KitapAlimOnayi.Designer.cs">
+      <DependentUpon>KitapAlimOnayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KullaniciEklemeDuzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Yonetici Panel Form\KullaniciEklemeDuzenleme.Designer.cs">
+      <DependentUpon>KullaniciEklemeDuzenleme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -86,7 +128,7 @@
     <EmbeddedResource Include="Form\Giris Form\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Panel Form\Profil.resx">
+    <EmbeddedResource Include="Form\Kullanici Panel Form\Profil.resx">
       <DependentUpon>Profil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
