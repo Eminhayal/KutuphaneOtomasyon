@@ -131,6 +131,21 @@
     <EmbeddedResource Include="Form\Kullanici Panel Form\Profil.resx">
       <DependentUpon>Profil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Yonetici Panel Form\EmanetBilgileri.resx">
+      <DependentUpon>EmanetBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Yonetici Panel Form\KitapAlimOnayi.resx">
+      <DependentUpon>KitapAlimOnayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Yonetici Panel Form\KitapEklemeDuzenleme.resx">
+      <DependentUpon>KitapEklemeDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Yonetici Panel Form\KitapTeslimOnay.resx">
+      <DependentUpon>KitapTeslimOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Yonetici Panel Form\KullaniciEklemeDuzenleme.resx">
+      <DependentUpon>KullaniciEklemeDuzenleme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
