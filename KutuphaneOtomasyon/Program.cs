@@ -16,7 +16,7 @@ namespace KutuphaneOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KitapAraAl());
+            Application.Run(new Giris());
             
         }
     }
