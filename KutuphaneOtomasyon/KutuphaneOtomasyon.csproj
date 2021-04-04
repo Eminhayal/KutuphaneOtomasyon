@@ -134,6 +134,9 @@
     <EmbeddedResource Include="Form\Giris Form\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Kullanici Panel Form\KitapAlma.resx">
+      <DependentUpon>KitapAlma.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Kullanici Panel Form\KitapAraAl.resx">
       <DependentUpon>KitapAraAl.cs</DependentUpon>
     </EmbeddedResource>
