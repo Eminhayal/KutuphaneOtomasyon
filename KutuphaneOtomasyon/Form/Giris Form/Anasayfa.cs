@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class Anasayfa : Form
+    public partial class Anasayfa : System.Windows.Forms.Form
     {
         public Anasayfa()
         {
@@ -27,7 +27,12 @@ namespace KutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FormProfil formProfil = new FormProfil();
+            formProfil.Dock = DockStyle.Fill;
+            formProfil.TopLevel = false;
+            formProfil.FormBorderStyle = FormBorderStyle.None;
+            panelKullanici.Controls.Add(formProfil);
+            formProfil.Show();
         }
     }
 }

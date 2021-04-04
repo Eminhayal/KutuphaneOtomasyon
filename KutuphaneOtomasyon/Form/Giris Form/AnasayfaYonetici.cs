@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class AnasayfaYonetici : Form
+    public partial class AnasayfaYonetici : System.Windows.Forms.Form
     {
         public AnasayfaYonetici()
         {

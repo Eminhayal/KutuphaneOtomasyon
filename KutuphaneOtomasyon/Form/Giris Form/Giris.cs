@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class Giris : Form
+    public partial class Giris : System.Windows.Forms.Form
     {
         public Giris()
         {
