@@ -112,6 +112,12 @@
     <Compile Include="Form\Yonetici Panel Form\KullaniciEklemeDuzenleme.Designer.cs">
       <DependentUpon>KullaniciEklemeDuzenleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapAlma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapAlma.Designer.cs">
+      <DependentUpon>KitapAlma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Giris Form\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Kullanici Panel Form\KitapAraAl.resx">
+      <DependentUpon>KitapAraAl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Kullanici Panel Form\Profil.resx">
       <DependentUpon>Profil.cs</DependentUpon>
