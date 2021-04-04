@@ -46,22 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Anasayfa.cs">
+    <Compile Include="Form\Panel Form\Profil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Anasayfa.Designer.cs">
+    <Compile Include="Form\Panel Form\Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Giris Form\Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Giris Form\Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\AnasayfaYonetici.cs">
+    <Compile Include="Form\Giris Form\AnasayfaYonetici.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\AnasayfaYonetici.Designer.cs">
+    <Compile Include="Form\Giris Form\AnasayfaYonetici.Designer.cs">
       <DependentUpon>AnasayfaYonetici.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Giris.cs">
+    <Compile Include="Form\Giris Form\Giris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Giris.Designer.cs">
+    <Compile Include="Form\Giris Form\Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -71,13 +77,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\Anasayfa.resx">
+    <EmbeddedResource Include="Form\Giris Form\Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\AnasayfaYonetici.resx">
+    <EmbeddedResource Include="Form\Giris Form\AnasayfaYonetici.resx">
       <DependentUpon>AnasayfaYonetici.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Giris.resx">
+    <EmbeddedResource Include="Form\Giris Form\Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
