@@ -52,6 +52,8 @@ namespace KutuphaneOtomasyon
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -256,7 +258,7 @@ namespace KutuphaneOtomasyon
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(611, 477);
+            this.button1.Location = new System.Drawing.Point(694, 519);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 47);
             this.button1.TabIndex = 3;
@@ -270,7 +272,7 @@ namespace KutuphaneOtomasyon
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(784, 477);
+            this.button2.Location = new System.Drawing.Point(597, 572);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(153, 47);
             this.button2.TabIndex = 3;
@@ -285,7 +287,7 @@ namespace KutuphaneOtomasyon
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(700, 348);
+            this.button3.Location = new System.Drawing.Point(694, 470);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(139, 37);
             this.button3.TabIndex = 3;
@@ -299,12 +301,22 @@ namespace KutuphaneOtomasyon
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(700, 544);
+            this.button4.Location = new System.Drawing.Point(770, 572);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(133, 45);
             this.button4.TabIndex = 3;
             this.button4.Text = "Kitap Sil";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(656, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 324);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // KitapEklemeDuzenleme
             // 
@@ -312,6 +324,7 @@ namespace KutuphaneOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(949, 631);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -336,6 +349,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label1);
             this.Name = "KitapEklemeDuzenleme";
             this.Text = "KitapEklemeDuzenleme";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,5 +379,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
