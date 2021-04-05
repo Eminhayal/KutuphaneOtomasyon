@@ -146,7 +146,7 @@
         SQSATCIAZF8iNwD8N8cDs7JiQkc0pKUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="emanetBilgileriButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAA+RJREFUeF7t3TGLJEUcxuHjFBE5RBAVETk2F8zMBI0vF8RkMwPB7PIDswvkElPN
@@ -169,7 +169,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="kullaniciEklemeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAA/FJREFUeF7t3b9qHFcUwGETQjAmuHJrjFLEcnAQpEshcKoY1KRwI3BhkkKdcSNI
@@ -192,7 +192,7 @@
         xuFfKxnaLBxIuT4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="kitapTeslimOnayButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAAvZJREFUeF7t3bFN42AYx2FKCkTHAJmACSJdzwR0dJkg/UkskAk8QSagujITMAET
@@ -211,7 +211,7 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="kitapAlimOnayButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAAzVJREFUeF7t3c9t2nAYx+Gqpx6q3joAUtV/l0yA1HsmyC23TMC9UhZgAiZgAk49
@@ -231,7 +231,7 @@
         CHa5AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="kitapEklemeDuzenlemeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EgAACxIB0t1+/AAAAWlJREFUeF7t1UEVQFAUQEFRvAYiiCaaZt+hgbuexWSYbWYuAAj2N5EFAMEpEQAq
