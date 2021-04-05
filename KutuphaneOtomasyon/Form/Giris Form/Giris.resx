@@ -128,6 +128,16 @@
         gg==
 </value>
   </data>
+  <data name="cikisButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFYAAAAaCAYAAAAtzKvgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EgAACxIB0t1+/AAAAM9JREFUaEPt2rsNwkAQRVGXQAkk5FsCDSCRkboESqAESqEEl0AJLoEOhpkVa62s
+        DfzhZTc40Wx05ey5M7PJ5XRL7u4eWOVadwwl6MG9nGGz0aV52Hf1ANt9XI4bUfvqgP2GEnaYHbBfirCt
+        A/Y5E1aDsCKEFSGsCGFFCCtCWBHCihBWhLAihBUhrAhhRQgrQliRHJZZ5v9y2FgZW0dsM5ZpJhbaGMFa
+        j7BensLLShv/E8R823qI5froOYX9xY0vNxbb+L8gBkYs93TH0tLMui9TK1gK0QI/gAAAAABJRU5ErkJg
+        gg==
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABVYAAAMBCAYAAAAEYu9nAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

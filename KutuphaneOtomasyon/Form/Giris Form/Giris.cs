@@ -37,5 +37,10 @@ namespace KutuphaneOtomasyon
         {
             Application.Exit();
         }
+
+        private void cikisButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

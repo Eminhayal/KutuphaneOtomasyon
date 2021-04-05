@@ -33,6 +33,7 @@ namespace KutuphaneOtomasyon
             this.button1 = new System.Windows.Forms.Button();
             this.Users = new System.Windows.Forms.RadioButton();
             this.Admins = new System.Windows.Forms.RadioButton();
+            this.cikisButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -71,12 +72,27 @@ namespace KutuphaneOtomasyon
             this.Admins.Text = "Yönetici";
             this.Admins.UseVisualStyleBackColor = true;
             // 
+            // cikisButton
+            // 
+            this.cikisButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.cikisButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cikisButton.BackgroundImage")));
+            this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cikisButton.ForeColor = System.Drawing.Color.White;
+            this.cikisButton.Location = new System.Drawing.Point(743, 488);
+            this.cikisButton.Name = "cikisButton";
+            this.cikisButton.Size = new System.Drawing.Size(85, 25);
+            this.cikisButton.TabIndex = 3;
+            this.cikisButton.Text = "Çıkış";
+            this.cikisButton.UseVisualStyleBackColor = false;
+            this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.cikisButton);
             this.Controls.Add(this.Admins);
             this.Controls.Add(this.Users);
             this.Controls.Add(this.button1);
@@ -95,5 +111,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton Users;
         private System.Windows.Forms.RadioButton Admins;
+        private System.Windows.Forms.Button cikisButton;
     }
 }
