@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Abstract\IUserService.cs" />
+    <Compile Include="Business\Concrete\UserManager.cs" />
+    <Compile Include="Core\DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
+    <Compile Include="Core\DataAccess\IEntityRepository.cs" />
+    <Compile Include="Core\Entities\IEntity.cs" />
+    <Compile Include="DataAccess\Abstract\IUserDal.cs" />
+    <Compile Include="DataAccess\Concrete\EntityFramework\EFUserDal.cs" />
+    <Compile Include="Entities\Concrete\Users.cs" />
     <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +187,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Entities\Abstract\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
