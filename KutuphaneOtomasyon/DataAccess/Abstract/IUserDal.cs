@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KutuphaneOtomasyon.DataAccess.Abstract
 {
-    public interface IUserDal 
+    public interface IUserDal
     {
+
     }
 }
