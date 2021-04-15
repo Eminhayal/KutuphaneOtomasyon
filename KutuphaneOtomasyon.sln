@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KutuphaneOtomasyon", "KutuphaneOtomasyon\KutuphaneOtomasyon.csproj", "{8AFF2E67-2C25-44B1-9188-6C761C952F00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "KutuphaneOtomasyon\Forms.csproj", "{8AFF2E67-2C25-44B1-9188-6C761C952F00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{9B7ABBE9-26BD-4DAB-BB40-92B83B95DC12}"
 EndProject

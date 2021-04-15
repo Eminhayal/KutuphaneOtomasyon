@@ -56,13 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Abstract\IUserService.cs" />
-    <Compile Include="Business\Concrete\UserManager.cs" />
-    <Compile Include="DataAccess\Abstract\IUserDal.cs" />
-    <Compile Include="DataAccess\Concrete\EntityFramework\EFUserDal.cs" />
-    <Compile Include="DataAccess\Concrete\EntityFramework\ProjectContext.cs" />
-    <Compile Include="Entities\Concrete\Category.cs" />
-    <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,9 +191,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\Abstract\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
