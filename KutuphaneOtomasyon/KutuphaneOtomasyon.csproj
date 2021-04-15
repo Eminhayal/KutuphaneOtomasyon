@@ -58,12 +58,11 @@
   <ItemGroup>
     <Compile Include="Business\Abstract\IUserService.cs" />
     <Compile Include="Business\Concrete\UserManager.cs" />
-    <Compile Include="Core\DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
-    <Compile Include="Core\DataAccess\IEntityRepository.cs" />
-    <Compile Include="Core\Entities\IEntity.cs" />
     <Compile Include="DataAccess\Abstract\IUserDal.cs" />
     <Compile Include="DataAccess\Concrete\EntityFramework\EFUserDal.cs" />
-    <Compile Include="Entities\Concrete\Users.cs" />
+    <Compile Include="DataAccess\Concrete\EntityFramework\ProjectContext.cs" />
+    <Compile Include="Entities\Concrete\Category.cs" />
+    <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
