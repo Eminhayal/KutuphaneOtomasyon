@@ -1,36 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using KutuphaneOtomasyon.Entities.Concrete;
+using DbContext = Microsoft.EntityFrameworkCore.DbContext;
 
-namespace KutuphaneOtomasyon.DataAccess.Concrete.EntityFramework
+namespace DataAccess.Concrete.EntityFramework
 {
     public class ProjectContext : DbContext
     {
-        // Veritabanı ile bağlantı kurmamızı sağlıyor 
-        
-        protected override void OnCon
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Project;Trusted_Connection=True"); 
+            //server
+
+        }
+
+        //Veritabanı Tablolar ile ilişki kurmak bağlamak
+
+        public Microsoft.EntityFrameworkCore.DbSet<User> Users { get; set; }
+        public Microsoft.EntityFrameworkCore.DbSet<> Type { get; set; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-        // Veritabanındaki tablolarımız ile ilişki kurmamız için
-        // DbSet<Varlıklarımız> Veritabanında neye karışılık geliyorsa yanına onu yazıyoruz veritabanındaki adı ile 
-
-        public DbSet<User> Users { get; set; } // user tablosu ile bağladımız varlığımız
-       
-     
     }
+}

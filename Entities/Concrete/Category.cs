@@ -12,7 +12,7 @@ namespace KutuphaneOtomasyon.Entities.Concrete
         private readonly ObservableListSource<User> _users =
             new ObservableListSource<User>();
 
-        public int CategoryId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public virtual ObservableListSource<User> Products { get { return _users; } }
     }
