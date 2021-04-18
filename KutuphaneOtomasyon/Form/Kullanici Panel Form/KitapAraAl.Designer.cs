@@ -33,7 +33,6 @@ namespace KutuphaneOtomasyon
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,21 +70,12 @@ namespace KutuphaneOtomasyon
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "ARA";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(25, 95);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(601, 485);
-            this.listBox1.TabIndex = 2;
-            // 
             // KitapAraAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(950, 619);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "KitapAraAl";
@@ -101,6 +91,5 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }
