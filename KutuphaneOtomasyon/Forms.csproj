@@ -128,6 +128,11 @@
     <Compile Include="Form\Kullanici Panel Form\KitapAlma.Designer.cs">
       <DependentUpon>KitapAlma.cs</DependentUpon>
     </Compile>
+    <Compile Include="KutuphaneOtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneOtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ObservableListSource.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +182,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="KutuphaneOtomasyonDataSet.xsc">
+      <DependentUpon>KutuphaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneOtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneOtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneOtomasyonDataSet.xss">
+      <DependentUpon>KutuphaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
