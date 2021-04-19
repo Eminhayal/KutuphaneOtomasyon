@@ -47,7 +47,7 @@ namespace KutuphaneOtomasyon
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(53, 9);
+            this.label1.Location = new System.Drawing.Point(40, 444);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(442, 55);
             this.label1.TabIndex = 0;
