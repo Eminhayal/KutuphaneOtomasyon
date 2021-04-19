@@ -9,11 +9,9 @@ namespace KutuphaneOtomasyon.Entities.Concrete
 {
     public class Category : IEntity
     {
-        private readonly ObservableListSource<User> _users =
-            new ObservableListSource<User>();
+   
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual ObservableListSource<User> Products { get { return _users; } }
     }
 }
