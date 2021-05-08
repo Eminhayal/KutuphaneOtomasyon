@@ -59,5 +59,16 @@ namespace KutuphaneOtomasyon.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_arrow_computer_icons_bar_chart_arrow_angle_chevron_svg_filter_effects {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-arrow-computer-icons-bar-chart-arrow-angle-chevron-svg-filter-eff" +
+                        "ects", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
