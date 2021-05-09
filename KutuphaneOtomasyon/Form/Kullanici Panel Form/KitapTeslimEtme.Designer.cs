@@ -352,6 +352,7 @@ namespace KutuphaneOtomasyon
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
@@ -359,7 +360,7 @@ namespace KutuphaneOtomasyon
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 43);
             this.button2.TabIndex = 10;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 

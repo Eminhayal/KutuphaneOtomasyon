@@ -126,7 +126,7 @@ namespace KutuphaneOtomasyon
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(548, 553);
+            this.button1.Location = new System.Drawing.Point(548, 564);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(354, 56);
             this.button1.TabIndex = 2;
