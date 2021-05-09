@@ -34,13 +34,7 @@ namespace KutuphaneOtomasyon
 
         private void button7_Click(object sender, EventArgs e)
         {
-            panelKullanici.Controls.Clear();
-            FormProfil formProfil = new FormProfil();
-            formProfil.Dock = DockStyle.Fill;
-            formProfil.TopLevel = false;
-            formProfil.FormBorderStyle = FormBorderStyle.None;
-            panelKullanici.Controls.Add(formProfil);
-            formProfil.Show();
+            
         }
     }
 }
