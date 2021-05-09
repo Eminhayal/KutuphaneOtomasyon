@@ -275,7 +275,7 @@ namespace KutuphaneOtomasyon
             // Profil
             // 
             this.Profil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Profil.BackgroundImage")));
-            this.Profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Profil.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Profil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Profil.ForeColor = System.Drawing.Color.Transparent;
             this.Profil.Location = new System.Drawing.Point(-1, 97);
@@ -289,7 +289,7 @@ namespace KutuphaneOtomasyon
             // button4
             // 
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Transparent;
             this.button4.Location = new System.Drawing.Point(311, 97);
@@ -303,7 +303,7 @@ namespace KutuphaneOtomasyon
             // button5
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
             this.button5.Location = new System.Drawing.Point(629, 97);

@@ -19,7 +19,12 @@ namespace KutuphaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
-            UserManager user = new UserManager();
+            //UserManager user = new UserManager();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

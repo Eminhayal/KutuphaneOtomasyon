@@ -233,10 +233,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.Location = new System.Drawing.Point(429, 185);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 31);
+            this.label10.Size = new System.Drawing.Size(97, 29);
             this.label10.TabIndex = 0;
             this.label10.Text = "Kitap ID";
             this.label10.Click += new System.EventHandler(this.label1_Click_1);
@@ -245,10 +245,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.Location = new System.Drawing.Point(429, 241);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 31);
+            this.label11.Size = new System.Drawing.Size(109, 29);
             this.label11.TabIndex = 0;
             this.label11.Text = "Kitap Adı";
             this.label11.Click += new System.EventHandler(this.label1_Click_1);
@@ -257,10 +257,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.Location = new System.Drawing.Point(429, 299);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(311, 31);
+            this.label12.Size = new System.Drawing.Size(274, 29);
             this.label12.TabIndex = 0;
             this.label12.Text = "Emanet Alan Kullanıcı ID";
             this.label12.Click += new System.EventHandler(this.label1_Click_1);
@@ -269,10 +269,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.Location = new System.Drawing.Point(429, 353);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(322, 31);
+            this.label13.Size = new System.Drawing.Size(286, 29);
             this.label13.TabIndex = 0;
             this.label13.Text = "Emanet Alan Kullanıcı Adı";
             this.label13.Click += new System.EventHandler(this.label1_Click_1);
@@ -281,10 +281,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.Location = new System.Drawing.Point(429, 408);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(366, 31);
+            this.label14.Size = new System.Drawing.Size(325, 29);
             this.label14.TabIndex = 0;
             this.label14.Text = "Emanet Alan Kullanıcı Soyadı";
             this.label14.Click += new System.EventHandler(this.label1_Click_1);
@@ -293,10 +293,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.Location = new System.Drawing.Point(429, 464);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(177, 31);
+            this.label15.Size = new System.Drawing.Size(160, 29);
             this.label15.TabIndex = 0;
             this.label15.Text = "Cep Telefonu";
             this.label15.Click += new System.EventHandler(this.label1_Click_1);
@@ -305,10 +305,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.Location = new System.Drawing.Point(429, 519);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(224, 31);
+            this.label16.Size = new System.Drawing.Size(204, 29);
             this.label16.TabIndex = 0;
             this.label16.Text = "Son Teslim Tarihi";
             this.label16.Click += new System.EventHandler(this.label1_Click_1);
@@ -317,10 +317,10 @@ namespace KutuphaneOtomasyon
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.Location = new System.Drawing.Point(429, 574);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(200, 31);
+            this.label17.Size = new System.Drawing.Size(178, 29);
             this.label17.TabIndex = 0;
             this.label17.Text = "Gecikme Ücreti";
             this.label17.Click += new System.EventHandler(this.label1_Click_1);
