@@ -175,6 +175,9 @@
     <EmbeddedResource Include="Form\Kullanici Panel Form\KitapAlma.resx">
       <DependentUpon>KitapAlma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Kullanici Panel Form\KitapAraAl.resx">
+      <DependentUpon>KitapAraAl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Kullanici Panel Form\KitapTeslimEtme.resx">
       <DependentUpon>KitapTeslimEtme.cs</DependentUpon>
     </EmbeddedResource>
