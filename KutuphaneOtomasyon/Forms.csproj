@@ -56,7 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database Connect\DatabaseConnect.cs" />
     <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
