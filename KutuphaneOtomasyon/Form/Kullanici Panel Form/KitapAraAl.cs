@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KutuphaneOtomasyon
+namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 {
-    public partial class KullaniciEklemeDuzenleme : System.Windows.Forms.Form
+    public partial class KitapAraAl : System.Windows.Forms.Form
     {
-        public KullaniciEklemeDuzenleme()
+        public KitapAraAl()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class KitapAlimOnayi : Form
+    public partial class KitapAlimOnayi : System.Windows.Forms.Form
     {
         public KitapAlimOnayi()
         {

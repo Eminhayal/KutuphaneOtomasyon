@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Kullanici Panel Form\KitapAraAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Kullanici Panel Form\KitapAraAl.Designer.cs">
+      <DependentUpon>KitapAraAl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Yonetici Panel Form\EmanetBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>

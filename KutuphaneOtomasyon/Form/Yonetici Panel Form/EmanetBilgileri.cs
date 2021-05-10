@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class EmanetBilgileri : Form
+    public partial class EmanetBilgileri : System.Windows.Forms.Form
     {
         public EmanetBilgileri()
         {
