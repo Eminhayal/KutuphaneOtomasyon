@@ -42,9 +42,9 @@ namespace KutuphaneOtomasyon
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(743, 447);
+            this.button1.Location = new System.Drawing.Point(762, 500);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 25);
+            this.button1.Size = new System.Drawing.Size(119, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "GİRİŞ";
             this.button1.UseVisualStyleBackColor = false;
@@ -53,24 +53,26 @@ namespace KutuphaneOtomasyon
             // Users
             // 
             this.Users.AutoSize = true;
-            this.Users.Location = new System.Drawing.Point(710, 295);
+            this.Users.BackColor = System.Drawing.Color.Transparent;
+            this.Users.Location = new System.Drawing.Point(728, 295);
             this.Users.Name = "Users";
             this.Users.Size = new System.Drawing.Size(67, 17);
             this.Users.TabIndex = 2;
             this.Users.TabStop = true;
             this.Users.Text = "Kullanıcı ";
-            this.Users.UseVisualStyleBackColor = true;
+            this.Users.UseVisualStyleBackColor = false;
             // 
             // Admins
             // 
             this.Admins.AutoSize = true;
-            this.Admins.Location = new System.Drawing.Point(783, 295);
+            this.Admins.BackColor = System.Drawing.Color.Transparent;
+            this.Admins.Location = new System.Drawing.Point(833, 295);
             this.Admins.Name = "Admins";
             this.Admins.Size = new System.Drawing.Size(63, 17);
             this.Admins.TabIndex = 2;
             this.Admins.TabStop = true;
             this.Admins.Text = "Yönetici";
-            this.Admins.UseVisualStyleBackColor = true;
+            this.Admins.UseVisualStyleBackColor = false;
             // 
             // cikisButton
             // 
@@ -78,7 +80,7 @@ namespace KutuphaneOtomasyon
             this.cikisButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cikisButton.BackgroundImage")));
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.ForeColor = System.Drawing.Color.White;
-            this.cikisButton.Location = new System.Drawing.Point(743, 488);
+            this.cikisButton.Location = new System.Drawing.Point(783, 469);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(85, 25);
             this.cikisButton.TabIndex = 3;

@@ -38,6 +38,7 @@ namespace KutuphaneOtomasyon
             this.panelKullanici = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // profilButton
@@ -114,10 +115,9 @@ namespace KutuphaneOtomasyon
             // 
             // panelKullanici
             // 
-            this.panelKullanici.Location = new System.Drawing.Point(528, 137);
-            this.panelKullanici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelKullanici.Location = new System.Drawing.Point(396, 99);
             this.panelKullanici.Name = "panelKullanici";
-            this.panelKullanici.Size = new System.Drawing.Size(1284, 802);
+            this.panelKullanici.Size = new System.Drawing.Size(954, 620);
             this.panelKullanici.TabIndex = 7;
             // 
             // button6
@@ -144,12 +144,23 @@ namespace KutuphaneOtomasyon
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(0, 99);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(398, 19);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1800, 897);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.panelKullanici);
             this.Controls.Add(this.button7);
@@ -176,5 +187,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Panel panelKullanici;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button1;
     }
 }
