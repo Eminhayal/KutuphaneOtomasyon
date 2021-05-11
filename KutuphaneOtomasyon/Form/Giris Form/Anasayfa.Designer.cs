@@ -100,7 +100,7 @@ namespace KutuphaneOtomasyon
             this.panelKullanici.Location = new System.Drawing.Point(0, 134);
             this.panelKullanici.Margin = new System.Windows.Forms.Padding(2);
             this.panelKullanici.Name = "panelKullanici";
-            this.panelKullanici.Size = new System.Drawing.Size(1350, 426);
+            this.panelKullanici.Size = new System.Drawing.Size(1350, 600);
             this.panelKullanici.TabIndex = 7;
             // 
             // button1
@@ -119,7 +119,7 @@ namespace KutuphaneOtomasyon
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
-            this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.kitapTeslimButton);
             this.Controls.Add(this.kitapAraAlButton);
             this.Controls.Add(this.profilButton);
