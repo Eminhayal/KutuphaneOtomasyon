@@ -26,5 +26,10 @@ namespace KutuphaneOtomasyon
         {
 
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

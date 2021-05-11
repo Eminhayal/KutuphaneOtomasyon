@@ -21,5 +21,15 @@ namespace KutuphaneOtomasyon
         {
             
         }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KullaniciEklemeDuzenleme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

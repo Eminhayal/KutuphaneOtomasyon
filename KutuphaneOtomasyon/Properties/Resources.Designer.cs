@@ -63,6 +63,56 @@ namespace KutuphaneOtomasyon.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap arkaplan_50 {
+            get {
+                object obj = ResourceManager.GetObject("arkaplan_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit_butonu0 {
+            get {
+                object obj = ResourceManager.GetObject("exit butonu0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap giriş_butonu0_400x94 {
+            get {
+                object obj = ResourceManager.GetObject("giriş butonu0_400x94", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap giriş_butonu0_400x941 {
+            get {
+                object obj = ResourceManager.GetObject("giriş butonu0_400x941", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap giriş_butonu0_450x30 {
+            get {
+                object obj = ResourceManager.GetObject("giriş butonu0_450x30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_arrow_computer_icons_bar_chart_arrow_angle_chevron_svg_filter_effects {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-arrow-computer-icons-bar-chart-arrow-angle-chevron-svg-filter-eff" +
