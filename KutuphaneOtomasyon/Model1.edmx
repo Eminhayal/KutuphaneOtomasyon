@@ -18,6 +18,7 @@
           <Property Name="RegisterDate" Type="date" Nullable="false" />
           <Property Name="Mail" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="Telephone" Type="bigint" Nullable="false" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <EntityType Name="Books">
           <Key>
@@ -30,6 +31,37 @@
           <Property Name="PageNo" Type="smallint" Nullable="false" />
           <Property Name="Category" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="SaloonShelf" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="Image" Type="image" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Confirm">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="int" Nullable="false" />
+          <Property Name="DeliveryConfirm" Type="bit" Nullable="false" />
+          <Property Name="EntrustConfirm" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DeliveredBooks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookId" Type="int" Nullable="false" />
+          <Property Name="BookName" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="DeliveryDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
@@ -41,6 +73,14 @@
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="DeadLine" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EntrustedInfo">
+          <Key>
+            <PropertyRef Name="DeliveredId" />
+          </Key>
+          <Property Name="DeliveredId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -55,7 +95,8 @@
           <Property Name="RegisterDate" Type="date" Nullable="false" />
           <Property Name="Mail" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="Telephone" Type="bigint" Nullable="false" />
-          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Image" Type="image" />
         </EntityType>
         <Association Name="FK_Books_Category">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
@@ -69,7 +110,43 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EntrustedBooks_BooksId">
+        <Association Name="FK_Confirm_Books">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="Confirm">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveredBooks_BooksId">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="DeliveredBooks">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveredBooks_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="DeliveredBooks">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedBooks_BookId">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
           <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
           <ReferentialConstraint>
@@ -93,22 +170,91 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_EntrustedInfo_BookId">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedInfo_DeliveredId">
+          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="EntrustedBooks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="DeliveredId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedInfo_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="KutuphaneOtoModelStoreContainer">
           <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Confirm" EntityType="Self.Confirm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EntrustedInfo" EntityType="Self.EntrustedInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Category].[Id] AS [Id], 
+    [Category].[Name] AS [Name]
+    FROM [dbo].[Category] AS [Category]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Books_Category" Association="Self.FK_Books_Category">
             <End Role="Books" EntitySet="Books" />
             <End Role="Books1" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK_EntrustedBooks_BooksId" Association="Self.FK_EntrustedBooks_BooksId">
+          <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="Confirm" EntitySet="Confirm" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveredBooks_BooksId" Association="Self.FK_DeliveredBooks_BooksId">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveredBooks_UserId" Association="Self.FK_DeliveredBooks_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedBooks_BookId" Association="Self.FK_EntrustedBooks_BookId">
             <End Role="Books" EntitySet="Books" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
           </AssociationSet>
           <AssociationSet Name="FK_EntrustedBooks_UserId" Association="Self.FK_EntrustedBooks_UserId">
             <End Role="Users" EntitySet="Users" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_BookId" Association="Self.FK_EntrustedInfo_BookId">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_DeliveredId" Association="Self.FK_EntrustedInfo_DeliveredId">
+            <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_UserId" Association="Self.FK_EntrustedInfo_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -129,6 +275,7 @@
           <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Mail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telephone" Type="Int64" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Books">
           <Key>
@@ -141,9 +288,36 @@
           <Property Name="PageNo" Type="Int16" Nullable="false" />
           <Property Name="Category" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SaloonShelf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Books1" Relationship="Self.FK_Books_Category" FromRole="Books" ToRole="Books1" />
           <NavigationProperty Name="Books2" Relationship="Self.FK_Books_Category" FromRole="Books1" ToRole="Books" />
-          <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_BooksId" FromRole="Books" ToRole="EntrustedBooks" />
+          <NavigationProperty Name="Confirm" Relationship="Self.FK_Confirm_Books" FromRole="Books" ToRole="Confirm" />
+          <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_BooksId" FromRole="Books" ToRole="DeliveredBooks" />
+          <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_BookId" FromRole="Books" ToRole="EntrustedBooks" />
+          <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="Books" ToRole="EntrustedInfo" />
+        </EntityType>
+        <EntityType Name="Confirm">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="DeliveryConfirm" Type="Boolean" Nullable="false" />
+          <Property Name="EntrustConfirm" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
+        </EntityType>
+        <EntityType Name="DeliveredBooks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="BookName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_DeliveredBooks_BooksId" FromRole="DeliveredBooks" ToRole="Books" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_DeliveredBooks_UserId" FromRole="DeliveredBooks" ToRole="Users" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
@@ -155,8 +329,20 @@
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeadLine" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_EntrustedBooks_BooksId" FromRole="EntrustedBooks" ToRole="Books" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_EntrustedBooks_BookId" FromRole="EntrustedBooks" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="EntrustedBooks" ToRole="Users" />
+          <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_DeliveredId" FromRole="EntrustedBooks" ToRole="EntrustedInfo" />
+        </EntityType>
+        <EntityType Name="EntrustedInfo">
+          <Key>
+            <PropertyRef Name="DeliveredId" />
+          </Key>
+          <Property Name="DeliveredId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Books" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="EntrustedInfo" ToRole="Books" />
+          <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedInfo_DeliveredId" FromRole="EntrustedInfo" ToRole="EntrustedBooks" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="EntrustedInfo" ToRole="Users" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -171,8 +357,19 @@
           <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Mail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telephone" Type="Int64" Nullable="false" />
-          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_UserId" FromRole="Users" ToRole="DeliveredBooks" />
           <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="Users" ToRole="EntrustedBooks" />
+          <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="Users" ToRole="EntrustedInfo" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <Association Name="FK_Books_Category">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
@@ -186,7 +383,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EntrustedBooks_BooksId">
+        <Association Name="FK_Confirm_Books">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="Confirm">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveredBooks_BooksId">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="DeliveredBooks">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedBooks_BookId">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
           <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
           <ReferentialConstraint>
@@ -195,6 +416,30 @@
             </Principal>
             <Dependent Role="EntrustedBooks">
               <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedInfo_BookId">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DeliveredBooks_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="DeliveredBooks">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -210,22 +455,74 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KutuphaneOtoEntities2" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_EntrustedInfo_DeliveredId">
+          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="EntrustedBooks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="DeliveredId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntrustedInfo_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="EntrustedInfo">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KutuphaneOtoEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Books" EntityType="Self.Books" />
+          <EntitySet Name="Confirm" EntityType="Self.Confirm" />
+          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
+          <EntitySet Name="EntrustedInfo" EntityType="Self.EntrustedInfo" />
           <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Category" EntityType="Self.Category" />
           <AssociationSet Name="FK_Books_Category" Association="Self.FK_Books_Category">
             <End Role="Books" EntitySet="Books" />
             <End Role="Books1" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK_EntrustedBooks_BooksId" Association="Self.FK_EntrustedBooks_BooksId">
+          <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="Confirm" EntitySet="Confirm" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveredBooks_BooksId" Association="Self.FK_DeliveredBooks_BooksId">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedBooks_BookId" Association="Self.FK_EntrustedBooks_BookId">
             <End Role="Books" EntitySet="Books" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_BookId" Association="Self.FK_EntrustedInfo_BookId">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DeliveredBooks_UserId" Association="Self.FK_DeliveredBooks_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
           </AssociationSet>
           <AssociationSet Name="FK_EntrustedBooks_UserId" Association="Self.FK_EntrustedBooks_UserId">
             <End Role="Users" EntitySet="Users" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_DeliveredId" Association="Self.FK_EntrustedInfo_DeliveredId">
+            <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntrustedInfo_UserId" Association="Self.FK_EntrustedInfo_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -233,7 +530,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities2">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities3">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Admins">
               <MappingFragment StoreEntitySet="Admins">
@@ -246,6 +543,7 @@
                 <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -259,6 +557,29 @@
                 <ScalarProperty Name="PageNo" ColumnName="PageNo" />
                 <ScalarProperty Name="Category" ColumnName="Category" />
                 <ScalarProperty Name="SaloonShelf" ColumnName="SaloonShelf" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Confirm">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.Confirm">
+              <MappingFragment StoreEntitySet="Confirm">
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="DeliveryConfirm" ColumnName="DeliveryConfirm" />
+                <ScalarProperty Name="EntrustConfirm" ColumnName="EntrustConfirm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveredBooks">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
+              <MappingFragment StoreEntitySet="DeliveredBooks">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -271,6 +592,15 @@
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DeadLine" ColumnName="DeadLine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EntrustedInfo">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedInfo">
+              <MappingFragment StoreEntitySet="EntrustedInfo">
+                <ScalarProperty Name="DeliveredId" ColumnName="DeliveredId" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -287,6 +617,15 @@
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

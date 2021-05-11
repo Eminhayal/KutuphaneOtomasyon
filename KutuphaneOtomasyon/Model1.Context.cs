@@ -13,10 +13,10 @@ namespace KutuphaneOtomasyon
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class KutuphaneOtoEntities2 : DbContext
+    public partial class KutuphaneOtoEntities3 : DbContext
     {
-        public KutuphaneOtoEntities2()
-            : base("name=KutuphaneOtoEntities2")
+        public KutuphaneOtoEntities3()
+            : base("name=KutuphaneOtoEntities3")
         {
         }
     
@@ -27,7 +27,11 @@ namespace KutuphaneOtomasyon
     
         public virtual DbSet<Admins> Admins { get; set; }
         public virtual DbSet<Books> Books { get; set; }
+        public virtual DbSet<Confirm> Confirm { get; set; }
+        public virtual DbSet<DeliveredBooks> DeliveredBooks { get; set; }
         public virtual DbSet<EntrustedBooks> EntrustedBooks { get; set; }
+        public virtual DbSet<EntrustedInfo> EntrustedInfo { get; set; }
         public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
     }
 }
