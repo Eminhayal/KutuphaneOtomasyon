@@ -12,17 +12,14 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Admins
+    public partial class EntrustedInfo
     {
-        public int AdminId { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Password { get; set; }
-        public System.DateTime BirthDate { get; set; }
-        public long Tckn { get; set; }
-        public System.DateTime RegisterDate { get; set; }
-        public string Mail { get; set; }
-        public long Telephone { get; set; }
-        public byte[] Image { get; set; }
+        public int DeliveredId { get; set; }
+        public int BookId { get; set; }
+        public int UserId { get; set; }
+    
+        public virtual Books Books { get; set; }
+        public virtual EntrustedBooks EntrustedBooks { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

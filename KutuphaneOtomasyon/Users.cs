@@ -17,7 +17,9 @@ namespace KutuphaneOtomasyon
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Users()
         {
+            this.DeliveredBooks = new HashSet<DeliveredBooks>();
             this.EntrustedBooks = new HashSet<EntrustedBooks>();
+            this.EntrustedInfo = new HashSet<EntrustedInfo>();
         }
     
         public int UserId { get; set; }
@@ -29,9 +31,14 @@ namespace KutuphaneOtomasyon
         public System.DateTime RegisterDate { get; set; }
         public string Mail { get; set; }
         public long Telephone { get; set; }
-        public bool Status { get; set; }
+        public Nullable<bool> Status { get; set; }
+        public byte[] Image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DeliveredBooks> DeliveredBooks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EntrustedBooks> EntrustedBooks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EntrustedInfo> EntrustedInfo { get; set; }
     }
 }
