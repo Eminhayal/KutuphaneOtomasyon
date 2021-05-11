@@ -32,9 +32,8 @@ namespace KutuphaneOtomasyon
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnasayfaYonetici));
             this.button7 = new System.Windows.Forms.Button();
             this.panelYonetici = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.kullaniciEklemeButton = new System.Windows.Forms.Button();
             this.kitapAlimOnayButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.kitapTeslimOnayButton = new System.Windows.Forms.Button();
             this.kitapEklemeDuzenlemeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,9 +46,9 @@ namespace KutuphaneOtomasyon
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::KutuphaneOtomasyon.Properties.Resources.exit_butonu0;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1155, 94);
+            this.button7.Location = new System.Drawing.Point(1068, 94);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(225, 29);
+            this.button7.Size = new System.Drawing.Size(278, 29);
             this.button7.TabIndex = 13;
             this.button7.Text = "ÇIKIŞ";
             this.button7.UseVisualStyleBackColor = false;
@@ -62,20 +61,20 @@ namespace KutuphaneOtomasyon
             this.panelYonetici.Size = new System.Drawing.Size(1350, 600);
             this.panelYonetici.TabIndex = 15;
             // 
-            // button2
+            // kullaniciEklemeButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
-            this.button2.Location = new System.Drawing.Point(924, 94);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(239, 29);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "KULLANICI EKLEME / DÜZENLEME";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.kitapEklemeDuzenlemeButton_Click);
+            this.kullaniciEklemeButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.kullaniciEklemeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("kullaniciEklemeButton.BackgroundImage")));
+            this.kullaniciEklemeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.kullaniciEklemeButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.kullaniciEklemeButton.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.kullaniciEklemeButton.Location = new System.Drawing.Point(804, 94);
+            this.kullaniciEklemeButton.Name = "kullaniciEklemeButton";
+            this.kullaniciEklemeButton.Size = new System.Drawing.Size(270, 29);
+            this.kullaniciEklemeButton.TabIndex = 14;
+            this.kullaniciEklemeButton.Text = "KULLANICI EKLEME / DÜZENLEME";
+            this.kullaniciEklemeButton.UseVisualStyleBackColor = false;
+            this.kullaniciEklemeButton.Click += new System.EventHandler(this.kullaniciEklemeButton_Click);
             // 
             // kitapAlimOnayButton
             // 
@@ -83,28 +82,13 @@ namespace KutuphaneOtomasyon
             this.kitapAlimOnayButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("kitapAlimOnayButton.BackgroundImage")));
             this.kitapAlimOnayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapAlimOnayButton.ForeColor = System.Drawing.Color.White;
-            this.kitapAlimOnayButton.Location = new System.Drawing.Point(462, 94);
+            this.kitapAlimOnayButton.Location = new System.Drawing.Point(540, 94);
             this.kitapAlimOnayButton.Name = "kitapAlimOnayButton";
-            this.kitapAlimOnayButton.Size = new System.Drawing.Size(237, 29);
+            this.kitapAlimOnayButton.Size = new System.Drawing.Size(270, 29);
             this.kitapAlimOnayButton.TabIndex = 7;
             this.kitapAlimOnayButton.Text = "KİTAP ALIM ONAYI";
             this.kitapAlimOnayButton.UseVisualStyleBackColor = false;
             this.kitapAlimOnayButton.Click += new System.EventHandler(this.kitapAlimOnayButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
-            this.button1.Location = new System.Drawing.Point(693, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 29);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "KİTAP EKLEME / DÜZENLEME";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.kitapEklemeDuzenlemeButton_Click);
             // 
             // kitapTeslimOnayButton
             // 
@@ -113,9 +97,9 @@ namespace KutuphaneOtomasyon
             this.kitapTeslimOnayButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapTeslimOnayButton.ForeColor = System.Drawing.Color.White;
             this.kitapTeslimOnayButton.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
-            this.kitapTeslimOnayButton.Location = new System.Drawing.Point(231, 94);
+            this.kitapTeslimOnayButton.Location = new System.Drawing.Point(276, 94);
             this.kitapTeslimOnayButton.Name = "kitapTeslimOnayButton";
-            this.kitapTeslimOnayButton.Size = new System.Drawing.Size(235, 29);
+            this.kitapTeslimOnayButton.Size = new System.Drawing.Size(270, 29);
             this.kitapTeslimOnayButton.TabIndex = 8;
             this.kitapTeslimOnayButton.Text = "KİTAP TESLİM ONAYI";
             this.kitapTeslimOnayButton.UseVisualStyleBackColor = false;
@@ -130,7 +114,7 @@ namespace KutuphaneOtomasyon
             this.kitapEklemeDuzenlemeButton.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
             this.kitapEklemeDuzenlemeButton.Location = new System.Drawing.Point(0, 94);
             this.kitapEklemeDuzenlemeButton.Name = "kitapEklemeDuzenlemeButton";
-            this.kitapEklemeDuzenlemeButton.Size = new System.Drawing.Size(235, 29);
+            this.kitapEklemeDuzenlemeButton.Size = new System.Drawing.Size(278, 29);
             this.kitapEklemeDuzenlemeButton.TabIndex = 14;
             this.kitapEklemeDuzenlemeButton.Text = "KİTAP EKLEME / DÜZENLEME";
             this.kitapEklemeDuzenlemeButton.UseVisualStyleBackColor = false;
@@ -143,12 +127,11 @@ namespace KutuphaneOtomasyon
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panelYonetici);
-            this.Controls.Add(this.kitapEklemeDuzenlemeButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.kitapTeslimOnayButton);
+            this.Controls.Add(this.kullaniciEklemeButton);
             this.Controls.Add(this.kitapAlimOnayButton);
+            this.Controls.Add(this.kitapEklemeDuzenlemeButton);
+            this.Controls.Add(this.kitapTeslimOnayButton);
             this.Name = "AnasayfaYonetici";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AnasayfaYonetici_Load);
@@ -160,8 +143,7 @@ namespace KutuphaneOtomasyon
 
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panelYonetici;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button kullaniciEklemeButton;
         private System.Windows.Forms.Button kitapAlimOnayButton;
         private System.Windows.Forms.Button kitapEklemeDuzenlemeButton;
         private System.Windows.Forms.Button kitapTeslimOnayButton;

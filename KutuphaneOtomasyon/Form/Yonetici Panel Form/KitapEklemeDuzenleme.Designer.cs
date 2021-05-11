@@ -52,7 +52,6 @@ namespace KutuphaneOtomasyon
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,19 +284,11 @@ namespace KutuphaneOtomasyon
             this.textBox7.Size = new System.Drawing.Size(100, 20);
             this.textBox7.TabIndex = 16;
             // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(272, 474);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 16;
-            // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox6);
@@ -353,6 +344,5 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
     }
 }
