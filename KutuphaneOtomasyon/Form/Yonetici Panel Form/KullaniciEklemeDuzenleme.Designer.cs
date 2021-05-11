@@ -251,7 +251,7 @@ namespace KutuphaneOtomasyon
             this.button6.TabIndex = 17;
             this.button6.Text = "Kullanııc Ekle/Düzenle";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+
             // 
             // button7
             // 
@@ -265,7 +265,7 @@ namespace KutuphaneOtomasyon
             this.button7.TabIndex = 18;
             this.button7.Text = "Kitap Ekle/Düzenle";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+
             // 
             // button8
             // 
@@ -415,7 +415,7 @@ namespace KutuphaneOtomasyon
             this.button11.Size = new System.Drawing.Size(57, 36);
             this.button11.TabIndex = 22;
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+
             // 
             // KullaniciEklemeDuzenleme
             // 

@@ -28,6 +28,8 @@ namespace KutuphaneOtomasyon
         public string Category { get; set; }
         public string SaloonShelf { get; set; }
     
+        public virtual Books Books1 { get; set; }
+        public virtual Books Books2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EntrustedBooks> EntrustedBooks { get; set; }
     }

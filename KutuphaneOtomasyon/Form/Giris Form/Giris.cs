@@ -19,6 +19,8 @@ namespace KutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            // giris e posta ile olacak
             if (Users.Checked)
             {
                 Anasayfa anasayfa = new Anasayfa();

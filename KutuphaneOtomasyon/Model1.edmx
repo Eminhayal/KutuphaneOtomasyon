@@ -31,16 +31,6 @@
           <Property Name="Category" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="SaloonShelf" Type="varchar" MaxLength="150" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Categorys">
-          <Key>
-            <PropertyRef Name="Id" />
-            <PropertyRef Name="CategoryName" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CategoryName" Type="varchar" MaxLength="150" Nullable="false" />
-        </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
             <PropertyRef Name="Id" />
@@ -67,6 +57,18 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
           <Property Name="Telephone" Type="bigint" Nullable="false" />
           <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Books_Category">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="Books1" Type="Self.Books" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="Books1">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_EntrustedBooks_BooksId">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
           <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
@@ -96,12 +98,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
           <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Categorys" EntityType="Self.Categorys" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Categorys].[Id] AS [Id], 
-    [Categorys].[CategoryName] AS [CategoryName]
-    FROM [dbo].[Categorys] AS [Categorys]</DefiningQuery>
-          </EntitySet>
+          <AssociationSet Name="FK_Books_Category" Association="Self.FK_Books_Category">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="Books1" EntitySet="Books" />
+          </AssociationSet>
           <AssociationSet Name="FK_EntrustedBooks_BooksId" Association="Self.FK_EntrustedBooks_BooksId">
             <End Role="Books" EntitySet="Books" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
@@ -141,6 +141,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
           <Property Name="PageNo" Type="Int16" Nullable="false" />
           <Property Name="Category" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="SaloonShelf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Books1" Relationship="Self.FK_Books_Category" FromRole="Books" ToRole="Books1" />
+          <NavigationProperty Name="Books2" Relationship="Self.FK_Books_Category" FromRole="Books1" ToRole="Books" />
           <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_BooksId" FromRole="Books" ToRole="EntrustedBooks" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
@@ -172,14 +174,18 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="Users" ToRole="EntrustedBooks" />
         </EntityType>
-        <EntityType Name="Categorys">
-          <Key>
-            <PropertyRef Name="Id" />
-            <PropertyRef Name="CategoryName" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CategoryName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
+        <Association Name="FK_Books_Category">
+          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="Books1" Type="Self.Books" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Books">
+              <PropertyRef Name="BookId" />
+            </Principal>
+            <Dependent Role="Books1">
+              <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_EntrustedBooks_BooksId">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
           <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
@@ -204,12 +210,15 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KutuphaneOtoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KutuphaneOtoEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Books" EntityType="Self.Books" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
           <EntitySet Name="Users" EntityType="Self.Users" />
-          <EntitySet Name="Categorys" EntityType="Self.Categorys" />
+          <AssociationSet Name="FK_Books_Category" Association="Self.FK_Books_Category">
+            <End Role="Books" EntitySet="Books" />
+            <End Role="Books1" EntitySet="Books" />
+          </AssociationSet>
           <AssociationSet Name="FK_EntrustedBooks_BooksId" Association="Self.FK_EntrustedBooks_BooksId">
             <End Role="Books" EntitySet="Books" />
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
@@ -224,7 +233,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities2">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Admins">
               <MappingFragment StoreEntitySet="Admins">
@@ -278,14 +287,6 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Categorys' does not have a primar
                 <ScalarProperty Name="Mail" ColumnName="Mail" />
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Categorys">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.Categorys">
-              <MappingFragment StoreEntitySet="Categorys">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

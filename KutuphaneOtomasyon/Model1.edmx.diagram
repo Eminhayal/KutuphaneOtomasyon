@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e2f5e7b981f145a987d4d92cb8697d76" Name="Diagram1">
+      <Diagram DiagramId="e51606755deb46b9969b3f112beaa920" Name="Diagram1">
         <EntityTypeShape EntityType="KutuphaneOtoModel.Admins" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneOtoModel.Books" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedBooks" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Users" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Categorys" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedBooks" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Users" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="KutuphaneOtoModel.FK_Books_Category" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedBooks_BooksId" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedBooks_UserId" ManuallyRouted="false" />
       </Diagram>
