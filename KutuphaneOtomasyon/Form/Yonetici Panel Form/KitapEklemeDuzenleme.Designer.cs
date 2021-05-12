@@ -44,14 +44,14 @@ namespace KutuphaneOtomasyon
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBookAdd = new System.Windows.Forms.Button();
             this.textBoxBookId = new System.Windows.Forms.TextBox();
             this.textBoxBookName = new System.Windows.Forms.TextBox();
             this.textBoxWriter = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxPublisher = new System.Windows.Forms.TextBox();
+            this.textBoxPageNo = new System.Windows.Forms.TextBox();
+            this.textBoxCategory = new System.Windows.Forms.TextBox();
+            this.textBoxSaloonShelf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,20 +221,20 @@ namespace KutuphaneOtomasyon
             this.button4.Text = "Kitap Sil";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonBookAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(990, 492);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 47);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Kitap Ekle";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBookAdd.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBookAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBookAdd.BackgroundImage")));
+            this.buttonBookAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBookAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonBookAdd.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonBookAdd.Location = new System.Drawing.Point(990, 492);
+            this.buttonBookAdd.Name = "buttonBookAdd";
+            this.buttonBookAdd.Size = new System.Drawing.Size(153, 47);
+            this.buttonBookAdd.TabIndex = 3;
+            this.buttonBookAdd.Text = "Kitap Ekle";
+            this.buttonBookAdd.UseVisualStyleBackColor = false;
+            this.buttonBookAdd.Click += new System.EventHandler(this.buttonBookAdd_Click);
             // 
             // textBoxBookId
             // 
@@ -257,44 +257,44 @@ namespace KutuphaneOtomasyon
             this.textBoxWriter.Size = new System.Drawing.Size(100, 20);
             this.textBoxWriter.TabIndex = 16;
             // 
-            // textBox4
+            // textBoxPublisher
             // 
-            this.textBox4.Location = new System.Drawing.Point(272, 248);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 16;
+            this.textBoxPublisher.Location = new System.Drawing.Point(272, 248);
+            this.textBoxPublisher.Name = "textBoxPublisher";
+            this.textBoxPublisher.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPublisher.TabIndex = 16;
             // 
-            // textBox5
+            // textBoxPageNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(272, 309);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 16;
+            this.textBoxPageNo.Location = new System.Drawing.Point(272, 309);
+            this.textBoxPageNo.Name = "textBoxPageNo";
+            this.textBoxPageNo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPageNo.TabIndex = 16;
             // 
-            // textBox6
+            // textBoxCategory
             // 
-            this.textBox6.Location = new System.Drawing.Point(272, 362);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 16;
+            this.textBoxCategory.Location = new System.Drawing.Point(272, 362);
+            this.textBoxCategory.Name = "textBoxCategory";
+            this.textBoxCategory.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCategory.TabIndex = 16;
             // 
-            // textBox7
+            // textBoxSaloonShelf
             // 
-            this.textBox7.Location = new System.Drawing.Point(272, 419);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 16;
+            this.textBoxSaloonShelf.Location = new System.Drawing.Point(272, 419);
+            this.textBoxSaloonShelf.Name = "textBoxSaloonShelf";
+            this.textBoxSaloonShelf.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSaloonShelf.TabIndex = 16;
             // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxSaloonShelf);
+            this.Controls.Add(this.textBoxPublisher);
+            this.Controls.Add(this.textBoxCategory);
             this.Controls.Add(this.textBoxWriter);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxPageNo);
             this.Controls.Add(this.textBoxBookName);
             this.Controls.Add(this.textBoxBookId);
             this.Controls.Add(this.button7);
@@ -302,7 +302,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonBookAdd);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -332,7 +332,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBookAdd;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -341,9 +341,9 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.TextBox textBoxBookId;
         private System.Windows.Forms.TextBox textBoxBookName;
         private System.Windows.Forms.TextBox textBoxWriter;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxPublisher;
+        private System.Windows.Forms.TextBox textBoxPageNo;
+        private System.Windows.Forms.TextBox textBoxCategory;
+        private System.Windows.Forms.TextBox textBoxSaloonShelf;
     }
 }

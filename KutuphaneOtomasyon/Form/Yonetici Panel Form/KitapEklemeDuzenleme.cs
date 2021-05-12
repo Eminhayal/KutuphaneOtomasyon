@@ -17,6 +17,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -37,8 +38,16 @@ namespace KutuphaneOtomasyon
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBookAdd_Click(object sender, EventArgs e)
         {
+            Books book = new Books();
+            book.Name = textBoxBookName.Text;
+            book.Writer = textBoxWriter.Text;
+            book.Publisher = textBoxPublisher.Text;
+            book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
+            book.Category = textBoxCategory.Text;
+            book.SaloonShelf = textBoxSaloonShelf.Text;
+
 
         }
     }
