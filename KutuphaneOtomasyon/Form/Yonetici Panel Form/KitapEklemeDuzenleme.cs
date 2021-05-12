@@ -37,7 +37,7 @@ namespace KutuphaneOtomasyon
 
         private void KitapEklemeDuzenleme_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
