@@ -40,23 +40,21 @@ namespace KutuphaneOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnUsersKaydet = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtUserID = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtUserSurname = new System.Windows.Forms.TextBox();
-            this.txtUserBirthdate = new System.Windows.Forms.TextBox();
-            this.txtUserTckn = new System.Windows.Forms.TextBox();
-            this.txtUserMail = new System.Windows.Forms.TextBox();
-            this.txtUserNumber = new System.Windows.Forms.TextBox();
-            this.txtUserStatus = new System.Windows.Forms.TextBox();
-            this.txtUserRegDate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUserPassword = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +96,7 @@ namespace KutuphaneOtomasyon
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(24, 291);
+            this.label5.Location = new System.Drawing.Point(24, 244);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(188, 31);
             this.label5.TabIndex = 1;
@@ -109,7 +107,7 @@ namespace KutuphaneOtomasyon
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(24, 338);
+            this.label6.Location = new System.Drawing.Point(24, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(202, 31);
             this.label6.TabIndex = 1;
@@ -120,7 +118,7 @@ namespace KutuphaneOtomasyon
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(24, 386);
+            this.label7.Location = new System.Drawing.Point(24, 338);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 31);
             this.label7.TabIndex = 1;
@@ -131,7 +129,7 @@ namespace KutuphaneOtomasyon
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(24, 432);
+            this.label8.Location = new System.Drawing.Point(24, 386);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(189, 31);
             this.label8.TabIndex = 1;
@@ -142,7 +140,7 @@ namespace KutuphaneOtomasyon
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(24, 471);
+            this.label9.Location = new System.Drawing.Point(24, 431);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(234, 31);
             this.label9.TabIndex = 1;
@@ -153,7 +151,7 @@ namespace KutuphaneOtomasyon
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(24, 508);
+            this.label10.Location = new System.Drawing.Point(24, 475);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(162, 31);
             this.label10.TabIndex = 1;
@@ -173,20 +171,20 @@ namespace KutuphaneOtomasyon
             this.button1.Text = "Resim Ekle";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnUsersKaydet
+            // button2
             // 
-            this.btnUsersKaydet.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsersKaydet.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsersKaydet.BackgroundImage")));
-            this.btnUsersKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsersKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUsersKaydet.ForeColor = System.Drawing.Color.Transparent;
-            this.btnUsersKaydet.Location = new System.Drawing.Point(936, 416);
-            this.btnUsersKaydet.Name = "btnUsersKaydet";
-            this.btnUsersKaydet.Size = new System.Drawing.Size(198, 46);
-            this.btnUsersKaydet.TabIndex = 2;
-            this.btnUsersKaydet.Text = "Kullanıcı Ekle";
-            this.btnUsersKaydet.UseVisualStyleBackColor = false;
-            this.btnUsersKaydet.Click += new System.EventHandler(this.button2_Click);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Location = new System.Drawing.Point(936, 416);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 46);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Kullanıcı Ekle";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -235,6 +233,105 @@ namespace KutuphaneOtomasyon
             this.button10.TabIndex = 21;
             this.button10.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(379, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Kullanıcı ID";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(379, 148);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(145, 29);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Kullanıcı Adı";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(379, 247);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(159, 29);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Doğum Tarihi";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(379, 199);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(184, 29);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Kullanıcı Soyadı";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(379, 386);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(160, 29);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Cep Telefonu";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(379, 291);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(168, 29);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "T.C. Kimlik No";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(379, 341);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 29);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "E-posta";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(379, 431);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(197, 29);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Öğrenim Durumu";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(379, 475);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(133, 29);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "Kayıt Tarihi";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -248,116 +345,34 @@ namespace KutuphaneOtomasyon
             this.label19.Text = "Kullanıcı Ekleme / Düzenleme";
             this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
-            // txtUserID
-            // 
-            this.txtUserID.Location = new System.Drawing.Point(345, 101);
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(100, 20);
-            this.txtUserID.TabIndex = 23;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(345, 159);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 20);
-            this.txtUserName.TabIndex = 23;
-            // 
-            // txtUserSurname
-            // 
-            this.txtUserSurname.Location = new System.Drawing.Point(345, 210);
-            this.txtUserSurname.Name = "txtUserSurname";
-            this.txtUserSurname.Size = new System.Drawing.Size(100, 20);
-            this.txtUserSurname.TabIndex = 23;
-            // 
-            // txtUserBirthdate
-            // 
-            this.txtUserBirthdate.Location = new System.Drawing.Point(345, 302);
-            this.txtUserBirthdate.Name = "txtUserBirthdate";
-            this.txtUserBirthdate.Size = new System.Drawing.Size(100, 20);
-            this.txtUserBirthdate.TabIndex = 23;
-            // 
-            // txtUserTckn
-            // 
-            this.txtUserTckn.Location = new System.Drawing.Point(345, 349);
-            this.txtUserTckn.Name = "txtUserTckn";
-            this.txtUserTckn.Size = new System.Drawing.Size(100, 20);
-            this.txtUserTckn.TabIndex = 23;
-            // 
-            // txtUserMail
-            // 
-            this.txtUserMail.Location = new System.Drawing.Point(345, 397);
-            this.txtUserMail.Name = "txtUserMail";
-            this.txtUserMail.Size = new System.Drawing.Size(100, 20);
-            this.txtUserMail.TabIndex = 23;
-            // 
-            // txtUserNumber
-            // 
-            this.txtUserNumber.Location = new System.Drawing.Point(345, 444);
-            this.txtUserNumber.Name = "txtUserNumber";
-            this.txtUserNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtUserNumber.TabIndex = 23;
-            // 
-            // txtUserStatus
-            // 
-            this.txtUserStatus.Location = new System.Drawing.Point(345, 482);
-            this.txtUserStatus.Name = "txtUserStatus";
-            this.txtUserStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtUserStatus.TabIndex = 23;
-            // 
-            // txtUserRegDate
-            // 
-            this.txtUserRegDate.Location = new System.Drawing.Point(345, 519);
-            this.txtUserRegDate.Name = "txtUserRegDate";
-            this.txtUserRegDate.Size = new System.Drawing.Size(100, 20);
-            this.txtUserRegDate.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(24, 244);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 31);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "ŞİFRE";
-            // 
-            // txtUserPassword
-            // 
-            this.txtUserPassword.Location = new System.Drawing.Point(345, 256);
-            this.txtUserPassword.Name = "txtUserPassword";
-            this.txtUserPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtUserPassword.TabIndex = 25;
-            // 
             // KullaniciEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.txtUserPassword);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUserRegDate);
-            this.Controls.Add(this.txtUserStatus);
-            this.Controls.Add(this.txtUserNumber);
-            this.Controls.Add(this.txtUserMail);
-            this.Controls.Add(this.txtUserTckn);
-            this.Controls.Add(this.txtUserBirthdate);
-            this.Controls.Add(this.txtUserSurname);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.btnUsersKaydet);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "KullaniciEklemeDuzenleme";
@@ -380,22 +395,20 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnUsersKaydet;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtUserID;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtUserSurname;
-        private System.Windows.Forms.TextBox txtUserBirthdate;
-        private System.Windows.Forms.TextBox txtUserTckn;
-        private System.Windows.Forms.TextBox txtUserMail;
-        private System.Windows.Forms.TextBox txtUserNumber;
-        private System.Windows.Forms.TextBox txtUserStatus;
-        private System.Windows.Forms.TextBox txtUserRegDate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUserPassword;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
