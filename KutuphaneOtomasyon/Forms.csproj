@@ -152,7 +152,15 @@
     <Compile Include="Form\Kullanici Panel Form\KitapAlma.Designer.cs">
       <DependentUpon>KitapAlma.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Form\Yonetici Panel Form\Musteri.cs" />
+=======
+    <Compile Include="KutuphaneOtoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KutuphaneOtoDataSet.xsd</DependentUpon>
+    </Compile>
+>>>>>>> 71e3a883114962710bced41fc4db621ab6ca918d
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -223,6 +231,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="KutuphaneOtoDataSet.xsc">
+      <DependentUpon>KutuphaneOtoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KutuphaneOtoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KutuphaneOtoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KutuphaneOtoDataSet.xss">
+      <DependentUpon>KutuphaneOtoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
