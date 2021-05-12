@@ -139,6 +139,7 @@
     <Compile Include="Form\Yonetici Panel Form\KitapAlimOnayi.Designer.cs">
       <DependentUpon>KitapAlimOnayi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Yonetici Panel Form\Kullanici.cs" />
     <Compile Include="Form\Yonetici Panel Form\KullaniciEklemeDuzenleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +152,7 @@
     <Compile Include="Form\Kullanici Panel Form\KitapAlma.Designer.cs">
       <DependentUpon>KitapAlma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\Yonetici Panel Form\Musteri.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
