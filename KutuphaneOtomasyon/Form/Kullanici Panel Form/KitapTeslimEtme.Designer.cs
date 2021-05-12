@@ -61,7 +61,7 @@ namespace KutuphaneOtomasyon
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1070, 455);
+            this.button1.Location = new System.Drawing.Point(1004, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(158, 52);
             this.button1.TabIndex = 0;
@@ -311,7 +311,7 @@ namespace KutuphaneOtomasyon
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(1055, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(979, 138);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 324);
             this.pictureBox1.TabIndex = 11;

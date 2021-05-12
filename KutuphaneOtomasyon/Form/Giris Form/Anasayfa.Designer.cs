@@ -36,6 +36,7 @@ namespace KutuphaneOtomasyon
             this.button7 = new System.Windows.Forms.Button();
             this.panelKullanici = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // profilButton
@@ -47,7 +48,7 @@ namespace KutuphaneOtomasyon
             this.profilButton.Image = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
             this.profilButton.Location = new System.Drawing.Point(0, 99);
             this.profilButton.Name = "profilButton";
-            this.profilButton.Size = new System.Drawing.Size(450, 30);
+            this.profilButton.Size = new System.Drawing.Size(337, 30);
             this.profilButton.TabIndex = 0;
             this.profilButton.Text = "PROFİL";
             this.profilButton.UseVisualStyleBackColor = false;
@@ -59,9 +60,9 @@ namespace KutuphaneOtomasyon
             this.kitapAraAlButton.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_450x30;
             this.kitapAraAlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapAraAlButton.ForeColor = System.Drawing.Color.White;
-            this.kitapAraAlButton.Location = new System.Drawing.Point(443, 99);
+            this.kitapAraAlButton.Location = new System.Drawing.Point(327, 99);
             this.kitapAraAlButton.Name = "kitapAraAlButton";
-            this.kitapAraAlButton.Size = new System.Drawing.Size(450, 30);
+            this.kitapAraAlButton.Size = new System.Drawing.Size(345, 30);
             this.kitapAraAlButton.TabIndex = 1;
             this.kitapAraAlButton.Text = "KİTAP ARA / AL";
             this.kitapAraAlButton.UseVisualStyleBackColor = false;
@@ -73,9 +74,9 @@ namespace KutuphaneOtomasyon
             this.kitapTeslimButton.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_450x30;
             this.kitapTeslimButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kitapTeslimButton.ForeColor = System.Drawing.Color.White;
-            this.kitapTeslimButton.Location = new System.Drawing.Point(885, 99);
+            this.kitapTeslimButton.Location = new System.Drawing.Point(670, 99);
             this.kitapTeslimButton.Name = "kitapTeslimButton";
-            this.kitapTeslimButton.Size = new System.Drawing.Size(450, 30);
+            this.kitapTeslimButton.Size = new System.Drawing.Size(345, 30);
             this.kitapTeslimButton.TabIndex = 3;
             this.kitapTeslimButton.Text = "KİTAP TESLİM ETME";
             this.kitapTeslimButton.UseVisualStyleBackColor = false;
@@ -114,12 +115,28 @@ namespace KutuphaneOtomasyon
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::KutuphaneOtomasyon.Properties.Resources.exit_butonu0;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(1013, 99);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(337, 30);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "ÇIKIŞ";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.kitapTeslimButton);
             this.Controls.Add(this.kitapAraAlButton);
             this.Controls.Add(this.profilButton);
@@ -140,5 +157,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panelKullanici;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
