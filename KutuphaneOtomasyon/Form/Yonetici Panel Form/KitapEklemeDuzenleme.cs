@@ -40,15 +40,26 @@ namespace KutuphaneOtomasyon
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
-            Books book = new Books();
-            book.Name = textBoxBookName.Text;
-            book.Writer = textBoxWriter.Text;
-            book.Publisher = textBoxPublisher.Text;
-            book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
-            book.Category = textBoxCategory.Text;
-            book.SaloonShelf = textBoxSaloonShelf.Text;
-            db.Books.Add(book);
-            db.SaveChanges();
+            try
+            {
+                Books book = new Books();
+                book.Name = textBoxBookName.Text;
+                book.Writer = textBoxWriter.Text;
+                book.Publisher = textBoxPublisher.Text;
+                book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
+                book.Category = textBoxCategory.Text;
+                book.SaloonShelf = textBoxSaloonShelf.Text;
+                db.Books.Add(book);
+                db.SaveChanges();
+
+                MessageBox.Show("Added");
+            }
+            catch 
+            {
+                MessageBox.Show("Eksik");
+                throw;
+            }
+           
 
         }
     }
