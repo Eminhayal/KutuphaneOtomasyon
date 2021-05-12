@@ -40,48 +40,15 @@ namespace KutuphaneOtomasyon
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Books book = new Books();
-                book.Name = textBoxBookName.Text;
-                book.Writer = textBoxWriter.Text;
-                book.Publisher = textBoxPublisher.Text;
-                book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
-                book.Category = textBoxCategory.Text;
-                book.SaloonShelf = textBoxSaloonShelf.Text;
-                db.Books.Add(book);
-                db.SaveChanges();
+            Books book = new Books();
+            book.Name = textBoxBookName.Text;
+            book.Writer = textBoxWriter.Text;
+            book.Publisher = textBoxPublisher.Text;
+            book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
+            book.Category = textBoxCategory.Text;
+            book.SaloonShelf = textBoxSaloonShelf.Text;
 
-                MessageBox.Show("Added");
-            }
-            catch 
-            {
-                MessageBox.Show("Eksik");
-                throw;
-            }
-           
 
-        }
-
-        private void buttonBookDelete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(textBoxBookId.Text);
-            var kayit = db.Books.Find(id);
-
-            if (kayit == null)
-            {
-                MessageBox.Show("Bos");
-                return;
-            }
-
-            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? " ,
-                " Kayıt silme onayı",
-                MessageBoxButtons.YesNo)== DialogResult.Yes)
-            {
-                db.Books.Remove(kayit);
-                db.SaveChanges();
-            }
-            
         }
     }
 }
