@@ -47,7 +47,8 @@ namespace KutuphaneOtomasyon
             book.PageNo = Convert.ToInt16(textBoxPageNo.Text);
             book.Category = textBoxCategory.Text;
             book.SaloonShelf = textBoxSaloonShelf.Text;
-
+            db.Books.Add(book);
+            db.SaveChanges();
 
         }
     }
