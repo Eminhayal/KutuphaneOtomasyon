@@ -45,9 +45,9 @@ namespace KutuphaneOtomasyon
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxBookId = new System.Windows.Forms.TextBox();
+            this.textBoxBookName = new System.Windows.Forms.TextBox();
+            this.textBoxWriter = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -234,27 +234,28 @@ namespace KutuphaneOtomasyon
             this.button1.TabIndex = 3;
             this.button1.Text = "Kitap Ekle";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxBookId
             // 
-            this.textBox1.Location = new System.Drawing.Point(272, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
+            this.textBoxBookId.Location = new System.Drawing.Point(272, 94);
+            this.textBoxBookId.Name = "textBoxBookId";
+            this.textBoxBookId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBookId.TabIndex = 16;
             // 
-            // textBox2
+            // textBoxBookName
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 16;
+            this.textBoxBookName.Location = new System.Drawing.Point(272, 146);
+            this.textBoxBookName.Name = "textBoxBookName";
+            this.textBoxBookName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBookName.TabIndex = 16;
             // 
-            // textBox3
+            // textBoxWriter
             // 
-            this.textBox3.Location = new System.Drawing.Point(272, 198);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 16;
+            this.textBoxWriter.Location = new System.Drawing.Point(272, 198);
+            this.textBoxWriter.Name = "textBoxWriter";
+            this.textBoxWriter.Size = new System.Drawing.Size(100, 20);
+            this.textBoxWriter.TabIndex = 16;
             // 
             // textBox4
             // 
@@ -292,10 +293,10 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxWriter);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxBookName);
+            this.Controls.Add(this.textBoxBookId);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -337,9 +338,9 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxBookId;
+        private System.Windows.Forms.TextBox textBoxBookName;
+        private System.Windows.Forms.TextBox textBoxWriter;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
