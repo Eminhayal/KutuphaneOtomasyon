@@ -18,9 +18,11 @@ namespace KutuphaneOtomasyon
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
-        private void button2_Click(object sender, EventArgs e)
-        {
+        Books book = new Books();
 
+        private void buttonBookEdit_Click(object sender, EventArgs e)
+        {
+            book.Name = textBoxBookName.Text;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -35,14 +37,14 @@ namespace KutuphaneOtomasyon
 
         private void KitapEklemeDuzenleme_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                Books book = new Books();
+                
                 book.Name = textBoxBookName.Text;
                 book.Writer = textBoxWriter.Text;
                 book.Publisher = textBoxPublisher.Text;
@@ -65,23 +67,7 @@ namespace KutuphaneOtomasyon
 
         private void buttonBookDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBoxBookId.Text);
-            var kayit = db.Books.Find(id);
 
-            if (kayit == null)
-            {
-                MessageBox.Show("Bos");
-                return;
-            }
-
-            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? " ,
-                " Kayıt silme onayı",
-                MessageBoxButtons.YesNo)== DialogResult.Yes)
-            {
-                db.Books.Remove(kayit);
-                db.SaveChanges();
-            }
-            
         }
     }
 }
