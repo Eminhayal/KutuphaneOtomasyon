@@ -239,28 +239,29 @@ namespace KutuphaneOtomasyon
             // 
             // textBoxBookId
             // 
-            this.textBoxBookId.Location = new System.Drawing.Point(272, 94);
+            this.textBoxBookId.Enabled = false;
+            this.textBoxBookId.Location = new System.Drawing.Point(272, 105);
             this.textBoxBookId.Name = "textBoxBookId";
             this.textBoxBookId.Size = new System.Drawing.Size(100, 20);
             this.textBoxBookId.TabIndex = 16;
             // 
             // textBoxBookName
             // 
-            this.textBoxBookName.Location = new System.Drawing.Point(272, 146);
+            this.textBoxBookName.Location = new System.Drawing.Point(272, 157);
             this.textBoxBookName.Name = "textBoxBookName";
             this.textBoxBookName.Size = new System.Drawing.Size(100, 20);
             this.textBoxBookName.TabIndex = 16;
             // 
             // textBoxWriter
             // 
-            this.textBoxWriter.Location = new System.Drawing.Point(272, 198);
+            this.textBoxWriter.Location = new System.Drawing.Point(272, 210);
             this.textBoxWriter.Name = "textBoxWriter";
             this.textBoxWriter.Size = new System.Drawing.Size(100, 20);
             this.textBoxWriter.TabIndex = 16;
             // 
             // textBoxPublisher
             // 
-            this.textBoxPublisher.Location = new System.Drawing.Point(272, 248);
+            this.textBoxPublisher.Location = new System.Drawing.Point(272, 259);
             this.textBoxPublisher.Name = "textBoxPublisher";
             this.textBoxPublisher.Size = new System.Drawing.Size(100, 20);
             this.textBoxPublisher.TabIndex = 16;
