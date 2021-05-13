@@ -28,28 +28,62 @@ namespace KutuphaneOtomasyon
         {
             Application.Exit();
         }
+        IDbConnection con;
+        IDbCommand com;
+        IDataReader dr;
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            // giris e posta ile olacak
+            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text))
+            {
+                Anasayfa ana = new Anasayfa();
+                ana.Show();
+            }
+            else
+            {
+                MessageBox.Show("E posta yada şifre hatalı");
+            }
+
+
+
+            /* giris e posta ile olacak
             if (rdUsers.Checked)
             {
-                Anasayfa anasayfa = new Anasayfa();
-                anasayfa.Show();
-                this.Hide();
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.Show();
+            this.Hide();
             }
             if (rdAdmins.Checked)
             {
-                AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
-                anasayfaYonetici.Show();
-                this.Hide();
+            AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
+            anasayfaYonetici.Show();
+             this.Hide();
+            }*/
+        }
+
+        private bool girisdoğrula(string kEposta, string kSifre)
+        {
+            DataClasses1DataContext context = new DataClasses1DataContext();
+            var sorgu = from p in context.Users
+                        where p.Mail == kEposta
+                        && p.Password == kSifre
+                        select p;
+            if (sorgu.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
+
+
         private void Giris_Load(object sender, EventArgs e)
         {
-            txtLogMail.Text = "MAİL";
-            txtLogPass.Text = "ŞİFRE";
+            txtLogMail.Text = "e-posta";
+            txtLogPass.Text = "şifre";
         }
 
         private void txtLogMail_Click(object sender, EventArgs e)

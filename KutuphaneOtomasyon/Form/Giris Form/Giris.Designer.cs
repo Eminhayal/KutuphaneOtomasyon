@@ -97,24 +97,24 @@ namespace KutuphaneOtomasyon
             // txtLogPass
             // 
             this.txtLogPass.BackColor = System.Drawing.Color.White;
-            this.txtLogPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogPass.ForeColor = System.Drawing.Color.Black;
-            this.txtLogPass.Location = new System.Drawing.Point(744, 419);
+            this.txtLogPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogPass.ForeColor = System.Drawing.Color.Gray;
+            this.txtLogPass.Location = new System.Drawing.Point(743, 415);
             this.txtLogPass.Name = "txtLogPass";
-            this.txtLogPass.Size = new System.Drawing.Size(152, 13);
+            this.txtLogPass.Size = new System.Drawing.Size(152, 20);
             this.txtLogPass.TabIndex = 4;
             this.txtLogPass.Click += new System.EventHandler(this.txtLogPass_Click);
             // 
             // txtLogMail
             // 
             this.txtLogMail.BackColor = System.Drawing.Color.White;
-            this.txtLogMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLogMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogMail.ForeColor = System.Drawing.Color.Black;
-            this.txtLogMail.Location = new System.Drawing.Point(744, 342);
+            this.txtLogMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogMail.ForeColor = System.Drawing.Color.Gray;
+            this.txtLogMail.Location = new System.Drawing.Point(743, 339);
             this.txtLogMail.Name = "txtLogMail";
-            this.txtLogMail.Size = new System.Drawing.Size(152, 13);
+            this.txtLogMail.Size = new System.Drawing.Size(152, 20);
             this.txtLogMail.TabIndex = 4;
             this.txtLogMail.Click += new System.EventHandler(this.txtLogMail_Click);
             // 
