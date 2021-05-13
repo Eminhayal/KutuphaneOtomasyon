@@ -76,7 +76,7 @@ namespace KutuphaneOtomasyon
         }
         private void buttonAra_Click(object sender, EventArgs e)
         {
-            if (textBoxBookId.Enabled = true)
+            if (textBoxBookId.Enabled == true)
             {
                 try
                 {
