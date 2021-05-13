@@ -19,7 +19,7 @@ namespace KutuphaneOtomasyon
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
-        Books book = new Books();
+     
         
         private void buttonBookEdit_Click(object sender, EventArgs e)
         {
@@ -37,13 +37,13 @@ namespace KutuphaneOtomasyon
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
+            file.Title = "ayemkutuphane ";
+            file.ShowDialog();
+            string filePath = file.FileName;
+            pictureBox1.ImageLocation = filePath;
         }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void KitapEklemeDuzenleme_Load(object sender, EventArgs e)
         {
             
@@ -135,10 +135,13 @@ namespace KutuphaneOtomasyon
             book.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             book.Category = textBoxCategory.Text;
             book.SaloonShelf = textBoxSaloonShelf.Text;
+            //book.Image = pictureBox1.
+            
             db.Books.Add(book);
             db.SaveChanges();
             MessageBox.Show("ekle");
         }
 
+        
     }
 }

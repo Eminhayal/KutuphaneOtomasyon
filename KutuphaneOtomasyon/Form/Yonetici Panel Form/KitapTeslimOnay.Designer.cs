@@ -38,7 +38,7 @@ namespace KutuphaneOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonIdSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -127,6 +127,7 @@ namespace KutuphaneOtomasyon
             this.button1.TabIndex = 2;
             this.button1.Text = "Kitap Teslimini Onayla";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -139,17 +140,17 @@ namespace KutuphaneOtomasyon
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button7
+            // buttonIdSearch
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(1082, 23);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 43);
-            this.button7.TabIndex = 16;
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonIdSearch.BackColor = System.Drawing.Color.Transparent;
+            this.buttonIdSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.BackgroundImage")));
+            this.buttonIdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonIdSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.Image")));
+            this.buttonIdSearch.Location = new System.Drawing.Point(509, 28);
+            this.buttonIdSearch.Name = "buttonIdSearch";
+            this.buttonIdSearch.Size = new System.Drawing.Size(240, 43);
+            this.buttonIdSearch.TabIndex = 16;
+            this.buttonIdSearch.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -236,7 +237,7 @@ namespace KutuphaneOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.buttonIdSearch);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
@@ -268,7 +269,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonIdSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

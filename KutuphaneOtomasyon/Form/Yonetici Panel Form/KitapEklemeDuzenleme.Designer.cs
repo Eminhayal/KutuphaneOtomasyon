@@ -41,7 +41,6 @@ namespace KutuphaneOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.buttonBookEdit = new System.Windows.Forms.Button();
             this.buttonBookDelete = new System.Windows.Forms.Button();
             this.buttonBookAdd = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@ namespace KutuphaneOtomasyon
             this.numericUpDownPageNo = new System.Windows.Forms.NumericUpDown();
             this.buttonAra = new System.Windows.Forms.Button();
             this.buttonBookEditUpdate = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).BeginInit();
             this.SuspendLayout();
@@ -164,7 +164,7 @@ namespace KutuphaneOtomasyon
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(877, 39);
+            this.button7.Location = new System.Drawing.Point(868, 34);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(240, 43);
             this.button7.TabIndex = 15;
@@ -180,20 +180,6 @@ namespace KutuphaneOtomasyon
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(928, 99);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 37);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Resim Ekle";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // buttonBookEdit
             // 
@@ -318,11 +304,21 @@ namespace KutuphaneOtomasyon
             this.buttonBookEditUpdate.Visible = false;
             this.buttonBookEditUpdate.Click += new System.EventHandler(this.buttonBookEditUpdate_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(906, 481);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(202, 13);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Resim eklemek için X simgesine tıklayınız.";
+            // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonBookEditUpdate);
             this.Controls.Add(this.buttonAra);
             this.Controls.Add(this.numericUpDownPageNo);
@@ -334,7 +330,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.textBoxBookId);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonBookEdit);
             this.Controls.Add(this.buttonBookDelete);
             this.Controls.Add(this.buttonBookAdd);
@@ -370,7 +365,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonBookAdd;
         private System.Windows.Forms.Button buttonBookEdit;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonBookDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
@@ -383,5 +377,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.NumericUpDown numericUpDownPageNo;
         private System.Windows.Forms.Button buttonAra;
         private System.Windows.Forms.Button buttonBookEditUpdate;
+        private System.Windows.Forms.Label label10;
     }
 }
