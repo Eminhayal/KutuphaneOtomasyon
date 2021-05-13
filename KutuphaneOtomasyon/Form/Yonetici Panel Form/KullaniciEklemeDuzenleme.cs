@@ -17,7 +17,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUsersAdd_click(object sender, EventArgs e)
         {
             
         }
@@ -31,5 +31,14 @@ namespace KutuphaneOtomasyon
         {
 
         }
+
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
