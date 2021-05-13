@@ -49,6 +49,10 @@ namespace KutuphaneOtomasyon
                 AnasayfaYonetici anayon = new AnasayfaYonetici();
                 anayon.Show();
             }
+            else
+            {
+                MessageBox.Show("E posta yada şifre hatalı");
+            }
 
             /* giris e posta ile olacak
             if (rdUsers.Checked)
