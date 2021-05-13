@@ -34,17 +34,13 @@ namespace KutuphaneOtomasyon
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text))
+            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
             {
                 Anasayfa ana = new Anasayfa();
                 ana.Show();
             }
-            else
-            {
-                MessageBox.Show("E posta yada şifre hatalı");
-            }
 
-             if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
+            if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
             {
                 AnasayfaYonetici anayon = new AnasayfaYonetici();
                 anayon.Show();
@@ -53,6 +49,7 @@ namespace KutuphaneOtomasyon
             {
                 MessageBox.Show("E posta yada şifre hatalı");
             }
+            
 
             /* giris e posta ile olacak
             if (rdUsers.Checked)
@@ -76,10 +73,12 @@ namespace KutuphaneOtomasyon
                         where p.Mail == kEposta
                         && p.Password == kSifre
                         select p;
+
             if (sorgu.Any())
             {
                 return true;
             }
+
             else
             {
                 return false;
