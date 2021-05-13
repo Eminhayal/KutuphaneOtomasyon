@@ -23,16 +23,15 @@ namespace KutuphaneOtomasyon
         
         private void buttonBookEdit_Click(object sender, EventArgs e)
         {
-            var bookId = book.BookId.ToString();
-            int x= 0;
             textBoxBookId.Enabled = true;
-            if (bookId == textBoxBookId.Text)
-            {
-                textBoxBookName.Text = book.Name;
-                
+            buttonAra.Visible = true;
+        }
+        private void buttonBookEditUpdate_Click(object sender, EventArgs e)
+        {
+            buttonBookEditUpdate.Visible = false;
+            buttonBookEdit.Visible = true;
 
-            }
-          
+            ChanceInfo();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -52,7 +51,7 @@ namespace KutuphaneOtomasyon
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
-            ChanceInfo();
+            AddBook();
         }
 
         private void buttonBookDelete_Click(object sender, EventArgs e)
@@ -75,16 +74,34 @@ namespace KutuphaneOtomasyon
             }
 
         }
-      
-        public void ChanceInfo()
+        private void buttonAra_Click(object sender, EventArgs e)
         {
-            book.Name = textBoxBookName.Text;
-            book.Writer = textBoxWriter.Text;
-            book.Publisher = textBoxPublisher.Text;
-            book.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
-            book.Category = textBoxCategory.Text;
-            book.SaloonShelf = textBoxSaloonShelf.Text;
+            if (textBoxBookId.Enabled = true)
+            {
+                try
+                {
+                    int id = Convert.ToInt32(textBoxBookId.Text);
+                    var kayit = db.Books.Find(id);
+                    textBoxBookName.Text = kayit.Name.ToString();
+                    textBoxCategory.Text = kayit.Category.ToString();
+                    textBoxPublisher.Text = kayit.Publisher.ToString();
+                    textBoxSaloonShelf.Text = kayit.SaloonShelf.ToString();
+                    textBoxWriter.Text = kayit.Writer.ToString();
+                    numericUpDownPageNo.Text = kayit.PageNo.ToString();
+                    textBoxBookId.Enabled = false;
+                    buttonAra.Visible = false;
+                    buttonBookEdit.Visible = false;
+                    buttonBookEditUpdate.Visible = true;
+                }
+                catch
+                {
+                    MessageBox.Show("Hatali ");
+                    
+                }
+                
+            }
         }
+        
 
         private void textBoxBookId_TextChanged(object sender, EventArgs e)
         {
@@ -96,22 +113,32 @@ namespace KutuphaneOtomasyon
            
           
         }
-
-        private void buttonAra_Click(object sender, EventArgs e)
+        public void ChanceInfo()
         {
-            if (textBoxBookId.Enabled = true)
-            {
-                int id = Convert.ToInt32(textBoxBookId.Text);
-                var kayit = db.Books.Find(id);
-                textBoxBookName.Text = kayit.Name.ToString();
-                textBoxCategory.Text = kayit.Category.ToString();
-                textBoxPublisher.Text = kayit.Publisher.ToString();
-                textBoxSaloonShelf.Text = kayit.SaloonShelf.ToString();
-                textBoxWriter.Text = kayit.Writer.ToString();
-                numericUpDownPageNo.Text = kayit.PageNo.ToString();
-
-
-            }
+            int id = Convert.ToInt32(textBoxBookId.Text);
+            var kayit = db.Books.Find(id);
+            kayit.Name = textBoxBookName.Text;
+            kayit.Writer = textBoxWriter.Text;
+            kayit.Publisher = textBoxPublisher.Text;
+            kayit.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
+            kayit.Category = textBoxCategory.Text;
+            kayit.SaloonShelf = textBoxSaloonShelf.Text;
+            db.SaveChanges();
         }
+
+        public void AddBook()
+        {
+            Books book = new Books();
+            book.Name = textBoxBookName.Text;
+            book.Writer = textBoxWriter.Text;
+            book.Publisher = textBoxPublisher.Text;
+            book.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
+            book.Category = textBoxCategory.Text;
+            book.SaloonShelf = textBoxSaloonShelf.Text;
+            db.Books.Add(book);
+            db.SaveChanges();
+            MessageBox.Show("ekle");
+        }
+
     }
 }
