@@ -58,6 +58,7 @@ namespace KutuphaneOtomasyon
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
             AddBook();
+            
         }
 
         private void buttonBookDelete_Click(object sender, EventArgs e)
@@ -145,7 +146,7 @@ namespace KutuphaneOtomasyon
 
         public void AddBook()
         {
-            Books book = new Books();
+            Book book = new Book();
             book.Name = textBoxBookName.Text;
             book.Writer = textBoxWriter.Text;
             book.Publisher = textBoxPublisher.Text;
@@ -159,7 +160,7 @@ namespace KutuphaneOtomasyon
             MessageBox.Show("ekle");
         }
 
-        public void ImageAdd(Books book)
+        public void ImageAdd(Book book)
         {
             if (pictureBox1 != null)
             {
