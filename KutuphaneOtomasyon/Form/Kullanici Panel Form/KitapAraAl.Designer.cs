@@ -47,6 +47,15 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -203,11 +212,12 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(564, 59);
+            this.button2.Location = new System.Drawing.Point(564, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 43);
             this.button2.TabIndex = 23;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
             // 
@@ -242,11 +252,72 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.button3.Text = "Kitap Detayı";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(34, 163);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(1208, 168);
+            this.listView1.TabIndex = 37;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Kitap ID";
+            this.columnHeader1.Width = 97;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Kitap Adı";
+            this.columnHeader2.Width = 124;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Yazar";
+            this.columnHeader3.Width = 158;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Yayın Evi";
+            this.columnHeader4.Width = 141;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Sayfa Sayısı";
+            this.columnHeader5.Width = 88;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Kategori";
+            this.columnHeader6.Width = 124;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Raf / Salon";
+            this.columnHeader7.Width = 268;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Durum";
+            this.columnHeader8.Width = 199;
+            // 
             // KitapAraAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button8);
@@ -266,6 +337,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.Controls.Add(this.button2);
             this.Name = "KitapAraAl";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.KitapAraAl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -295,5 +367,14 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
