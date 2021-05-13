@@ -146,7 +146,7 @@ namespace KutuphaneOtomasyon
             this.buttonIdSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.BackgroundImage")));
             this.buttonIdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIdSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.Image")));
-            this.buttonIdSearch.Location = new System.Drawing.Point(509, 28);
+            this.buttonIdSearch.Location = new System.Drawing.Point(494, 28);
             this.buttonIdSearch.Name = "buttonIdSearch";
             this.buttonIdSearch.Size = new System.Drawing.Size(240, 43);
             this.buttonIdSearch.TabIndex = 16;

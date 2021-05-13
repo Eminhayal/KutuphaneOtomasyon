@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -19,8 +21,8 @@ namespace KutuphaneOtomasyon
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
-     
-        
+        private string imagePath;
+
         private void buttonBookEdit_Click(object sender, EventArgs e)
         {
             textBoxBookId.Enabled = true;
@@ -34,6 +36,7 @@ namespace KutuphaneOtomasyon
             ChanceInfo();
         }
 
+       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -41,9 +44,12 @@ namespace KutuphaneOtomasyon
             file.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
             file.Title = "ayemkutuphane ";
             file.ShowDialog();
-            string filePath = file.FileName;
-            pictureBox1.ImageLocation = filePath;
+            pictureBox1.Image = Image.FromFile(file.FileName);
+            imagePath = file.FileName.ToString();
+
+
         }
+
         private void KitapEklemeDuzenleme_Load(object sender, EventArgs e)
         {
             
@@ -88,11 +94,21 @@ namespace KutuphaneOtomasyon
                     textBoxSaloonShelf.Text = kayit.SaloonShelf.ToString();
                     textBoxWriter.Text = kayit.Writer.ToString();
                     numericUpDownPageNo.Text = kayit.PageNo.ToString();
+ 
+                    if (pictureBox1 == null)
+                    {
+                       
+                    }
+                    else
+                    {
+                        pictureBox1.Image = null;
+                    }
                     textBoxBookId.Enabled = false;
                     buttonAra.Visible = false;
                     buttonBookEdit.Visible = false;
                     buttonBookEditUpdate.Visible = true;
                 }
+
                 catch
                 {
                     MessageBox.Show("Hatali ");
@@ -123,6 +139,7 @@ namespace KutuphaneOtomasyon
             kayit.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             kayit.Category = textBoxCategory.Text;
             kayit.SaloonShelf = textBoxSaloonShelf.Text;
+            
             db.SaveChanges();
         }
 
@@ -135,13 +152,32 @@ namespace KutuphaneOtomasyon
             book.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             book.Category = textBoxCategory.Text;
             book.SaloonShelf = textBoxSaloonShelf.Text;
-            //book.Image = pictureBox1.
-            
+            ImageAdd(book);
+         
             db.Books.Add(book);
             db.SaveChanges();
             MessageBox.Show("ekle");
         }
 
-        
+        public void ImageAdd(Books book)
+        {
+            if (pictureBox1 != null)
+            {
+                //FileStream fsImage = new FileStream(imagePath, FileMode.Open, FileAccess.Read);
+                //BinaryReader brImage = new BinaryReader(fsImage);
+                //byte[] image = brImage.ReadBytes((int)fsImage.Length);
+                //brImage.Close();
+                //fsImage.Close();
+                //book.Image = image;
+
+                MemoryStream ms1 = new MemoryStream();
+                pictureBox1.Image.Save(ms1,pictureBox1.Image.RawFormat);
+                book.Image = ms1.ToArray();
+
+            }
+
+        }
     }
+
 }
+

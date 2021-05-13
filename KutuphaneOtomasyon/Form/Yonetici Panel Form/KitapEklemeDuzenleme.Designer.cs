@@ -54,6 +54,7 @@ namespace KutuphaneOtomasyon
             this.buttonAra = new System.Windows.Forms.Button();
             this.buttonBookEditUpdate = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.file = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).BeginInit();
             this.SuspendLayout();
@@ -313,6 +314,10 @@ namespace KutuphaneOtomasyon
             this.label10.TabIndex = 20;
             this.label10.Text = "Resim eklemek için X simgesine tıklayınız.";
             // 
+            // file
+            // 
+            this.file.FileName = "openFileDialog1";
+            // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,5 +383,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button buttonAra;
         private System.Windows.Forms.Button buttonBookEditUpdate;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.OpenFileDialog file;
     }
 }
