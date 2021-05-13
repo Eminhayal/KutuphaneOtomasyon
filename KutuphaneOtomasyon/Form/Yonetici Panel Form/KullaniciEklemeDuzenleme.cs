@@ -45,5 +45,25 @@ namespace KutuphaneOtomasyon
         {
 
         }
+
+        private void btnUsersRemove_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtUserID.Text);
+            var kayit = db.Users.Find(id);
+
+            if (kayit == null)
+            {
+                MessageBox.Show("Bos");
+                return;
+            }
+
+            if (MessageBox.Show(kayit.Name + "Kullanıcı silinecek onaylıyor musunuz ? ",
+                " Kayıt silme onayı",
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                db.Users.Remove(kayit);
+                db.SaveChanges();
+            }
+        }
     }
 }
