@@ -63,7 +63,7 @@ namespace KutuphaneOtomasyon
 
         private bool girisdoğrula(string kEposta, string kSifre)
         {
-            DataClasses1DataContext context = new DataClasses1DataContext();
+            KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
             var sorgu = from p in context.Users
                         where p.Mail == kEposta
                         && p.Password == kSifre
