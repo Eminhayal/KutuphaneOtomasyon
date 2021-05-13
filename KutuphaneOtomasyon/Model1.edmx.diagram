@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedBooks" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedInfo" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneOtoModel.Users" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Category" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Category" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_Books_Category" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Books" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_DeliveredBooks_BooksId" ManuallyRouted="false" />

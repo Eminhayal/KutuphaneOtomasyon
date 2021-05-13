@@ -18,6 +18,7 @@ namespace KutuphaneOtomasyon
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        
 
         private void btnUsersAdd_click(object sender, EventArgs e)
         {
@@ -65,5 +66,59 @@ namespace KutuphaneOtomasyon
                 db.SaveChanges();
             }
         }
+
+        private void btnUsersSearch_Click(object sender, EventArgs e)
+        {
+            if(txtUserID.Enabled==true)
+            {
+                try
+                {
+                    int id = Convert.ToInt32(txtUserID.Text);
+                    var kayit = db.Users.Find(id);
+                    txtUserName.Text = kayit.Name.ToString();
+                    txtUserSurname.Text = kayit.Surname.ToString();
+                    txtUserPassword.Text = kayit.Password.Tostring();
+                    txtUserBirthdate.Text=kayit.BirthDate.ToDateTime();
+                    txtUserTckn.Text=kayit.Tckn.ToInt64();
+                    txtUserRegDate.Text=kayit.RegisterDate.ToDateTime();
+                    txtUserMail.Text=kayit.Mail.Tostring();
+                    txtUserNumber.Text=kayit.Telephone.ToInt64();
+                    txtUserStatus.Text=kayit.Status.ToBoolean();
+                }
+                catch
+                {
+                    MessageBox.Show("Kullanıcı ID Hatalı!");
+                }
+
+            }
+        }
+
+        private void btnUsersEdit_Click(object sender, EventArgs e)
+        {
+            btnUsersEdit.Enabled = true;
+            btnUsersSearch.Visible = true;
+
+
+        }
+
+        private void btnEditt_Click(object sender, EventArgs e)
+        {
+            btnUsersEdit.Visible = false;
+            btnEditt.Visible = true;
+
+            int id = Convert.ToInt32(txtUserID.Text);
+            var kayit = db.Users.Find(id);
+            kayit.Name = txtUserName.Text;
+            kayit.Surname = txtUserSurname.Text;
+            kayit.Password = txtUserPassword.Text;
+            txtUserBirthdate.Text = kayit.BirthDate;
+            txtUserTckn.Text = kayit.Tckn;
+            txtUserRegDate.Text = kayit.RegisterDate;
+            txtUserMail.Text = kayit.Mail;
+            txtUserNumber.Text = kayit.Telephone;
+            txtUserStatus.Text = kayit.Status;
+            db.SaveChanges();
+        }
     }
 }
+
