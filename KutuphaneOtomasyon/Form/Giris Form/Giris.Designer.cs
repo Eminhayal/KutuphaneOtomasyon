@@ -40,11 +40,13 @@ namespace KutuphaneOtomasyon
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(762, 500);
+            this.button1.Location = new System.Drawing.Point(762, 462);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 37);
+            this.button1.Size = new System.Drawing.Size(118, 37);
             this.button1.TabIndex = 1;
             this.button1.Text = "GİRİŞ";
             this.button1.UseVisualStyleBackColor = false;
@@ -76,15 +78,17 @@ namespace KutuphaneOtomasyon
             // 
             // cikisButton
             // 
-            this.cikisButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.cikisButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cikisButton.BackgroundImage")));
+            this.cikisButton.AutoEllipsis = true;
+            this.cikisButton.BackColor = System.Drawing.Color.White;
+            this.cikisButton.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.cikisButton.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.ForeColor = System.Drawing.Color.White;
-            this.cikisButton.Location = new System.Drawing.Point(783, 469);
+            this.cikisButton.Location = new System.Drawing.Point(766, 505);
             this.cikisButton.Name = "cikisButton";
-            this.cikisButton.Size = new System.Drawing.Size(85, 25);
+            this.cikisButton.Size = new System.Drawing.Size(109, 29);
             this.cikisButton.TabIndex = 3;
-            this.cikisButton.Text = "Çıkış";
+            this.cikisButton.Text = "ÇIKIŞ";
             this.cikisButton.UseVisualStyleBackColor = false;
             this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
