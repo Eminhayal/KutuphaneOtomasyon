@@ -26,11 +26,11 @@ namespace KutuphaneOtomasyon
             users.Surname = txtUserSurname.Text;
             users.Password = txtUserPassword.Text;
             users.BirthDate = Convert.ToDateTime(txtUserBirthdate.Text);
-            users.Tckn = Convert.ToInt32(txtUserTckn.Text);
+            users.Tckn = Convert.ToInt64(txtUserTckn.Text);
             users.RegisterDate = Convert.ToDateTime(txtUserRegDate.Text);
             users.Mail = txtUserMail.Text;
-            users.Telephone = Convert.ToInt32(txtUserNumber.Text);
-            users.Status = Convert.ToBoolean(txtUserStatus.Text);
+            users.Telephone = Convert.ToInt64(txtUserNumber.Text);
+            users.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text));
 
             db.Users.Add(users);
             db.SaveChanges();
