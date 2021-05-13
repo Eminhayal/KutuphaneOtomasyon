@@ -30,51 +30,53 @@ namespace KutuphaneOtomasyon
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
-            this.button1 = new System.Windows.Forms.Button();
-            this.Users = new System.Windows.Forms.RadioButton();
-            this.Admins = new System.Windows.Forms.RadioButton();
+            this.btnGiris = new System.Windows.Forms.Button();
+            this.rdUsers = new System.Windows.Forms.RadioButton();
+            this.rdAdmins = new System.Windows.Forms.RadioButton();
             this.cikisButton = new System.Windows.Forms.Button();
+            this.txtLogPass = new System.Windows.Forms.TextBox();
+            this.txtLogMail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnGiris
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(762, 462);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "GİRİŞ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGiris.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnGiris.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGiris.BackgroundImage")));
+            this.btnGiris.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnGiris.FlatAppearance.BorderSize = 0;
+            this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiris.ForeColor = System.Drawing.Color.White;
+            this.btnGiris.Location = new System.Drawing.Point(762, 462);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(118, 37);
+            this.btnGiris.TabIndex = 1;
+            this.btnGiris.Text = "GİRİŞ";
+            this.btnGiris.UseVisualStyleBackColor = false;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // Users
+            // rdUsers
             // 
-            this.Users.AutoSize = true;
-            this.Users.BackColor = System.Drawing.Color.Transparent;
-            this.Users.Location = new System.Drawing.Point(728, 295);
-            this.Users.Name = "Users";
-            this.Users.Size = new System.Drawing.Size(67, 17);
-            this.Users.TabIndex = 2;
-            this.Users.TabStop = true;
-            this.Users.Text = "Kullanıcı ";
-            this.Users.UseVisualStyleBackColor = false;
+            this.rdUsers.AutoSize = true;
+            this.rdUsers.BackColor = System.Drawing.Color.Transparent;
+            this.rdUsers.Location = new System.Drawing.Point(728, 295);
+            this.rdUsers.Name = "rdUsers";
+            this.rdUsers.Size = new System.Drawing.Size(67, 17);
+            this.rdUsers.TabIndex = 2;
+            this.rdUsers.TabStop = true;
+            this.rdUsers.Text = "Kullanıcı ";
+            this.rdUsers.UseVisualStyleBackColor = false;
             // 
-            // Admins
+            // rdAdmins
             // 
-            this.Admins.AutoSize = true;
-            this.Admins.BackColor = System.Drawing.Color.Transparent;
-            this.Admins.Location = new System.Drawing.Point(833, 295);
-            this.Admins.Name = "Admins";
-            this.Admins.Size = new System.Drawing.Size(63, 17);
-            this.Admins.TabIndex = 2;
-            this.Admins.TabStop = true;
-            this.Admins.Text = "Yönetici";
-            this.Admins.UseVisualStyleBackColor = false;
+            this.rdAdmins.AutoSize = true;
+            this.rdAdmins.BackColor = System.Drawing.Color.Transparent;
+            this.rdAdmins.Location = new System.Drawing.Point(833, 295);
+            this.rdAdmins.Name = "rdAdmins";
+            this.rdAdmins.Size = new System.Drawing.Size(63, 17);
+            this.rdAdmins.TabIndex = 2;
+            this.rdAdmins.TabStop = true;
+            this.rdAdmins.Text = "Yönetici";
+            this.rdAdmins.UseVisualStyleBackColor = false;
             // 
             // cikisButton
             // 
@@ -92,21 +94,48 @@ namespace KutuphaneOtomasyon
             this.cikisButton.UseVisualStyleBackColor = false;
             this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
             // 
+            // txtLogPass
+            // 
+            this.txtLogPass.BackColor = System.Drawing.Color.White;
+            this.txtLogPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogPass.ForeColor = System.Drawing.Color.Black;
+            this.txtLogPass.Location = new System.Drawing.Point(744, 419);
+            this.txtLogPass.Name = "txtLogPass";
+            this.txtLogPass.Size = new System.Drawing.Size(152, 13);
+            this.txtLogPass.TabIndex = 4;
+            this.txtLogPass.Click += new System.EventHandler(this.txtLogPass_Click);
+            // 
+            // txtLogMail
+            // 
+            this.txtLogMail.BackColor = System.Drawing.Color.White;
+            this.txtLogMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLogMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogMail.ForeColor = System.Drawing.Color.Black;
+            this.txtLogMail.Location = new System.Drawing.Point(744, 342);
+            this.txtLogMail.Name = "txtLogMail";
+            this.txtLogMail.Size = new System.Drawing.Size(152, 13);
+            this.txtLogMail.TabIndex = 4;
+            this.txtLogMail.Click += new System.EventHandler(this.txtLogMail_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.txtLogMail);
+            this.Controls.Add(this.txtLogPass);
             this.Controls.Add(this.cikisButton);
-            this.Controls.Add(this.Admins);
-            this.Controls.Add(this.Users);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rdAdmins);
+            this.Controls.Add(this.rdUsers);
+            this.Controls.Add(this.btnGiris);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Giris";
             this.Text = "Giris";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Giris_FormClosing);
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,9 +143,11 @@ namespace KutuphaneOtomasyon
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton Users;
-        private System.Windows.Forms.RadioButton Admins;
+        private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.RadioButton rdUsers;
+        private System.Windows.Forms.RadioButton rdAdmins;
         private System.Windows.Forms.Button cikisButton;
+        private System.Windows.Forms.TextBox txtLogPass;
+        private System.Windows.Forms.TextBox txtLogMail;
     }
 }

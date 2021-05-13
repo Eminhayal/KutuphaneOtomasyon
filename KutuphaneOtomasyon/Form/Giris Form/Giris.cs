@@ -17,23 +17,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-            // giris e posta ile olacak
-            if (Users.Checked)
-            {
-                Anasayfa anasayfa = new Anasayfa();
-                anasayfa.Show();
-                this.Hide();
-            }
-            if (Admins.Checked)
-            {
-                AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
-                anasayfaYonetici.Show();
-                this.Hide();
-            }
-        }
 
         private void Giris_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -43,6 +27,39 @@ namespace KutuphaneOtomasyon
         private void cikisButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            // giris e posta ile olacak
+            if (rdUsers.Checked)
+            {
+                Anasayfa anasayfa = new Anasayfa();
+                anasayfa.Show();
+                this.Hide();
+            }
+            if (rdAdmins.Checked)
+            {
+                AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
+                anasayfaYonetici.Show();
+                this.Hide();
+            }
+        }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+            txtLogMail.Text = "MAİL";
+            txtLogPass.Text = "ŞİFRE";
+        }
+
+        private void txtLogMail_Click(object sender, EventArgs e)
+        {
+            txtLogMail.Text = null;
+        }
+
+        private void txtLogPass_Click(object sender, EventArgs e)
+        {
+            txtLogPass.Text = null;
         }
     }
 }
