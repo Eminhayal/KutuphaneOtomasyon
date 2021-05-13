@@ -220,7 +220,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookDelete.TabIndex = 3;
             this.buttonBookDelete.Text = "Kitap Sil";
             this.buttonBookDelete.UseVisualStyleBackColor = false;
-            this.buttonBookDelete.Click += new System.EventHandler(this.buttonBookDelete_Click);
+           // this.buttonBookDelete.Click += new System.EventHandler(this.buttonBookDelete_Click);
             // 
             // buttonBookAdd
             // 

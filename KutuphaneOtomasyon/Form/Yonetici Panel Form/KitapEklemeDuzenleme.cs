@@ -72,7 +72,7 @@ namespace KutuphaneOtomasyon
             
         }
 
-        private void buttonBookDelete_Click(object sender, EventArgs e)
+        /*private void buttonBookDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBoxBookId.Text);
             var kayit = db.Books.Find(id);
@@ -91,6 +91,6 @@ namespace KutuphaneOtomasyon
                 db.SaveChanges();
             }
             
-        }
+        }*/
     }
 }
