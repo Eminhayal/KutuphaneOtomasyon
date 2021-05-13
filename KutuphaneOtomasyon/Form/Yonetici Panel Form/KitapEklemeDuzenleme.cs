@@ -72,25 +72,6 @@ namespace KutuphaneOtomasyon
             
         }
 
-        /*private void buttonBookDelete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(textBoxBookId.Text);
-            var kayit = db.Books.Find(id);
-
-            if (kayit == null)
-            {
-                MessageBox.Show("Bos");
-                return;
-            }
-
-            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? " ,
-                " Kayıt silme onayı",
-                MessageBoxButtons.YesNo)== DialogResult.Yes)
-            {
-                db.Books.Remove(kayit);
-                db.SaveChanges();
-            }
-            
-        }*/
+        
     }
 }
