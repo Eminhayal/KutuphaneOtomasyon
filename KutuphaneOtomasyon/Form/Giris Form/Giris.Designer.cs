@@ -110,8 +110,8 @@ namespace KutuphaneOtomasyon
             // 
             this.txtLogMail.BackColor = System.Drawing.Color.White;
             this.txtLogMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLogMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogMail.ForeColor = System.Drawing.Color.Gray;
+            this.txtLogMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtLogMail.ForeColor = System.Drawing.Color.Black;
             this.txtLogMail.Location = new System.Drawing.Point(743, 339);
             this.txtLogMail.Name = "txtLogMail";
             this.txtLogMail.Size = new System.Drawing.Size(152, 20);

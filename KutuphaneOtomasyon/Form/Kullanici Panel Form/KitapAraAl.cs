@@ -18,10 +18,11 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=KitapAra;Integrated Security=True");
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+
         private void verilerigoster()
         {
-            SqlConnection baglanti = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=KitapAra;Integrated Security=True");
+            SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-DQ0AR7O\SQLEXPRESS;Initial Catalog=KitapAra;Integrated Security=True");
 
          
             

@@ -128,7 +128,7 @@ namespace KutuphaneOtomasyon
 
         public void AddBook()
         {
-            Books book = new Books();
+            Book book = new Book();
             book.Name = textBoxBookName.Text;
             book.Writer = textBoxWriter.Text;
             book.Publisher = textBoxPublisher.Text;
