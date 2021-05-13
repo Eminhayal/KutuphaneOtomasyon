@@ -17,23 +17,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-            // giris e posta ile olacak
-            if (Users.Checked)
-            {
-                Anasayfa anasayfa = new Anasayfa();
-                anasayfa.Show();
-                this.Hide();
-            }
-            if (Admins.Checked)
-            {
-                AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
-                anasayfaYonetici.Show();
-                this.Hide();
-            }
-        }
 
         private void Giris_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -43,6 +27,73 @@ namespace KutuphaneOtomasyon
         private void cikisButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+        IDbConnection con;
+        IDbCommand com;
+        IDataReader dr;
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text))
+            {
+                Anasayfa ana = new Anasayfa();
+                ana.Show();
+            }
+            else
+            {
+                MessageBox.Show("E posta yada şifre hatalı");
+            }
+
+
+
+            /* giris e posta ile olacak
+            if (rdUsers.Checked)
+            {
+            Anasayfa anasayfa = new Anasayfa();
+            anasayfa.Show();
+            this.Hide();
+            }
+            if (rdAdmins.Checked)
+            {
+            AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
+            anasayfaYonetici.Show();
+             this.Hide();
+            }*/
+        }
+
+        private bool girisdoğrula(string kEposta, string kSifre)
+        {
+            DataClasses1DataContext context = new DataClasses1DataContext();
+            var sorgu = from p in context.Users
+                        where p.Mail == kEposta
+                        && p.Password == kSifre
+                        select p;
+            if (sorgu.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+            txtLogMail.Text = "e-posta";
+            txtLogPass.Text = "şifre";
+        }
+
+        private void txtLogMail_Click(object sender, EventArgs e)
+        {
+            txtLogMail.Text = null;
+        }
+
+        private void txtLogPass_Click(object sender, EventArgs e)
+        {
+            txtLogPass.Text = null;
         }
     }
 }

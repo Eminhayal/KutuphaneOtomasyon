@@ -4,20 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="db19e2e987024be08d7adde880a7f7c7" Name="Diagram1">
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Admins" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Books" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Confirm" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.DeliveredBooks" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedBooks" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedInfo" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Users" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneOtoModel.Category" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="95ed8487b44c4c7eb1647d060d16c100" Name="Diagram1">
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Admin" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Book" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Confirm" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.DeliveredBook" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedBook" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.EntrustedInfo" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.User" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneOtoModel.Category" Width="1.5" PointX="2.75" PointY="8.125" IsExpanded="true" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_Books_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Books1" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_DeliveredBooks_BooksId" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedBooks_BookId" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedInfo_BookId" ManuallyRouted="false" />
+        <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Users" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_DeliveredBooks_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedBooks_UserId" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedInfo_DeliveredId" ManuallyRouted="false" />

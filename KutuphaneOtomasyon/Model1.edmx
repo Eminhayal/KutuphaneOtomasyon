@@ -48,9 +48,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="int" Nullable="false" />
+          <Property Name="BookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DeliveryConfirm" Type="bit" Nullable="false" />
           <Property Name="EntrustConfirm" Type="bit" Nullable="false" />
+          <Property Name="UserId" Type="int" />
         </EntityType>
         <EntityType Name="DeliveredBooks">
           <Key>
@@ -110,7 +111,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Confirm_Books">
+        <Association Name="FK_Confirm_Books1">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
           <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -119,6 +120,18 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </Principal>
             <Dependent Role="Confirm">
               <PropertyRef Name="BookId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Confirm_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Confirm">
+              <PropertyRef Name="UserId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -224,8 +237,12 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             <End Role="Books" EntitySet="Books" />
             <End Role="Books1" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
+          <AssociationSet Name="FK_Confirm_Books1" Association="Self.FK_Confirm_Books1">
             <End Role="Books" EntitySet="Books" />
+            <End Role="Confirm" EntitySet="Confirm" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Confirm_Users" Association="Self.FK_Confirm_Users">
+            <End Role="Users" EntitySet="Users" />
             <End Role="Confirm" EntitySet="Confirm" />
           </AssociationSet>
           <AssociationSet Name="FK_DeliveredBooks_BooksId" Association="Self.FK_DeliveredBooks_BooksId">
@@ -262,7 +279,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KutuphaneOtoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Admins">
+        <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="AdminId" />
           </Key>
@@ -277,7 +294,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="Telephone" Type="Int64" Nullable="false" />
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <EntityType Name="Books">
+        <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
@@ -291,22 +308,24 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Books1" Relationship="Self.FK_Books_Category" FromRole="Books" ToRole="Books1" />
-          <NavigationProperty Name="Books2" Relationship="Self.FK_Books_Category" FromRole="Books1" ToRole="Books" />
-          <NavigationProperty Name="Confirm" Relationship="Self.FK_Confirm_Books" FromRole="Books" ToRole="Confirm" />
+          <NavigationProperty Name="Book1" Relationship="Self.FK_Books_Category" FromRole="Books1" ToRole="Books" />
+          <NavigationProperty Name="Confirm" Relationship="Self.FK_Confirm_Books1" FromRole="Books" ToRole="Confirm" />
           <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_BooksId" FromRole="Books" ToRole="DeliveredBooks" />
           <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_BookId" FromRole="Books" ToRole="EntrustedBooks" />
-          <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="Books" ToRole="EntrustedInfo" />
+          <NavigationProperty Name="EntrustedInfoes" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="Books" ToRole="EntrustedInfo" />
         </EntityType>
         <EntityType Name="Confirm">
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DeliveryConfirm" Type="Boolean" Nullable="false" />
           <Property Name="EntrustConfirm" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
+          <Property Name="UserId" Type="Int32" />
+          <NavigationProperty Name="Book" Relationship="Self.FK_Confirm_Books1" FromRole="Confirm" ToRole="Books" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Confirm_Users" FromRole="Confirm" ToRole="Users" />
         </EntityType>
-        <EntityType Name="DeliveredBooks">
+        <EntityType Name="DeliveredBook">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -316,10 +335,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_DeliveredBooks_BooksId" FromRole="DeliveredBooks" ToRole="Books" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_DeliveredBooks_UserId" FromRole="DeliveredBooks" ToRole="Users" />
+          <NavigationProperty Name="Book" Relationship="Self.FK_DeliveredBooks_BooksId" FromRole="DeliveredBooks" ToRole="Books" />
+          <NavigationProperty Name="User" Relationship="Self.FK_DeliveredBooks_UserId" FromRole="DeliveredBooks" ToRole="Users" />
         </EntityType>
-        <EntityType Name="EntrustedBooks">
+        <EntityType Name="EntrustedBook">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -329,8 +348,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeadLine" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_EntrustedBooks_BookId" FromRole="EntrustedBooks" ToRole="Books" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="EntrustedBooks" ToRole="Users" />
+          <NavigationProperty Name="Book" Relationship="Self.FK_EntrustedBooks_BookId" FromRole="EntrustedBooks" ToRole="Books" />
+          <NavigationProperty Name="User" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="EntrustedBooks" ToRole="Users" />
           <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_DeliveredId" FromRole="EntrustedBooks" ToRole="EntrustedInfo" />
         </EntityType>
         <EntityType Name="EntrustedInfo">
@@ -340,11 +359,11 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="DeliveredId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="EntrustedInfo" ToRole="Books" />
-          <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedInfo_DeliveredId" FromRole="EntrustedInfo" ToRole="EntrustedBooks" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="EntrustedInfo" ToRole="Users" />
+          <NavigationProperty Name="Book" Relationship="Self.FK_EntrustedInfo_BookId" FromRole="EntrustedInfo" ToRole="Books" />
+          <NavigationProperty Name="EntrustedBook" Relationship="Self.FK_EntrustedInfo_DeliveredId" FromRole="EntrustedInfo" ToRole="EntrustedBooks" />
+          <NavigationProperty Name="User" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="EntrustedInfo" ToRole="Users" />
         </EntityType>
-        <EntityType Name="Users">
+        <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
@@ -359,9 +378,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="Telephone" Type="Int64" Nullable="false" />
           <Property Name="Status" Type="Boolean" />
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Confirms" Relationship="Self.FK_Confirm_Users" FromRole="Users" ToRole="Confirm" />
           <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_UserId" FromRole="Users" ToRole="DeliveredBooks" />
           <NavigationProperty Name="EntrustedBooks" Relationship="Self.FK_EntrustedBooks_UserId" FromRole="Users" ToRole="EntrustedBooks" />
-          <NavigationProperty Name="EntrustedInfo" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="Users" ToRole="EntrustedInfo" />
+          <NavigationProperty Name="EntrustedInfoes" Relationship="Self.FK_EntrustedInfo_UserId" FromRole="Users" ToRole="EntrustedInfo" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -372,8 +392,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <Association Name="FK_Books_Category">
-          <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="Books1" Type="Self.Books" Multiplicity="0..1" />
+          <End Role="Books" Type="Self.Book" Multiplicity="1" />
+          <End Role="Books1" Type="Self.Book" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="BookId" />
@@ -383,8 +403,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Confirm_Books">
-          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+        <Association Name="FK_Confirm_Books1">
+          <End Role="Books" Type="Self.Book" Multiplicity="1" />
           <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Books">
@@ -396,8 +416,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DeliveredBooks_BooksId">
-          <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <End Role="Books" Type="Self.Book" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBook" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="BookId" />
@@ -408,8 +428,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EntrustedBooks_BookId">
-          <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
+          <End Role="Books" Type="Self.Book" Multiplicity="1" />
+          <End Role="EntrustedBooks" Type="Self.EntrustedBook" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="BookId" />
@@ -420,7 +440,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EntrustedInfo_BookId">
-          <End Role="Books" Type="Self.Books" Multiplicity="1" />
+          <End Role="Books" Type="Self.Book" Multiplicity="1" />
           <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Books">
@@ -431,9 +451,21 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Confirm_Users">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Confirm">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DeliveredBooks_UserId">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="*" />
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBook" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
               <PropertyRef Name="UserId" />
@@ -444,8 +476,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EntrustedBooks_UserId">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
-          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="*" />
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="EntrustedBooks" Type="Self.EntrustedBook" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
               <PropertyRef Name="UserId" />
@@ -456,7 +488,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EntrustedInfo_DeliveredId">
-          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="1" />
+          <End Role="EntrustedBooks" Type="Self.EntrustedBook" Multiplicity="1" />
           <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="EntrustedBooks">
@@ -468,7 +500,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_EntrustedInfo_UserId">
-          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
           <End Role="EntrustedInfo" Type="Self.EntrustedInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -480,21 +512,21 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="KutuphaneOtoEntities3" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Admins" EntityType="Self.Admins" />
-          <EntitySet Name="Books" EntityType="Self.Books" />
-          <EntitySet Name="Confirm" EntityType="Self.Confirm" />
-          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" />
-          <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
-          <EntitySet Name="EntrustedInfo" EntityType="Self.EntrustedInfo" />
-          <EntitySet Name="Users" EntityType="Self.Users" />
-          <EntitySet Name="Category" EntityType="Self.Category" />
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="Confirms" EntityType="Self.Confirm" />
+          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBook" />
+          <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBook" />
+          <EntitySet Name="EntrustedInfoes" EntityType="Self.EntrustedInfo" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
           <AssociationSet Name="FK_Books_Category" Association="Self.FK_Books_Category">
             <End Role="Books" EntitySet="Books" />
             <End Role="Books1" EntitySet="Books" />
           </AssociationSet>
-          <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
+          <AssociationSet Name="FK_Confirm_Books1" Association="Self.FK_Confirm_Books1">
             <End Role="Books" EntitySet="Books" />
-            <End Role="Confirm" EntitySet="Confirm" />
+            <End Role="Confirm" EntitySet="Confirms" />
           </AssociationSet>
           <AssociationSet Name="FK_DeliveredBooks_BooksId" Association="Self.FK_DeliveredBooks_BooksId">
             <End Role="Books" EntitySet="Books" />
@@ -506,7 +538,11 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </AssociationSet>
           <AssociationSet Name="FK_EntrustedInfo_BookId" Association="Self.FK_EntrustedInfo_BookId">
             <End Role="Books" EntitySet="Books" />
-            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Confirm_Users" Association="Self.FK_Confirm_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Confirm" EntitySet="Confirms" />
           </AssociationSet>
           <AssociationSet Name="FK_DeliveredBooks_UserId" Association="Self.FK_DeliveredBooks_UserId">
             <End Role="Users" EntitySet="Users" />
@@ -518,11 +554,11 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           </AssociationSet>
           <AssociationSet Name="FK_EntrustedInfo_DeliveredId" Association="Self.FK_EntrustedInfo_DeliveredId">
             <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
-            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfoes" />
           </AssociationSet>
           <AssociationSet Name="FK_EntrustedInfo_UserId" Association="Self.FK_EntrustedInfo_UserId">
             <End Role="Users" EntitySet="Users" />
-            <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
+            <End Role="EntrustedInfo" EntitySet="EntrustedInfoes" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -532,7 +568,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities3">
           <EntitySetMapping Name="Admins">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.Admins">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.Admin">
               <MappingFragment StoreEntitySet="Admins">
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -548,7 +584,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Books">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.Books">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.Book">
               <MappingFragment StoreEntitySet="Books">
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -562,17 +598,18 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Confirm">
+          <EntitySetMapping Name="Confirms">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Confirm">
               <MappingFragment StoreEntitySet="Confirm">
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="DeliveryConfirm" ColumnName="DeliveryConfirm" />
                 <ScalarProperty Name="EntrustConfirm" ColumnName="EntrustConfirm" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DeliveredBooks">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBook">
               <MappingFragment StoreEntitySet="DeliveredBooks">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
@@ -584,7 +621,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EntrustedBooks">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedBooks">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedBook">
               <MappingFragment StoreEntitySet="EntrustedBooks">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
@@ -595,7 +632,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="EntrustedInfo">
+          <EntitySetMapping Name="EntrustedInfoes">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedInfo">
               <MappingFragment StoreEntitySet="EntrustedInfo">
                 <ScalarProperty Name="DeliveredId" ColumnName="DeliveredId" />
@@ -605,7 +642,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.Users">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -621,7 +658,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Category">
+          <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -643,7 +680,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

@@ -12,33 +12,34 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Book
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users()
+        public Book()
         {
-            this.DeliveredBooks = new HashSet<DeliveredBooks>();
-            this.EntrustedBooks = new HashSet<EntrustedBooks>();
-            this.EntrustedInfo = new HashSet<EntrustedInfo>();
+            this.DeliveredBooks = new HashSet<DeliveredBook>();
+            this.EntrustedBooks = new HashSet<EntrustedBook>();
+            this.EntrustedInfoes = new HashSet<EntrustedInfo>();
         }
     
-        public int UserId { get; set; }
+        public int BookId { get; set; }
         public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Password { get; set; }
-        public System.DateTime BirthDate { get; set; }
-        public long Tckn { get; set; }
-        public System.DateTime RegisterDate { get; set; }
-        public string Mail { get; set; }
-        public long Telephone { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public string Publisher { get; set; }
+        public string Writer { get; set; }
+        public short PageNo { get; set; }
+        public string Category { get; set; }
+        public string SaloonShelf { get; set; }
         public byte[] Image { get; set; }
+        public bool Status { get; set; }
     
+        public virtual Book Books1 { get; set; }
+        public virtual Book Book1 { get; set; }
+        public virtual Confirm Confirm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DeliveredBooks> DeliveredBooks { get; set; }
+        public virtual ICollection<DeliveredBook> DeliveredBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedBooks> EntrustedBooks { get; set; }
+        public virtual ICollection<EntrustedBook> EntrustedBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedInfo> EntrustedInfo { get; set; }
+        public virtual ICollection<EntrustedInfo> EntrustedInfoes { get; set; }
     }
 }

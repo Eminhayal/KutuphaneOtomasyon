@@ -165,7 +165,7 @@ namespace KutuphaneOtomasyon
             this.btnUsersAdd.BackColor = System.Drawing.Color.Transparent;
             this.btnUsersAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsersAdd.BackgroundImage")));
             this.btnUsersAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsersAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUsersAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnUsersAdd.ForeColor = System.Drawing.Color.Transparent;
             this.btnUsersAdd.Location = new System.Drawing.Point(548, 141);
             this.btnUsersAdd.Name = "btnUsersAdd";
@@ -314,7 +314,7 @@ namespace KutuphaneOtomasyon
             this.btnUsersSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsersSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsersSearch.ForeColor = System.Drawing.Color.White;
-            this.btnUsersSearch.Location = new System.Drawing.Point(548, 98);
+            this.btnUsersSearch.Location = new System.Drawing.Point(548, 93);
             this.btnUsersSearch.Name = "btnUsersSearch";
             this.btnUsersSearch.Size = new System.Drawing.Size(173, 35);
             this.btnUsersSearch.TabIndex = 26;

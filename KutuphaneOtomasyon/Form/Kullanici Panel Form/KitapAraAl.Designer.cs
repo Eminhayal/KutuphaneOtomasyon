@@ -120,7 +120,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(866, 163);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(104, 168);
+            this.pictureBox4.Size = new System.Drawing.Size(143, 158);
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
             // 
@@ -129,7 +129,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(564, 163);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(104, 168);
+            this.pictureBox3.Size = new System.Drawing.Size(137, 158);
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             // 
@@ -138,7 +138,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(299, 163);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 168);
+            this.pictureBox2.Size = new System.Drawing.Size(143, 158);
             this.pictureBox2.TabIndex = 29;
             this.pictureBox2.TabStop = false;
             // 
@@ -147,7 +147,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(33, 163);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 168);
+            this.pictureBox1.Size = new System.Drawing.Size(142, 158);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
@@ -235,7 +235,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(1138, 163);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(104, 168);
+            this.pictureBox5.Size = new System.Drawing.Size(145, 168);
             this.pictureBox5.TabIndex = 31;
             this.pictureBox5.TabStop = false;
             // 
