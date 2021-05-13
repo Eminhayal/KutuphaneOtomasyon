@@ -44,7 +44,11 @@ namespace KutuphaneOtomasyon
                 MessageBox.Show("E posta yada şifre hatalı");
             }
 
-
+             if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
+            {
+                AnasayfaYonetici anayon = new AnasayfaYonetici();
+                anayon.Show();
+            }
 
             /* giris e posta ile olacak
             if (rdUsers.Checked)
@@ -77,23 +81,43 @@ namespace KutuphaneOtomasyon
                 return false;
             }
         }
-
+         private bool girisdoğrulaiki(string yEposta, string ySifre)
+        {
+            KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
+            var sorgus = from p in context.Admins
+                         where p.Mail == yEposta
+                         && p.Password == ySifre
+                         select p;
+            if(sorgus.Any())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
 
         private void Giris_Load(object sender, EventArgs e)
         {
             txtLogMail.Text = "e-posta";
+            txtLogMail.ForeColor = Color.Gray;
             txtLogPass.Text = "şifre";
+            txtLogPass.ForeColor = Color.Gray;
         }
 
         private void txtLogMail_Click(object sender, EventArgs e)
         {
             txtLogMail.Text = null;
+            txtLogMail.ForeColor = Color.Black;
         }
 
         private void txtLogPass_Click(object sender, EventArgs e)
         {
             txtLogPass.Text = null;
+            txtLogPass.ForeColor = Color.Black;
+          
         }
     }
 }

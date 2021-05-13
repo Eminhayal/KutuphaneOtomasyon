@@ -98,7 +98,7 @@ namespace KutuphaneOtomasyon
             // 
             this.txtLogPass.BackColor = System.Drawing.Color.White;
             this.txtLogPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLogPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogPass.ForeColor = System.Drawing.Color.Gray;
             this.txtLogPass.Location = new System.Drawing.Point(743, 415);
             this.txtLogPass.Name = "txtLogPass";
