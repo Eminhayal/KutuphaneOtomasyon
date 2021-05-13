@@ -56,5 +56,12 @@ namespace KutuphaneOtomasyon
             panelKullanici.Controls.Add(kitapTeslimEtme);
             kitapTeslimEtme.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Giris giris = new Giris();
+            giris.Show();
+            this.Hide();
+        }
     }
 }

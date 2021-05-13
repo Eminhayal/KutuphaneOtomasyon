@@ -41,7 +41,7 @@ namespace KutuphaneOtomasyon
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnUsersAdd = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnUsersRemove = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -188,18 +188,19 @@ namespace KutuphaneOtomasyon
             this.btnUsersAdd.UseVisualStyleBackColor = false;
             this.btnUsersAdd.Click += new System.EventHandler(this.btnUsersAdd_click);
             // 
-            // button3
+            // btnUsersRemove
             // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(805, 471);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(173, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Kullanıcı Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUsersRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUsersRemove.BackgroundImage")));
+            this.btnUsersRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsersRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUsersRemove.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUsersRemove.Location = new System.Drawing.Point(805, 471);
+            this.btnUsersRemove.Name = "btnUsersRemove";
+            this.btnUsersRemove.Size = new System.Drawing.Size(173, 46);
+            this.btnUsersRemove.TabIndex = 2;
+            this.btnUsersRemove.Text = "Kullanıcı Sil";
+            this.btnUsersRemove.UseVisualStyleBackColor = true;
+            this.btnUsersRemove.Click += new System.EventHandler(this.btnUsersRemove_Click);
             // 
             // button4
             // 
@@ -348,7 +349,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.button10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnUsersRemove);
             this.Controls.Add(this.btnUsersAdd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
@@ -381,7 +382,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnUsersAdd;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnUsersRemove;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button10;
