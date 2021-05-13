@@ -38,12 +38,15 @@ namespace KutuphaneOtomasyon
             {
                 Anasayfa ana = new Anasayfa();
                 ana.Show();
+                this.Hide();
+                
             }
 
-            if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
+            else if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
             {
                 AnasayfaYonetici anayon = new AnasayfaYonetici();
                 anayon.Show();
+                this.Hide();
             }
             else
             {
