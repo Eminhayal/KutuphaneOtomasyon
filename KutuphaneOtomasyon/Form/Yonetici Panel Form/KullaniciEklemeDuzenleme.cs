@@ -77,13 +77,21 @@ namespace KutuphaneOtomasyon
                     var kayit = db.Users.Find(id);
                     txtUserName.Text = kayit.Name.ToString();
                     txtUserSurname.Text = kayit.Surname.ToString();
-                    txtUserPassword.Text = kayit.Password.Tostring();
-                    txtUserBirthdate.Text=kayit.BirthDate.ToDateTime();
-                    txtUserTckn.Text=kayit.Tckn.ToInt64();
-                    txtUserRegDate.Text=kayit.RegisterDate.ToDateTime();
-                    txtUserMail.Text=kayit.Mail.Tostring();
-                    txtUserNumber.Text=kayit.Telephone.ToInt64();
-                    txtUserStatus.Text=kayit.Status.ToBoolean();
+                    txtUserPassword.Text = kayit.Password.ToString();
+                    txtUserBirthdate.Text= kayit.BirthDate.ToLongDateString(); 
+                    txtUserTckn.Text=kayit.Tckn.ToString();
+                    txtUserRegDate.Text=kayit.RegisterDate.ToLongDateString();
+                    txtUserMail.Text=kayit.Mail.ToString();
+                    txtUserNumber.Text=kayit.Telephone.ToString();
+                    txtUserStatus.Text = kayit.Status.ToString();
+
+                    txtUserID.Enabled = false;
+                    btnUsersSearch.Visible = false;
+                    btnUsersEdit.Visible = false;
+                    btnEditt.Visible = true;
+
+
+
                 }
                 catch
                 {
@@ -97,6 +105,7 @@ namespace KutuphaneOtomasyon
         {
             btnUsersEdit.Enabled = true;
             btnUsersSearch.Visible = true;
+            txtUserID.Enabled = true;
 
 
         }
@@ -111,13 +120,23 @@ namespace KutuphaneOtomasyon
             kayit.Name = txtUserName.Text;
             kayit.Surname = txtUserSurname.Text;
             kayit.Password = txtUserPassword.Text;
-            txtUserBirthdate.Text = kayit.BirthDate;
-            txtUserTckn.Text = kayit.Tckn;
-            txtUserRegDate.Text = kayit.RegisterDate;
-            txtUserMail.Text = kayit.Mail;
-            txtUserNumber.Text = kayit.Telephone;
-            txtUserStatus.Text = kayit.Status;
+            kayit.BirthDate = Convert.ToDateTime(txtUserBirthdate.Text);
+            kayit.Tckn =Convert.ToInt64(txtUserTckn.Text) ;
+            kayit.RegisterDate =Convert.ToDateTime(txtUserRegDate.Text);
+            kayit.Mail = txtUserMail.Text;
+            kayit.Telephone = Convert.ToInt64(txtUserNumber.Text); 
+            //kayit.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text)); 
             db.SaveChanges();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
+            file.Title = "ayemkutuphane ";
+            file.ShowDialog();
+            string filePath = file.FileName;
+            pictureBox1.ImageLocation = filePath;
         }
     }
 }
