@@ -21,5 +21,10 @@ namespace KutuphaneOtomasyon
         {
 
         }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

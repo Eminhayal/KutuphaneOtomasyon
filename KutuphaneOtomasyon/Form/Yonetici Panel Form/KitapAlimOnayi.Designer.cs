@@ -36,7 +36,7 @@ namespace KutuphaneOtomasyon
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonConfirm = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -115,19 +115,20 @@ namespace KutuphaneOtomasyon
             this.label6.TabIndex = 1;
             this.label6.Text = "Son Teslim Tarihi";
             // 
-            // button1
+            // buttonConfirm
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(871, 461);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(379, 65);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Kitap Alımını Onayla";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.buttonConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonConfirm.BackgroundImage")));
+            this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonConfirm.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonConfirm.Location = new System.Drawing.Point(871, 461);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(379, 65);
+            this.buttonConfirm.TabIndex = 3;
+            this.buttonConfirm.Text = "Kitap Alımını Onayla";
+            this.buttonConfirm.UseVisualStyleBackColor = false;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // pictureBox1
             // 
@@ -213,7 +214,7 @@ namespace KutuphaneOtomasyon
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
@@ -241,7 +242,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label7;
