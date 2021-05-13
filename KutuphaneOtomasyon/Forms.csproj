@@ -58,10 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admins.cs">
+    <Compile Include="Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Books.cs">
+    <Compile Include="Book.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
@@ -70,10 +70,10 @@
     <Compile Include="Confirm.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DeliveredBooks.cs">
+    <Compile Include="DeliveredBook.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntrustedBooks.cs">
+    <Compile Include="EntrustedBook.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="EntrustedInfo.cs">
@@ -173,7 +173,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\Giris Form\Anasayfa.resx">

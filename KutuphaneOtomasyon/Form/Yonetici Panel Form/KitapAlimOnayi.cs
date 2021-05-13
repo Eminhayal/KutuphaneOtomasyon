@@ -35,13 +35,23 @@ namespace KutuphaneOtomasyon
                 if (textBoxSearchId != null)
                 {
                     var id = Convert.ToInt32(textBoxSearchId.Text);
-                    var book1 = db.Books.Find(id);
-                    var user1 = db.Users.Find(book1.BookId);
 
-                    labelBookId.Text = book1.BookId.ToString();
-                    labelBookName.Text = book1.Name;
+                    var confirm = db.Confirms.Find(id);
+
+                    labelBookId.Text = confirm.BookId.ToString();
+                    labelBookName.Text = confirm.Book.Name;
+                    labelUserName.Text = confirm.User.Name;
+                    labelUserId.Text = confirm.UserId.ToString();
+
+
+
+                    //var book1 = db.Books.Find(id);
+                    //var user1 = db.Users.Find(book1.BookId);
+
+                    // labelBookId.Text = book1.BookId.ToString();
+                    //labelBookName.Text = book1.Name;
                     //labelUserId.Text = user1.UserId.ToString();
-                    labelUserName.Text = user1.Name;
+                    //labelUserName.Text = user1.Name;
                 }
             }
         }
