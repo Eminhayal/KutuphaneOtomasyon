@@ -17,8 +17,8 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-
-
+        KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
+        public static string mail;
         private void Giris_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -31,11 +31,34 @@ namespace KutuphaneOtomasyon
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
+            
+            if (girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
             {
                 Anasayfa ana = new Anasayfa();
                 ana.Show();
                 this.Hide();
+
+                
+                //User user = new User();
+                //if (user.Mail == txtLogMail.Text)
+                //{
+                //    id = user.UserId;
+                //}
+
+                //user = context.Users.Find(id);
+                
+                
+                //    FormProfil.id = user.UserId;
+                //    FormProfil.name = user.Name;
+                //    FormProfil.surname = user.Surname;
+                //    FormProfil.birthDate = user.BirthDate;
+                //    FormProfil.registerDate = user.RegisterDate;
+                //    FormProfil.mail = user.Mail;
+                //    FormProfil.tckn =  user.Tckn;
+                //    FormProfil.phone = user.Telephone;
+                //   // FormProfil.status = user.Status;
+                
+            
                 
             }
 
@@ -44,6 +67,7 @@ namespace KutuphaneOtomasyon
                 AnasayfaYonetici anayon = new AnasayfaYonetici();
                 anayon.Show();
                 this.Hide();
+                mail = txtLogMail.Text;
             }
             else
             {
@@ -68,7 +92,7 @@ namespace KutuphaneOtomasyon
 
         private bool girisdoğrula(string kEposta, string kSifre)
         {
-            KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
+          
             var sorgu = from p in context.Users
                         where p.Mail == kEposta
                         && p.Password == kSifre
@@ -91,6 +115,7 @@ namespace KutuphaneOtomasyon
                          where p.Mail == yEposta
                          && p.Password == ySifre
                          select p;
+            
             if(sorgus.Any())
             {
                 return true;

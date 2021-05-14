@@ -29,7 +29,6 @@ namespace KutuphaneOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,32 +39,18 @@ namespace KutuphaneOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.labelUserSurname = new System.Windows.Forms.Label();
+            this.labelUserBirthDate = new System.Windows.Forms.Label();
+            this.labelUserTckn = new System.Windows.Forms.Label();
+            this.labelUserId = new System.Windows.Forms.Label();
+            this.labelUserMail = new System.Windows.Forms.Label();
+            this.labelUserPhone = new System.Windows.Forms.Label();
+            this.labelUserStatus = new System.Windows.Forms.Label();
+            this.pictureBoxImage = new System.Windows.Forms.PictureBox();
+            this.labelUserRegisterDate = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 54.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(1151, 430);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 83);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "15";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -188,144 +173,129 @@ namespace KutuphaneOtomasyon
             this.label11.TabIndex = 0;
             this.label11.Text = "ÖĞRENİM DURUMU";
             // 
-            // label12
+            // labelUserName
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(363, 106);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 24);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "YASİN";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserName.ForeColor = System.Drawing.Color.Black;
+            this.labelUserName.Location = new System.Drawing.Point(363, 106);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(65, 24);
+            this.labelUserName.TabIndex = 0;
+            this.labelUserName.Text = "YASİN";
+            this.labelUserName.Click += new System.EventHandler(this.label12_Click);
             // 
-            // label13
+            // labelUserSurname
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(363, 161);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 24);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "KILIÇ";
+            this.labelUserSurname.AutoSize = true;
+            this.labelUserSurname.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserSurname.ForeColor = System.Drawing.Color.Black;
+            this.labelUserSurname.Location = new System.Drawing.Point(363, 161);
+            this.labelUserSurname.Name = "labelUserSurname";
+            this.labelUserSurname.Size = new System.Drawing.Size(53, 24);
+            this.labelUserSurname.TabIndex = 0;
+            this.labelUserSurname.Text = "KILIÇ";
             // 
-            // label14
+            // labelUserBirthDate
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(363, 211);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 24);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "25.03.1998";
+            this.labelUserBirthDate.AutoSize = true;
+            this.labelUserBirthDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserBirthDate.ForeColor = System.Drawing.Color.Black;
+            this.labelUserBirthDate.Location = new System.Drawing.Point(363, 211);
+            this.labelUserBirthDate.Name = "labelUserBirthDate";
+            this.labelUserBirthDate.Size = new System.Drawing.Size(100, 24);
+            this.labelUserBirthDate.TabIndex = 0;
+            this.labelUserBirthDate.Text = "25.03.1998";
             // 
-            // label15
+            // labelUserTckn
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(363, 267);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 24);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "72919084358";
+            this.labelUserTckn.AutoSize = true;
+            this.labelUserTckn.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserTckn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserTckn.ForeColor = System.Drawing.Color.Black;
+            this.labelUserTckn.Location = new System.Drawing.Point(363, 267);
+            this.labelUserTckn.Name = "labelUserTckn";
+            this.labelUserTckn.Size = new System.Drawing.Size(120, 24);
+            this.labelUserTckn.TabIndex = 0;
+            this.labelUserTckn.Text = "72919084358";
             // 
-            // label16
+            // labelUserId
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(363, 314);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 24);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "m195036049";
+            this.labelUserId.AutoSize = true;
+            this.labelUserId.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserId.ForeColor = System.Drawing.Color.Black;
+            this.labelUserId.Location = new System.Drawing.Point(363, 314);
+            this.labelUserId.Name = "labelUserId";
+            this.labelUserId.Size = new System.Drawing.Size(116, 24);
+            this.labelUserId.TabIndex = 0;
+            this.labelUserId.Text = "m195036049";
             // 
-            // label17
+            // labelUserMail
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(363, 367);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 24);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "15.04.2021";
+            this.labelUserMail.AutoSize = true;
+            this.labelUserMail.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserMail.ForeColor = System.Drawing.Color.Black;
+            this.labelUserMail.Location = new System.Drawing.Point(363, 415);
+            this.labelUserMail.Name = "labelUserMail";
+            this.labelUserMail.Size = new System.Drawing.Size(191, 24);
+            this.labelUserMail.TabIndex = 0;
+            this.labelUserMail.Text = "kilic.yasn@gmail.com";
             // 
-            // label18
+            // labelUserPhone
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(363, 415);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(191, 24);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "kilic.yasn@gmail.com";
+            this.labelUserPhone.AutoSize = true;
+            this.labelUserPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserPhone.ForeColor = System.Drawing.Color.Black;
+            this.labelUserPhone.Location = new System.Drawing.Point(363, 462);
+            this.labelUserPhone.Name = "labelUserPhone";
+            this.labelUserPhone.Size = new System.Drawing.Size(130, 24);
+            this.labelUserPhone.TabIndex = 0;
+            this.labelUserPhone.Text = "0534 697 0287";
             // 
-            // label19
+            // labelUserStatus
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(363, 462);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(130, 24);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "0534 697 0287";
+            this.labelUserStatus.AutoSize = true;
+            this.labelUserStatus.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
+            this.labelUserStatus.Location = new System.Drawing.Point(363, 508);
+            this.labelUserStatus.Name = "labelUserStatus";
+            this.labelUserStatus.Size = new System.Drawing.Size(128, 24);
+            this.labelUserStatus.TabIndex = 0;
+            this.labelUserStatus.Text = "Devam Ediyor";
             // 
-            // label20
+            // pictureBoxImage
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
-            this.label20.Location = new System.Drawing.Point(363, 508);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(128, 24);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Devam Ediyor";
+            this.pictureBoxImage.Location = new System.Drawing.Point(999, 84);
+            this.pictureBoxImage.Name = "pictureBoxImage";
+            this.pictureBoxImage.Size = new System.Drawing.Size(143, 162);
+            this.pictureBoxImage.TabIndex = 2;
+            this.pictureBoxImage.TabStop = false;
             // 
-            // pictureBox1
+            // labelUserRegisterDate
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(880, 176);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 162);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label21.Location = new System.Drawing.Point(753, 462);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(355, 42);
-            this.label21.TabIndex = 13;
-            this.label21.Text = "Okunan Kitap Sayısı";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label21.Click += new System.EventHandler(this.label21_Click);
+            this.labelUserRegisterDate.AutoSize = true;
+            this.labelUserRegisterDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelUserRegisterDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelUserRegisterDate.ForeColor = System.Drawing.Color.Black;
+            this.labelUserRegisterDate.Location = new System.Drawing.Point(363, 367);
+            this.labelUserRegisterDate.Name = "labelUserRegisterDate";
+            this.labelUserRegisterDate.Size = new System.Drawing.Size(100, 24);
+            this.labelUserRegisterDate.TabIndex = 0;
+            this.labelUserRegisterDate.Text = "15.04.2021";
             // 
             // FormProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -334,29 +304,27 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.labelUserStatus);
+            this.Controls.Add(this.labelUserPhone);
+            this.Controls.Add(this.labelUserMail);
+            this.Controls.Add(this.labelUserRegisterDate);
+            this.Controls.Add(this.labelUserId);
+            this.Controls.Add(this.labelUserTckn);
+            this.Controls.Add(this.labelUserBirthDate);
+            this.Controls.Add(this.labelUserSurname);
+            this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "FormProfil";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormProfil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -367,16 +335,15 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.Label labelUserSurname;
+        private System.Windows.Forms.Label labelUserBirthDate;
+        private System.Windows.Forms.Label labelUserTckn;
+        private System.Windows.Forms.Label labelUserId;
+        private System.Windows.Forms.Label labelUserMail;
+        private System.Windows.Forms.Label labelUserPhone;
+        private System.Windows.Forms.Label labelUserStatus;
+        private System.Windows.Forms.PictureBox pictureBoxImage;
+        private System.Windows.Forms.Label labelUserRegisterDate;
     }
 }
