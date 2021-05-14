@@ -22,38 +22,22 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
         private void verilerigoster()
         {
-            SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-DQ0AR7O\SQLEXPRESS;Initial Catalog=KitapAra;Integrated Security=True");
+            int id = Convert.ToInt32(textBoxSearch.Text);
+            var kayit = db.Books.Find(id);
 
-         
-            
-            SqlCommand komut = new SqlCommand("SELECT * FROM Kitap", baglanti);
-            komut.Connection = baglanti;
-            
-            baglanti.Open();
-            SqlDataReader oku = komut.ExecuteReader();
-
-            while (oku.Read())
+            Book book = new Book();
+            while (textBoxSearch != null)
             {
-
-                ListViewItem ekle = new ListViewItem();
-                ekle.Text = oku["Kitap ID"].ToString();
-                ekle.SubItems.Add(oku["Kitap Adı"].ToString());
-                ekle.SubItems.Add(oku["Yazar"].ToString());
-                ekle.SubItems.Add(oku["Yayın Evi"].ToString());
-                ekle.SubItems.Add(oku["Sayfa Sayısı"].ToString());
-                ekle.SubItems.Add(oku["Kategori"].ToString());
-                ekle.SubItems.Add(oku["Raf / Salon"].ToString());
-                ekle.SubItems.Add(oku["Durum"].ToString());
-
-                listView1.Items.Add(ekle);
-
-
-
             }
-            baglanti.Close();
+        }
 
+        void GetData(String search = "")
+        {
+            var list = from item in db.Books
+                where item.Name.Contains(search) || item.Category.Contains(search)
+                select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status};
 
-
+            dataGridViewData.DataSource = list.ToList();
         }
 
 
@@ -70,6 +54,11 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
