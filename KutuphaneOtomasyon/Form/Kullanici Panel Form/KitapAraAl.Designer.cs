@@ -77,7 +77,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label2);
             this.Name = "KitapAraAl";
-            this.Text = "Form1";
+            this.Text = "KitapAraAl";
             this.Load += new System.EventHandler(this.KitapAraAl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             this.ResumeLayout(false);

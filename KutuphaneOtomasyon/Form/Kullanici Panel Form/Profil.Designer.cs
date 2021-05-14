@@ -316,7 +316,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FormProfil";
-            this.Text = "Form1";
+            this.Text = "KullanıcıAl";
             this.Load += new System.EventHandler(this.FormProfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImage)).EndInit();
             this.ResumeLayout(false);
