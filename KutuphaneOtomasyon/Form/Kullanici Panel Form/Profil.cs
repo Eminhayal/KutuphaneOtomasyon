@@ -38,7 +38,7 @@ namespace KutuphaneOtomasyon
             //labelUserPhone.Text = phone.ToString();
             //labelUserTckn.Text = tckn.ToString();
             //labelUserStatus.Text = status.ToString();
-            labelUserMail.Text = Giris.mail;
+            //labelUserMail.Text = Giris.mail;
 
 
         }
