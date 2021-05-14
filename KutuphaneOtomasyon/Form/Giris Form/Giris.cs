@@ -31,7 +31,7 @@ namespace KutuphaneOtomasyon
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-           /* if(girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
+            if(girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
             {
                 Anasayfa ana = new Anasayfa();
                 ana.Show();
@@ -48,7 +48,7 @@ namespace KutuphaneOtomasyon
             else
             {
                 MessageBox.Show("E posta yada şifre hatalı");
-            }*/
+            }
             
 
             // giris e posta ile olacak
@@ -66,7 +66,7 @@ namespace KutuphaneOtomasyon
             }
         }
 
-        /*private bool girisdoğrula(string kEposta, string kSifre)
+        private bool girisdoğrula(string kEposta, string kSifre)
         {
             KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
             var sorgu = from p in context.Users
@@ -99,7 +99,7 @@ namespace KutuphaneOtomasyon
             {
                 return false;
             }
-        }*/
+        }
 
 
         private void Giris_Load(object sender, EventArgs e)

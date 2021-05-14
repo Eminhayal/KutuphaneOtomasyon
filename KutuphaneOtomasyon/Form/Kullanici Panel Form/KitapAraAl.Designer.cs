@@ -55,12 +55,17 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             // 
             // dataGridViewData
             // 
+            this.dataGridViewData.AllowUserToResizeRows = false;
+            this.dataGridViewData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewData.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewData.Location = new System.Drawing.Point(263, 154);
+            this.dataGridViewData.GridColor = System.Drawing.Color.White;
+            this.dataGridViewData.Location = new System.Drawing.Point(1, 128);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            this.dataGridViewData.Size = new System.Drawing.Size(853, 261);
+            this.dataGridViewData.Size = new System.Drawing.Size(1331, 431);
             this.dataGridViewData.TabIndex = 39;
+            this.dataGridViewData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellClick);
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             // 
             // KitapAraAl
