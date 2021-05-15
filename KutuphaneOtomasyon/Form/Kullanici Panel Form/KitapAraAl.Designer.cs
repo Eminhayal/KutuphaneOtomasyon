@@ -52,6 +52,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearch.TabIndex = 38;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridViewData
             // 

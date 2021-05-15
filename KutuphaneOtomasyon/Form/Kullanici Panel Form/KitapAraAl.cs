@@ -99,5 +99,17 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
 
         }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            //dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
+
+            if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
+            {
+                dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
+                //GetData(textBoxSearch.Text);
+            }
+        }
     }
 }

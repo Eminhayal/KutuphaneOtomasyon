@@ -41,7 +41,6 @@ namespace KutuphaneOtomasyon
             this.label9 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonBookEdit = new System.Windows.Forms.Button();
             this.buttonBookDelete = new System.Windows.Forms.Button();
             this.buttonBookAdd = new System.Windows.Forms.Button();
             this.textBoxBookId = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookEditUpdate = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.file = new System.Windows.Forms.OpenFileDialog();
+            this.buttonBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).BeginInit();
             this.SuspendLayout();
@@ -174,28 +174,13 @@ namespace KutuphaneOtomasyon
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::KutuphaneOtomasyon.Properties.Resources.Xbüyük;
             this.pictureBox1.Location = new System.Drawing.Point(891, 151);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 324);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // buttonBookEdit
-            // 
-            this.buttonBookEdit.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBookEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBookEdit.BackgroundImage")));
-            this.buttonBookEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBookEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.buttonBookEdit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBookEdit.Location = new System.Drawing.Point(303, 511);
-            this.buttonBookEdit.Name = "buttonBookEdit";
-            this.buttonBookEdit.Size = new System.Drawing.Size(153, 47);
-            this.buttonBookEdit.TabIndex = 3;
-            this.buttonBookEdit.Text = "Kitap Düzenle";
-            this.buttonBookEdit.UseVisualStyleBackColor = false;
-            this.buttonBookEdit.Click += new System.EventHandler(this.buttonBookEdit_Click);
             // 
             // buttonBookDelete
             // 
@@ -210,6 +195,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookDelete.TabIndex = 3;
             this.buttonBookDelete.Text = "Kitap Sil";
             this.buttonBookDelete.UseVisualStyleBackColor = false;
+            this.buttonBookDelete.Click += new System.EventHandler(this.buttonBookDelete_Click);
             // 
             // buttonBookAdd
             // 
@@ -228,7 +214,6 @@ namespace KutuphaneOtomasyon
             // 
             // textBoxBookId
             // 
-            this.textBoxBookId.Enabled = false;
             this.textBoxBookId.Location = new System.Drawing.Point(384, 105);
             this.textBoxBookId.Name = "textBoxBookId";
             this.textBoxBookId.Size = new System.Drawing.Size(125, 20);
@@ -277,6 +262,7 @@ namespace KutuphaneOtomasyon
             this.numericUpDownPageNo.Name = "numericUpDownPageNo";
             this.numericUpDownPageNo.Size = new System.Drawing.Size(125, 20);
             this.numericUpDownPageNo.TabIndex = 17;
+            this.numericUpDownPageNo.ValueChanged += new System.EventHandler(this.numericUpDownPageNo_ValueChanged);
             // 
             // buttonAra
             // 
@@ -286,23 +272,22 @@ namespace KutuphaneOtomasyon
             this.buttonAra.TabIndex = 18;
             this.buttonAra.Text = "Ara";
             this.buttonAra.UseVisualStyleBackColor = true;
-            this.buttonAra.Visible = false;
             this.buttonAra.Click += new System.EventHandler(this.buttonAra_Click);
             // 
             // buttonBookEditUpdate
             // 
             this.buttonBookEditUpdate.BackColor = System.Drawing.Color.Transparent;
             this.buttonBookEditUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBookEditUpdate.BackgroundImage")));
+            this.buttonBookEditUpdate.Enabled = false;
             this.buttonBookEditUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookEditUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBookEditUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBookEditUpdate.Location = new System.Drawing.Point(645, 335);
+            this.buttonBookEditUpdate.Location = new System.Drawing.Point(312, 509);
             this.buttonBookEditUpdate.Name = "buttonBookEditUpdate";
             this.buttonBookEditUpdate.Size = new System.Drawing.Size(153, 47);
             this.buttonBookEditUpdate.TabIndex = 19;
             this.buttonBookEditUpdate.Text = "Kitap Düzenle";
             this.buttonBookEditUpdate.UseVisualStyleBackColor = false;
-            this.buttonBookEditUpdate.Visible = false;
             this.buttonBookEditUpdate.Click += new System.EventHandler(this.buttonBookEditUpdate_Click);
             // 
             // label10
@@ -317,6 +302,21 @@ namespace KutuphaneOtomasyon
             // file
             // 
             this.file.FileName = "openFileDialog1";
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBack.BackgroundImage")));
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonBack.Location = new System.Drawing.Point(542, 419);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(133, 45);
+            this.buttonBack.TabIndex = 3;
+            this.buttonBack.Text = "Temizle";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // KitapEklemeDuzenleme
             // 
@@ -335,7 +335,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.textBoxBookId);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonBookEdit);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonBookDelete);
             this.Controls.Add(this.buttonBookAdd);
             this.Controls.Add(this.label9);
@@ -349,7 +349,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label1);
             this.Name = "KitapEklemeDuzenleme";
             this.Text = "KitapEklemeDuzenleme";
-            this.Load += new System.EventHandler(this.KitapEklemeDuzenleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).EndInit();
             this.ResumeLayout(false);
@@ -369,7 +368,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonBookAdd;
-        private System.Windows.Forms.Button buttonBookEdit;
         private System.Windows.Forms.Button buttonBookDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
@@ -384,5 +382,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button buttonBookEditUpdate;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog file;
+        private System.Windows.Forms.Button buttonBack;
     }
 }
