@@ -14,7 +14,7 @@ namespace KutuphaneOtomasyon.Form
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer("Server=tcp:10.211.55.9,1433;Initial Catalog=DevnotDB;User ID=****;Password=******;");
+            optionsBuilder.UseSqlServer("Server=tcp:31.223.14.80,1433;Initial Catalog=DevnotDB;User ID=sa;Password=asd123;");
             
         }
     }
