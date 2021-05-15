@@ -19,7 +19,7 @@ namespace KutuphaneOtomasyon
         public bool EntrustConfirm { get; set; }
         public Nullable<int> UserId { get; set; }
     
-        public virtual Book Book { get; set; }
-        public virtual User User { get; set; }
+        public virtual Books Books { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

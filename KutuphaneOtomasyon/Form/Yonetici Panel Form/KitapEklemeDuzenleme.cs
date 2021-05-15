@@ -131,7 +131,8 @@ namespace KutuphaneOtomasyon
 
         public void AddBook()
         {
-            Book book = new Book();
+            
+            Books book = new Books();
             book.Name = textBoxBookName.Text;
             book.Writer = textBoxWriter.Text;
             book.Publisher = textBoxPublisher.Text;
@@ -145,7 +146,7 @@ namespace KutuphaneOtomasyon
             db.SaveChanges();
             MessageBox.Show("ekle");
         }
-        public void ImageAdd(Book book)
+        public void ImageAdd(Books book)
         {
             if (pictureBox1 != null)
             {

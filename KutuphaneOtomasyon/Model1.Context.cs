@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Microsoft.EntityFrameworkCore;
+
 namespace KutuphaneOtomasyon
 {
     using System;
@@ -19,19 +21,20 @@ namespace KutuphaneOtomasyon
             : base("name=KutuphaneOtoEntities3")
         {
         }
-    
+        
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Admin> Admins { get; set; }
-        public virtual DbSet<Book> Books { get; set; }
-        public virtual DbSet<Confirm> Confirms { get; set; }
-        public virtual DbSet<DeliveredBook> DeliveredBooks { get; set; }
-        public virtual DbSet<EntrustedBook> EntrustedBooks { get; set; }
-        public virtual DbSet<EntrustedInfo> EntrustedInfoes { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Admins> Admins { get; set; }
+        public virtual DbSet<Books> Books { get; set; }
+        public virtual DbSet<Confirm> Confirm { get; set; }
+        public virtual DbSet<DeliveredBooks> DeliveredBooks { get; set; }
+        public virtual DbSet<EntrustedBooks> EntrustedBooks { get; set; }
+        public virtual DbSet<EntrustedInfo> EntrustedInfo { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Category> Category { get; set; }
     }
 }

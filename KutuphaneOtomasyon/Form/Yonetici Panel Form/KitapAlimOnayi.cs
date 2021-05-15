@@ -36,11 +36,11 @@ namespace KutuphaneOtomasyon
                 {
                     var id = Convert.ToInt32(textBoxSearchId.Text);
 
-                    var confirm = db.Confirms.Find(id);
+                    var confirm = db.Confirm.Find(id);
 
                     labelBookId.Text = confirm.BookId.ToString();
-                    labelBookName.Text = confirm.Book.Name;
-                    labelUserName.Text = confirm.User.Name;
+                    labelBookName.Text = confirm.Books.Name;
+                    labelUserName.Text = confirm.Users.Name;
                     labelUserId.Text = confirm.UserId.ToString();
 
 

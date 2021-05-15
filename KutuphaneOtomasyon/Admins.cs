@@ -12,7 +12,7 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Admin
+    public partial class Admins
     {
         public int AdminId { get; set; }
         public string Name { get; set; }
