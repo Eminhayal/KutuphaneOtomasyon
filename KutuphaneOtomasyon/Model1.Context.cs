@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Microsoft.EntityFrameworkCore;
-
 namespace KutuphaneOtomasyon
 {
     using System;
@@ -21,8 +19,7 @@ namespace KutuphaneOtomasyon
             : base("name=KutuphaneOtoEntities3")
         {
         }
-        
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
