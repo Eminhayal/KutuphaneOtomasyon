@@ -13,12 +13,14 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 {
     public partial class KitapAraAl : System.Windows.Forms.Form
     {
+
         public KitapAraAl()
         {
             InitializeComponent();
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private ImageConvert image = new ImageConvert();
         private void KitapAraAl_Load(object sender, EventArgs e)
         {
             GetData();
@@ -88,6 +90,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             KitapAlma.category = book.Category;
             KitapAlma.saloon = book.SaloonShelf;
             KitapAlma.status = book.Status;
+            KitapAlma.image = image.byteArrayToImage(book.Image);
             KitapAlma kitapAlma = new KitapAlma();
             kitapAlma.ShowDialog();
             //kitapAlma.Show();

@@ -42,7 +42,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(398, 101);
+            this.label2.Location = new System.Drawing.Point(376, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(336, 24);
             this.label2.TabIndex = 24;
@@ -50,7 +50,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(740, 103);
+            this.textBoxSearch.Location = new System.Drawing.Point(732, 33);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearch.TabIndex = 38;
@@ -64,10 +64,10 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.dataGridViewData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.GridColor = System.Drawing.Color.White;
-            this.dataGridViewData.Location = new System.Drawing.Point(1, 128);
+            this.dataGridViewData.Location = new System.Drawing.Point(1, 59);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            this.dataGridViewData.Size = new System.Drawing.Size(1331, 431);
+            this.dataGridViewData.Size = new System.Drawing.Size(1334, 500);
             this.dataGridViewData.TabIndex = 39;
             this.dataGridViewData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellClick);
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
@@ -77,7 +77,6 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.textBoxSearch);

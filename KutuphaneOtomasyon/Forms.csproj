@@ -191,6 +191,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form\bagla.cs" />
+    <Compile Include="Form\ImageConvert.cs" />
     <Compile Include="Form\Kullanici Panel Form\KitapAraAl.cs">
       <SubType>Form</SubType>
     </Compile>

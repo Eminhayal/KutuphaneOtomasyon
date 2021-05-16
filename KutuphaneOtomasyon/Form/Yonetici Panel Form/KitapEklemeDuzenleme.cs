@@ -9,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KutuphaneOtomasyon.Form;
 
 namespace KutuphaneOtomasyon
 {
@@ -20,8 +21,8 @@ namespace KutuphaneOtomasyon
         }
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
-     
-        
+
+        private ImageConvert image = new ImageConvert();
         private void buttonBookEdit_Click(object sender, EventArgs e)
         {
             
@@ -91,7 +92,7 @@ namespace KutuphaneOtomasyon
                     textBoxBookId.Enabled = false;
                     buttonAra.Visible = false;
                     buttonBookEditUpdate.Visible = true;
-                    pictureBox1.Image = byteArrayToImage(kayit.Image);
+                    pictureBox1.Image = image.byteArrayToImage(kayit.Image);
 
 
                 }
@@ -125,7 +126,7 @@ namespace KutuphaneOtomasyon
             kayit.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             kayit.Category = textBoxCategory.Text;
             kayit.SaloonShelf = textBoxSaloonShelf.Text;
-            kayit.Image = imageToByteArray(pictureBox1.Image);
+            kayit.Image = image.imageToByteArray(pictureBox1.Image);
             db.SaveChanges();
         }
 
@@ -157,19 +158,6 @@ namespace KutuphaneOtomasyon
             }
 
         }
-        public Image byteArrayToImage(byte[] byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
-        public byte[] imageToByteArray(System.Drawing.Image imageIn)
-        {
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
-        }
-
         private void numericUpDownPageNo_ValueChanged(object sender, EventArgs e)
         {
             numericUpDownPageNo.Maximum = 2500;

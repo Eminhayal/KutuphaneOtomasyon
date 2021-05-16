@@ -32,34 +32,29 @@ namespace KutuphaneOtomasyon
         private void btnGiris_Click(object sender, EventArgs e)
         {
             
-            if (girisdoğrula(txtLogMail.Text,txtLogPass.Text) )
+            if (girisdoğrula(Convert.ToInt32(txtLogMail.Text) ,txtLogPass.Text) )
             {
                 Anasayfa ana = new Anasayfa();
                 ana.Show();
                 this.Hide();
 
-                
-                //User user = new User();
-                //if (user.Mail == txtLogMail.Text)
-                //{
-                //    id = user.UserId;
-                //}
 
-                //user = context.Users.Find(id);
-                
-                
-                //    FormProfil.id = user.UserId;
-                //    FormProfil.name = user.Name;
-                //    FormProfil.surname = user.Surname;
-                //    FormProfil.birthDate = user.BirthDate;
-                //    FormProfil.registerDate = user.RegisterDate;
-                //    FormProfil.mail = user.Mail;
-                //    FormProfil.tckn =  user.Tckn;
-                //    FormProfil.phone = user.Telephone;
-                //   // FormProfil.status = user.Status;
-                
-            
-                
+                Users user = new Users();
+                int loginId = Convert.ToInt32(txtLogMail.Text);
+                user = context.Users.Find(loginId);
+    
+                FormProfil.id = user.UserId;
+                FormProfil.name = user.Name;
+                FormProfil.surname = user.Surname;
+                FormProfil.birthDate = user.BirthDate;
+                FormProfil.registerDate = user.RegisterDate;
+                FormProfil.mail = user.Mail;
+                FormProfil.tckn = user.Tckn;
+                FormProfil.phone = user.Telephone;
+                // FormProfil.status = user.Status;
+
+
+
             }
 
             else if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
@@ -73,7 +68,6 @@ namespace KutuphaneOtomasyon
             {
                 MessageBox.Show("E posta yada şifre hatalı");
             }
-            
 
             // giris e posta ile olacak
             if (rdUsers.Checked)
@@ -90,11 +84,11 @@ namespace KutuphaneOtomasyon
             }
         }
 
-        private bool girisdoğrula(string kEposta, string kSifre)
+        private bool girisdoğrula(int kId, string kSifre  )
         {
           
             var sorgu = from p in context.Users
-                        where p.Mail == kEposta
+                        where p.UserId == kId
                         && p.Password == kSifre
                         select p;
 

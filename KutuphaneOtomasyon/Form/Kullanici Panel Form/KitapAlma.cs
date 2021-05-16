@@ -25,8 +25,11 @@ namespace KutuphaneOtomasyon
         public static string category;
         public static string saloon;
         public static bool status;
+        public static Image image;
+        public static int userId;
 
-      
+
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private void KitapAlma_Load(object sender, EventArgs e)
         {
             labelBookId.Text = id.ToString();
@@ -37,17 +40,24 @@ namespace KutuphaneOtomasyon
             labelCategory.Text = category;
             labelSaloon.Text = saloon;
             labelStatus.Text = status.ToString();
+            pictureBox1.Image = image;
         }
         private void label1_Click(object sender, EventArgs e)
         {
             //
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            Confirm confirm = new Confirm();
+            Books book = new Books();
+            Users user = new Users();
+            book = db.Books.Find(id);
+            book.Confirm.BookId = Convert.ToInt32(labelBookId.Text);
+            book.Confirm.DeliveryConfirm = true;
+            book.Confirm.EntrustConfirm = false;
+            
 
         }
-
-      
     }
 }

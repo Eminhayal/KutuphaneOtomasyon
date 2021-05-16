@@ -242,11 +242,12 @@ namespace KutuphaneOtomasyon
             this.button1.TabIndex = 2;
             this.button1.Text = "Kitabı Al";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = global::KutuphaneOtomasyon.Properties.Resources.Xbüyük;
             this.pictureBox1.Location = new System.Drawing.Point(1043, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 324);
