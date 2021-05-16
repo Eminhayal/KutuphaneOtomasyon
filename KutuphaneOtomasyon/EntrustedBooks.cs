@@ -12,16 +12,17 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class DeliveredBook
+    public partial class EntrustedBooks
     {
         public int Id { get; set; }
         public int BookId { get; set; }
         public string BookName { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
-        public System.DateTime DeliveryDate { get; set; }
+        public System.DateTime DeadLine { get; set; }
     
-        public virtual Book Book { get; set; }
-        public virtual User User { get; set; }
+        public virtual Books Books { get; set; }
+        public virtual Users Users { get; set; }
+        public virtual EntrustedInfo EntrustedInfo { get; set; }
     }
 }

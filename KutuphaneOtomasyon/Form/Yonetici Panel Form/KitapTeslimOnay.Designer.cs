@@ -253,7 +253,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "KitapTeslimOnay";
-            this.Text = "Form1";
+            this.Text = "KitapTeslimOnayı";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

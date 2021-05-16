@@ -38,26 +38,30 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(542, 18);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(398, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(284, 24);
+            this.label2.Size = new System.Drawing.Size(336, 24);
             this.label2.TabIndex = 24;
-            this.label2.Text = "Aramak için bir kelime giriniz.";
+            this.label2.Text = "Kitap Aramak için bir kelime giriniz.";
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(626, 86);
+            this.textBoxSearch.Location = new System.Drawing.Point(740, 103);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
             this.textBoxSearch.TabIndex = 38;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridViewData
             // 
             this.dataGridViewData.AllowUserToResizeRows = false;
             this.dataGridViewData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewData.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewData.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewData.GridColor = System.Drawing.Color.White;
             this.dataGridViewData.Location = new System.Drawing.Point(1, 128);
@@ -72,12 +76,15 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label2);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "KitapAraAl";
-            this.Text = "Form1";
+            this.Text = "KitapAraAl";
             this.Load += new System.EventHandler(this.KitapAraAl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();
             this.ResumeLayout(false);

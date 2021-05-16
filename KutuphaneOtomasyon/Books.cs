@@ -12,14 +12,14 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Book
+    public partial class Books
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Book()
+        public Books()
         {
-            this.DeliveredBooks = new HashSet<DeliveredBook>();
-            this.EntrustedBooks = new HashSet<EntrustedBook>();
-            this.EntrustedInfoes = new HashSet<EntrustedInfo>();
+            this.DeliveredBooks = new HashSet<DeliveredBooks>();
+            this.EntrustedBooks = new HashSet<EntrustedBooks>();
+            this.EntrustedInfo = new HashSet<EntrustedInfo>();
         }
     
         public int BookId { get; set; }
@@ -32,14 +32,14 @@ namespace KutuphaneOtomasyon
         public byte[] Image { get; set; }
         public bool Status { get; set; }
     
-        public virtual Book Books1 { get; set; }
-        public virtual Book Book1 { get; set; }
+        public virtual Books Books1 { get; set; }
+        public virtual Books Books2 { get; set; }
         public virtual Confirm Confirm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DeliveredBook> DeliveredBooks { get; set; }
+        public virtual ICollection<DeliveredBooks> DeliveredBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedBook> EntrustedBooks { get; set; }
+        public virtual ICollection<EntrustedBooks> EntrustedBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedInfo> EntrustedInfoes { get; set; }
+        public virtual ICollection<EntrustedInfo> EntrustedInfo { get; set; }
     }
 }

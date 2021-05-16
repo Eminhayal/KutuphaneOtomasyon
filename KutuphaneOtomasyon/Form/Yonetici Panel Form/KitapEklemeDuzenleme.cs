@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -23,14 +24,10 @@ namespace KutuphaneOtomasyon
         
         private void buttonBookEdit_Click(object sender, EventArgs e)
         {
-            textBoxBookId.Enabled = true;
-            buttonAra.Visible = true;
+            
         }
         private void buttonBookEditUpdate_Click(object sender, EventArgs e)
         {
-            buttonBookEditUpdate.Visible = false;
-            buttonBookEdit.Visible = true;
-
             ChanceInfo();
         }
 
@@ -44,9 +41,9 @@ namespace KutuphaneOtomasyon
             string filePath = file.FileName;
             pictureBox1.ImageLocation = filePath;
         }
-        private void KitapEklemeDuzenleme_Load(object sender, EventArgs e)
+        private void button_Clear(object sender, EventArgs e)
         {
-            
+            textBoxBookId.Enabled = true;
         }
 
         private void buttonBookAdd_Click(object sender, EventArgs e)
@@ -72,12 +69,15 @@ namespace KutuphaneOtomasyon
                 db.Books.Remove(kayit);
                 db.SaveChanges();
             }
+           
 
         }
         private void buttonAra_Click(object sender, EventArgs e)
         {
             if (textBoxBookId.Enabled == true)
             {
+                textBoxBookId.Enabled = false;
+                buttonBookEditUpdate.Enabled = true;
                 try
                 {
                     int id = Convert.ToInt32(textBoxBookId.Text);
@@ -90,8 +90,10 @@ namespace KutuphaneOtomasyon
                     numericUpDownPageNo.Text = kayit.PageNo.ToString();
                     textBoxBookId.Enabled = false;
                     buttonAra.Visible = false;
-                    buttonBookEdit.Visible = false;
                     buttonBookEditUpdate.Visible = true;
+                    pictureBox1.Image = byteArrayToImage(kayit.Image);
+
+
                 }
                 catch
                 {
@@ -106,7 +108,7 @@ namespace KutuphaneOtomasyon
         private void textBoxBookId_TextChanged(object sender, EventArgs e)
         {
             
-            }
+        }
 
         private void textBoxBookId_Enter(object sender, EventArgs e)
         {
@@ -123,12 +125,14 @@ namespace KutuphaneOtomasyon
             kayit.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             kayit.Category = textBoxCategory.Text;
             kayit.SaloonShelf = textBoxSaloonShelf.Text;
+            kayit.Image = imageToByteArray(pictureBox1.Image);
             db.SaveChanges();
         }
 
         public void AddBook()
         {
-            Book book = new Book();
+            
+            Books book = new Books();
             book.Name = textBoxBookName.Text;
             book.Writer = textBoxWriter.Text;
             book.Publisher = textBoxPublisher.Text;
@@ -136,12 +140,56 @@ namespace KutuphaneOtomasyon
             book.Category = textBoxCategory.Text;
             book.SaloonShelf = textBoxSaloonShelf.Text;
             //book.Image = pictureBox1.
-            
+            ImageAdd(book);
+
             db.Books.Add(book);
             db.SaveChanges();
             MessageBox.Show("ekle");
         }
+        public void ImageAdd(Books book)
+        {
+            if (pictureBox1 != null)
+            {
+                MemoryStream ms1 = new MemoryStream();
+                pictureBox1.Image.Save(ms1, pictureBox1.Image.RawFormat);
+                book.Image = ms1.ToArray();
 
-        
+            }
+
+        }
+        public Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
+        public byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+
+        private void numericUpDownPageNo_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDownPageNo.Maximum = 2500;
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            textBoxBookId.Text = "";
+            textBoxBookName.Text = "";
+            textBoxCategory.Text = "";
+            textBoxPublisher.Text = "";
+            textBoxSaloonShelf.Text = "";
+            textBoxWriter.Text = "";
+            numericUpDownPageNo.Text = "";
+            textBoxBookId.Enabled = true;
+            buttonAra.Visible = true;
+            
+            pictureBox1.Image = Properties.Resources.Xbüyük;
+            buttonBookEditUpdate.Enabled = false;
+
+        }
     }
 }

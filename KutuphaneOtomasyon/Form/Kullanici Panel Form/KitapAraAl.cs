@@ -30,7 +30,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         {
        
 
-            Book book = new Book();
+            Books book = new Books();
             while (textBoxSearch != null)
             {
             }
@@ -77,7 +77,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private void dataGridViewData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dataGridViewData.Rows[dataGridViewData.CurrentCell.RowIndex].Cells[0].Value);
-            Book book = new Book();
+            Books book = new Books();
             book = db.Books.Find(id);
 
             KitapAlma.id = book.BookId;
@@ -98,6 +98,18 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
 
 
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            //dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
+
+            if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
+            {
+                dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
+                //GetData(textBoxSearch.Text);
+            }
         }
     }
 }

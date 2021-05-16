@@ -12,15 +12,15 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Users
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
+        public Users()
         {
-            this.Confirms = new HashSet<Confirm>();
-            this.DeliveredBooks = new HashSet<DeliveredBook>();
-            this.EntrustedBooks = new HashSet<EntrustedBook>();
-            this.EntrustedInfoes = new HashSet<EntrustedInfo>();
+            this.Confirm = new HashSet<Confirm>();
+            this.DeliveredBooks = new HashSet<DeliveredBooks>();
+            this.EntrustedBooks = new HashSet<EntrustedBooks>();
+            this.EntrustedInfo = new HashSet<EntrustedInfo>();
         }
     
         public int UserId { get; set; }
@@ -36,12 +36,12 @@ namespace KutuphaneOtomasyon
         public byte[] Image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Confirm> Confirms { get; set; }
+        public virtual ICollection<Confirm> Confirm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DeliveredBook> DeliveredBooks { get; set; }
+        public virtual ICollection<DeliveredBooks> DeliveredBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedBook> EntrustedBooks { get; set; }
+        public virtual ICollection<EntrustedBooks> EntrustedBooks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EntrustedInfo> EntrustedInfoes { get; set; }
+        public virtual ICollection<EntrustedInfo> EntrustedInfo { get; set; }
     }
 }

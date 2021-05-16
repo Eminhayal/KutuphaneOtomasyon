@@ -22,7 +22,7 @@ namespace KutuphaneOtomasyon
 
         private void btnUsersAdd_click(object sender, EventArgs e)
         {
-            User users = new User();
+            Users users = new Users();
             users.Name = txtUserName.Text;
             users.Surname = txtUserSurname.Text;
             users.Password = txtUserPassword.Text;

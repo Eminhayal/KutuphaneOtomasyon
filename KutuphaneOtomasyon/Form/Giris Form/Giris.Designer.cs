@@ -102,6 +102,7 @@ namespace KutuphaneOtomasyon
             this.txtLogPass.ForeColor = System.Drawing.Color.Gray;
             this.txtLogPass.Location = new System.Drawing.Point(743, 415);
             this.txtLogPass.Name = "txtLogPass";
+            this.txtLogPass.PasswordChar = '*';
             this.txtLogPass.Size = new System.Drawing.Size(152, 20);
             this.txtLogPass.TabIndex = 4;
             this.txtLogPass.Click += new System.EventHandler(this.txtLogPass_Click);
@@ -133,7 +134,7 @@ namespace KutuphaneOtomasyon
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Giris";
-            this.Text = "Giris";
+            this.Text = "GİRİŞ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Giris_FormClosing);
             this.Load += new System.EventHandler(this.Giris_Load);
             this.ResumeLayout(false);
