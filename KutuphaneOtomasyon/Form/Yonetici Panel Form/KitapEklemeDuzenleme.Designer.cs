@@ -39,7 +39,6 @@ namespace KutuphaneOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonBookDelete = new System.Windows.Forms.Button();
             this.buttonBookAdd = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@ namespace KutuphaneOtomasyon
             this.textBoxBookName = new System.Windows.Forms.TextBox();
             this.textBoxWriter = new System.Windows.Forms.TextBox();
             this.textBoxPublisher = new System.Windows.Forms.TextBox();
-            this.textBoxCategory = new System.Windows.Forms.TextBox();
             this.textBoxSaloonShelf = new System.Windows.Forms.TextBox();
             this.numericUpDownPageNo = new System.Windows.Forms.NumericUpDown();
             this.buttonAra = new System.Windows.Forms.Button();
@@ -55,6 +53,7 @@ namespace KutuphaneOtomasyon
             this.label10 = new System.Windows.Forms.Label();
             this.file = new System.Windows.Forms.OpenFileDialog();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).BeginInit();
             this.SuspendLayout();
@@ -159,18 +158,6 @@ namespace KutuphaneOtomasyon
             this.label9.TabIndex = 1;
             this.label9.Text = "Durumu";
             // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(868, 34);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 43);
-            this.button7.TabIndex = 15;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
@@ -216,7 +203,7 @@ namespace KutuphaneOtomasyon
             // 
             this.textBoxBookId.Location = new System.Drawing.Point(384, 105);
             this.textBoxBookId.Name = "textBoxBookId";
-            this.textBoxBookId.Size = new System.Drawing.Size(125, 20);
+            this.textBoxBookId.Size = new System.Drawing.Size(189, 20);
             this.textBoxBookId.TabIndex = 16;
             this.textBoxBookId.TextChanged += new System.EventHandler(this.textBoxBookId_TextChanged);
             this.textBoxBookId.Enter += new System.EventHandler(this.textBoxBookId_Enter);
@@ -225,48 +212,41 @@ namespace KutuphaneOtomasyon
             // 
             this.textBoxBookName.Location = new System.Drawing.Point(384, 157);
             this.textBoxBookName.Name = "textBoxBookName";
-            this.textBoxBookName.Size = new System.Drawing.Size(125, 20);
+            this.textBoxBookName.Size = new System.Drawing.Size(189, 20);
             this.textBoxBookName.TabIndex = 16;
             // 
             // textBoxWriter
             // 
             this.textBoxWriter.Location = new System.Drawing.Point(384, 210);
             this.textBoxWriter.Name = "textBoxWriter";
-            this.textBoxWriter.Size = new System.Drawing.Size(125, 20);
+            this.textBoxWriter.Size = new System.Drawing.Size(189, 20);
             this.textBoxWriter.TabIndex = 16;
             // 
             // textBoxPublisher
             // 
             this.textBoxPublisher.Location = new System.Drawing.Point(384, 259);
             this.textBoxPublisher.Name = "textBoxPublisher";
-            this.textBoxPublisher.Size = new System.Drawing.Size(125, 20);
+            this.textBoxPublisher.Size = new System.Drawing.Size(189, 20);
             this.textBoxPublisher.TabIndex = 16;
-            // 
-            // textBoxCategory
-            // 
-            this.textBoxCategory.Location = new System.Drawing.Point(384, 362);
-            this.textBoxCategory.Name = "textBoxCategory";
-            this.textBoxCategory.Size = new System.Drawing.Size(125, 20);
-            this.textBoxCategory.TabIndex = 16;
             // 
             // textBoxSaloonShelf
             // 
             this.textBoxSaloonShelf.Location = new System.Drawing.Point(384, 419);
             this.textBoxSaloonShelf.Name = "textBoxSaloonShelf";
-            this.textBoxSaloonShelf.Size = new System.Drawing.Size(125, 20);
+            this.textBoxSaloonShelf.Size = new System.Drawing.Size(189, 20);
             this.textBoxSaloonShelf.TabIndex = 16;
             // 
             // numericUpDownPageNo
             // 
             this.numericUpDownPageNo.Location = new System.Drawing.Point(384, 309);
             this.numericUpDownPageNo.Name = "numericUpDownPageNo";
-            this.numericUpDownPageNo.Size = new System.Drawing.Size(125, 20);
+            this.numericUpDownPageNo.Size = new System.Drawing.Size(189, 20);
             this.numericUpDownPageNo.TabIndex = 17;
             this.numericUpDownPageNo.ValueChanged += new System.EventHandler(this.numericUpDownPageNo_ValueChanged);
             // 
             // buttonAra
             // 
-            this.buttonAra.Location = new System.Drawing.Point(542, 105);
+            this.buttonAra.Location = new System.Drawing.Point(586, 105);
             this.buttonAra.Name = "buttonAra";
             this.buttonAra.Size = new System.Drawing.Size(75, 23);
             this.buttonAra.TabIndex = 18;
@@ -310,7 +290,7 @@ namespace KutuphaneOtomasyon
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBack.Location = new System.Drawing.Point(542, 419);
+            this.buttonBack.Location = new System.Drawing.Point(605, 419);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(133, 45);
             this.buttonBack.TabIndex = 3;
@@ -318,22 +298,43 @@ namespace KutuphaneOtomasyon
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // comboBoxCategory
+            // 
+            this.comboBoxCategory.FormattingEnabled = true;
+            this.comboBoxCategory.Items.AddRange(new object[] {
+            "Roman",
+            "Edebiyat",
+            "Öykü",
+            "Aksiyon",
+            "Macera",
+            "Dİni",
+            "Aile",
+            "Şiir",
+            "Polisiye ",
+            "Bilim",
+            "Araştırma",
+            "Biyografik",
+            "Otobiyografik"});
+            this.comboBoxCategory.Location = new System.Drawing.Point(384, 360);
+            this.comboBoxCategory.Name = "comboBoxCategory";
+            this.comboBoxCategory.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxCategory.TabIndex = 21;
+            // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonBookEditUpdate);
             this.Controls.Add(this.buttonAra);
             this.Controls.Add(this.numericUpDownPageNo);
             this.Controls.Add(this.textBoxSaloonShelf);
             this.Controls.Add(this.textBoxPublisher);
-            this.Controls.Add(this.textBoxCategory);
             this.Controls.Add(this.textBoxWriter);
             this.Controls.Add(this.textBoxBookName);
             this.Controls.Add(this.textBoxBookId);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonBookDelete);
@@ -370,12 +371,10 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button buttonBookAdd;
         private System.Windows.Forms.Button buttonBookDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBoxBookId;
         private System.Windows.Forms.TextBox textBoxBookName;
         private System.Windows.Forms.TextBox textBoxWriter;
         private System.Windows.Forms.TextBox textBoxPublisher;
-        private System.Windows.Forms.TextBox textBoxCategory;
         private System.Windows.Forms.TextBox textBoxSaloonShelf;
         private System.Windows.Forms.NumericUpDown numericUpDownPageNo;
         private System.Windows.Forms.Button buttonAra;
@@ -383,5 +382,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog file;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.ComboBox comboBoxCategory;
     }
 }

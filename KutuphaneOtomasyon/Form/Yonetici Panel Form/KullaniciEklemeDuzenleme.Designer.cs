@@ -38,7 +38,6 @@ namespace KutuphaneOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnUsersAdd = new System.Windows.Forms.Button();
             this.btnUsersRemove = new System.Windows.Forms.Button();
             this.btnUsersEdit = new System.Windows.Forms.Button();
@@ -52,7 +51,6 @@ namespace KutuphaneOtomasyon
             this.txtUserMail = new System.Windows.Forms.TextBox();
             this.txtUserNumber = new System.Windows.Forms.TextBox();
             this.txtUserStatus = new System.Windows.Forms.TextBox();
-            this.txtUserRegDate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserPassword = new System.Windows.Forms.TextBox();
             this.btnUsersSearch = new System.Windows.Forms.Button();
@@ -148,17 +146,6 @@ namespace KutuphaneOtomasyon
             this.label9.Size = new System.Drawing.Size(234, 31);
             this.label9.TabIndex = 1;
             this.label9.Text = "Öğrenim Durumu";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(97, 509);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(162, 31);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Kayıt Tarihi";
             // 
             // btnUsersAdd
             // 
@@ -283,13 +270,6 @@ namespace KutuphaneOtomasyon
             this.txtUserStatus.Size = new System.Drawing.Size(100, 20);
             this.txtUserStatus.TabIndex = 23;
             // 
-            // txtUserRegDate
-            // 
-            this.txtUserRegDate.Location = new System.Drawing.Point(418, 520);
-            this.txtUserRegDate.Name = "txtUserRegDate";
-            this.txtUserRegDate.Size = new System.Drawing.Size(100, 20);
-            this.txtUserRegDate.TabIndex = 23;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -355,7 +335,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.btnUsersSearch);
             this.Controls.Add(this.txtUserPassword);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUserRegDate);
             this.Controls.Add(this.txtUserStatus);
             this.Controls.Add(this.txtUserNumber);
             this.Controls.Add(this.txtUserMail);
@@ -370,7 +349,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.btnUsersEdit);
             this.Controls.Add(this.btnUsersRemove);
             this.Controls.Add(this.btnUsersAdd);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -397,7 +375,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUsersAdd;
         private System.Windows.Forms.Button btnUsersRemove;
         private System.Windows.Forms.Button btnUsersEdit;
@@ -411,7 +388,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.TextBox txtUserMail;
         private System.Windows.Forms.TextBox txtUserNumber;
         private System.Windows.Forms.TextBox txtUserStatus;
-        private System.Windows.Forms.TextBox txtUserRegDate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUserPassword;
         private System.Windows.Forms.Button btnUsersSearch;

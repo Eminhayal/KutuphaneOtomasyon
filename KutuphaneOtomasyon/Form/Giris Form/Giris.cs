@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace KutuphaneOtomasyon
 {
     public partial class Giris : System.Windows.Forms.Form
+   
     {
         public Giris()
         {
@@ -18,7 +19,9 @@ namespace KutuphaneOtomasyon
         }
 
         KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
+        
         public static string mail;
+        public static int _userID;
         private void Giris_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -42,7 +45,7 @@ namespace KutuphaneOtomasyon
                 Users user = new Users();
                 int loginId = Convert.ToInt32(txtLogMail.Text);
                 user = context.Users.Find(loginId);
-    
+                _userID = user.UserId;
                 FormProfil.id = user.UserId;
                 FormProfil.name = user.Name;
                 FormProfil.surname = user.Surname;
@@ -57,12 +60,12 @@ namespace KutuphaneOtomasyon
 
             }
 
-            else if(girisdoğrulaiki(txtLogMail.Text,txtLogPass.Text))
+            else if(girisdoğrulaiki(Convert.ToInt32(txtLogMail.Text) , txtLogPass.Text))
             {
                 AnasayfaYonetici anayon = new AnasayfaYonetici();
                 anayon.Show();
                 this.Hide();
-                mail = txtLogMail.Text;
+                
             }
             else
             {
@@ -102,11 +105,11 @@ namespace KutuphaneOtomasyon
                 return false;
             }
         }
-         private bool girisdoğrulaiki(string yEposta, string ySifre)
+         private bool girisdoğrulaiki(int yId, string ySifre)
         {
             KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
             var sorgus = from p in context.Admins
-                         where p.Mail == yEposta
+                         where p.AdminId == yId
                          && p.Password == ySifre
                          select p;
             

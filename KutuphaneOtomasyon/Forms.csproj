@@ -264,11 +264,6 @@
     <Compile Include="Form\Kullanici Panel Form\KitapAlma.Designer.cs">
       <DependentUpon>KitapAlma.cs</DependentUpon>
     </Compile>
-    <Compile Include="KitapAraDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KitapAraDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -335,17 +330,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="KitapAraDataSet1.xsc">
-      <DependentUpon>KitapAraDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="KitapAraDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KitapAraDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="KitapAraDataSet1.xss">
-      <DependentUpon>KitapAraDataSet1.xsd</DependentUpon>
-    </None>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="KutuphaneOtoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="KutuphaneOtoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="AdminId" />
@@ -46,9 +46,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
         </EntityType>
         <EntityType Name="Confirm">
           <Key>
-            <PropertyRef Name="BookId" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="BookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="DeliveryConfirm" Type="bit" Nullable="false" />
           <Property Name="EntrustConfirm" Type="bit" Nullable="false" />
           <Property Name="UserId" Type="int" />
@@ -113,7 +114,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
         </Association>
         <Association Name="FK_Confirm_Books1">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="BookId" />
@@ -274,7 +275,8 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
             <End Role="EntrustedInfo" EntitySet="EntrustedInfo" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KutuphaneOtoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -315,9 +317,10 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
         </EntityType>
         <EntityType Name="Confirm">
           <Key>
-            <PropertyRef Name="BookId" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookId" Type="Int32" Nullable="false" />
           <Property Name="DeliveryConfirm" Type="Boolean" Nullable="false" />
           <Property Name="EntrustConfirm" Type="Boolean" Nullable="false" />
           <Property Name="UserId" Type="Int32" />
@@ -404,7 +407,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
         </Association>
         <Association Name="FK_Confirm_Books1">
           <End Role="Books" Type="Self.Books" Multiplicity="1" />
-          <End Role="Confirm" Type="Self.Confirm" Multiplicity="0..1" />
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Books">
               <PropertyRef Name="BookId" />
@@ -600,6 +603,7 @@ warning 6002: The table/view 'KutuphaneOto.dbo.Category' does not have a primary
           <EntitySetMapping Name="Confirm">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Confirm">
               <MappingFragment StoreEntitySet="Confirm">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="DeliveryConfirm" ColumnName="DeliveryConfirm" />
                 <ScalarProperty Name="EntrustConfirm" ColumnName="EntrustConfirm" />

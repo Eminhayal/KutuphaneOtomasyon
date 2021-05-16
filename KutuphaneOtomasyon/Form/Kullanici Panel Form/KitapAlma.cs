@@ -26,7 +26,7 @@ namespace KutuphaneOtomasyon
         public static string saloon;
         public static bool status;
         public static Image image;
-        public static int userId;
+        public static int _userId;
 
 
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
@@ -49,14 +49,16 @@ namespace KutuphaneOtomasyon
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             Confirm confirm = new Confirm();
             Books book = new Books();
-            Users user = new Users();
             book = db.Books.Find(id);
-            book.Confirm.BookId = Convert.ToInt32(labelBookId.Text);
-            book.Confirm.DeliveryConfirm = true;
-            book.Confirm.EntrustConfirm = false;
-            
+            confirm.DeliveryConfirm = true;
+            confirm.EntrustConfirm = false;
+            confirm.BookId = id;
+            confirm.UserId = _userId;
+            db.Confirm.Add(confirm);
+            db.SaveChanges();
 
         }
     }

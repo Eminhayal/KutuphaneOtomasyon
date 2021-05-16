@@ -14,6 +14,7 @@ namespace KutuphaneOtomasyon
     
     public partial class Confirm
     {
+        public int id { get; set; }
         public int BookId { get; set; }
         public bool DeliveryConfirm { get; set; }
         public bool EntrustConfirm { get; set; }

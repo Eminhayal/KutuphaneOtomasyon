@@ -28,7 +28,7 @@ namespace KutuphaneOtomasyon
             users.Password = txtUserPassword.Text;
             users.BirthDate = Convert.ToDateTime(txtUserBirthdate.Text);
             users.Tckn = Convert.ToInt64(txtUserTckn.Text);
-            users.RegisterDate = Convert.ToDateTime(txtUserRegDate.Text);
+            users.RegisterDate = DateTime.Now;
             users.Mail = txtUserMail.Text;
             users.Telephone = Convert.ToInt64(txtUserNumber.Text);
             users.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text));
@@ -80,7 +80,6 @@ namespace KutuphaneOtomasyon
                     txtUserPassword.Text = kayit.Password.ToString();
                     txtUserBirthdate.Text= kayit.BirthDate.ToLongDateString(); 
                     txtUserTckn.Text=kayit.Tckn.ToString();
-                    txtUserRegDate.Text=kayit.RegisterDate.ToLongDateString();
                     txtUserMail.Text=kayit.Mail.ToString();
                     txtUserNumber.Text=kayit.Telephone.ToString();
                     txtUserStatus.Text = kayit.Status.ToString();
@@ -122,7 +121,6 @@ namespace KutuphaneOtomasyon
             kayit.Password = txtUserPassword.Text;
             kayit.BirthDate = Convert.ToDateTime(txtUserBirthdate.Text);
             kayit.Tckn =Convert.ToInt64(txtUserTckn.Text) ;
-            kayit.RegisterDate =Convert.ToDateTime(txtUserRegDate.Text);
             kayit.Mail = txtUserMail.Text;
             kayit.Telephone = Convert.ToInt64(txtUserNumber.Text); 
             //kayit.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text)); 
