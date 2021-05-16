@@ -44,6 +44,8 @@ namespace KutuphaneOtomasyon
             this.labelUserName = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxSearchId = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,11 +205,30 @@ namespace KutuphaneOtomasyon
             this.textBoxSearchId.TabIndex = 6;
             this.textBoxSearchId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSearchId_KeyDown);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(899, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(302, 20);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "Sorgulamak istediğiniz Kitap ID\'sini giriniz.";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1017, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 7;
+            // 
             // KitapAlimOnayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBoxSearchId);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonConfirm);
@@ -246,5 +267,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxSearchId;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -38,7 +38,6 @@ namespace KutuphaneOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonIdSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,6 +45,8 @@ namespace KutuphaneOtomasyon
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,18 +141,6 @@ namespace KutuphaneOtomasyon
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // buttonIdSearch
-            // 
-            this.buttonIdSearch.BackColor = System.Drawing.Color.Transparent;
-            this.buttonIdSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.BackgroundImage")));
-            this.buttonIdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonIdSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonIdSearch.Image")));
-            this.buttonIdSearch.Location = new System.Drawing.Point(494, 28);
-            this.buttonIdSearch.Name = "buttonIdSearch";
-            this.buttonIdSearch.Size = new System.Drawing.Size(240, 43);
-            this.buttonIdSearch.TabIndex = 16;
-            this.buttonIdSearch.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -231,13 +220,33 @@ namespace KutuphaneOtomasyon
             this.label13.Text = "Kitap Teslim Onayı";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(946, 46);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(302, 20);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "Sorgulamak istediğiniz Kitap ID\'sini giriniz.";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1064, 85);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // KitapTeslimOnay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.buttonIdSearch);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
@@ -269,7 +278,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button buttonIdSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -277,5 +285,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

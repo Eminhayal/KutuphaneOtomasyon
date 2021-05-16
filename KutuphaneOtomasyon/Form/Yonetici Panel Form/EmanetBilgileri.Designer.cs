@@ -29,7 +29,6 @@ namespace KutuphaneOtomasyon
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmanetBilgileri));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +46,8 @@ namespace KutuphaneOtomasyon
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -254,24 +254,30 @@ namespace KutuphaneOtomasyon
             this.label17.Text = "Gecikme Ücreti";
             this.label17.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // button6
+            // textBox1
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1072, 25);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(240, 43);
-            this.button6.TabIndex = 4;
-            this.button6.UseVisualStyleBackColor = false;
+            this.textBox1.Location = new System.Drawing.Point(1108, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(990, 47);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(302, 20);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Sorgulamak istediğiniz Kitap ID\'sini giriniz.";
             // 
             // EmanetBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label8);
@@ -315,6 +321,7 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label18;
     }
 }

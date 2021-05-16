@@ -39,7 +39,6 @@ namespace KutuphaneOtomasyon
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonBookDelete = new System.Windows.Forms.Button();
             this.buttonBookAdd = new System.Windows.Forms.Button();
@@ -158,18 +157,6 @@ namespace KutuphaneOtomasyon
             this.label9.Size = new System.Drawing.Size(116, 31);
             this.label9.TabIndex = 1;
             this.label9.Text = "Durumu";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(868, 34);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(240, 43);
-            this.button7.TabIndex = 15;
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -333,7 +320,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.textBoxWriter);
             this.Controls.Add(this.textBoxBookName);
             this.Controls.Add(this.textBoxBookId);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonBookDelete);
@@ -370,7 +356,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button buttonBookAdd;
         private System.Windows.Forms.Button buttonBookDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBoxBookId;
         private System.Windows.Forms.TextBox textBoxBookName;
         private System.Windows.Forms.TextBox textBoxWriter;
