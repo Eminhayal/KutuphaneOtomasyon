@@ -21,7 +21,6 @@ namespace KutuphaneOtomasyon
         public string UserName { get; set; }
         public System.DateTime DeliveryDate { get; set; }
     
-        public virtual Books Books { get; set; }
-        public virtual Users Users { get; set; }
+        public virtual Confirm Confirm { get; set; }
     }
 }

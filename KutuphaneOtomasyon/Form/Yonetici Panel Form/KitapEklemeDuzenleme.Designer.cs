@@ -54,6 +54,7 @@ namespace KutuphaneOtomasyon
             this.file = new System.Windows.Forms.OpenFileDialog();
             this.buttonBack = new System.Windows.Forms.Button();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).BeginInit();
             this.SuspendLayout();
@@ -143,9 +144,9 @@ namespace KutuphaneOtomasyon
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.Location = new System.Drawing.Point(125, 408);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 31);
+            this.label8.Size = new System.Drawing.Size(167, 31);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Raf / Salon";
+            this.label8.Text = "Salon / Raf ";
             // 
             // label9
             // 
@@ -320,11 +321,23 @@ namespace KutuphaneOtomasyon
             this.comboBoxCategory.Size = new System.Drawing.Size(189, 21);
             this.comboBoxCategory.TabIndex = 21;
             // 
+            // comboBoxStatus
+            // 
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "Alınabilir",
+            "Alınamaz"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(384, 463);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(189, 21);
+            this.comboBoxStatus.TabIndex = 22;
+            // 
             // KitapEklemeDuzenleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.buttonBookEditUpdate);
@@ -383,5 +396,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.OpenFileDialog file;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.ComboBox comboBoxCategory;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
     }
 }

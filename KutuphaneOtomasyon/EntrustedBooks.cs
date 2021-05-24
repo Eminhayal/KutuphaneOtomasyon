@@ -21,8 +21,6 @@ namespace KutuphaneOtomasyon
         public string UserName { get; set; }
         public System.DateTime DeadLine { get; set; }
     
-        public virtual Books Books { get; set; }
-        public virtual Users Users { get; set; }
-        public virtual EntrustedInfo EntrustedInfo { get; set; }
+        public virtual Confirm Confirm { get; set; }
     }
 }

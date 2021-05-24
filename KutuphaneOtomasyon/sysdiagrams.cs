@@ -12,16 +12,12 @@ namespace KutuphaneOtomasyon
     using System;
     using System.Collections.Generic;
     
-    public partial class Confirm
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public int BookId { get; set; }
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-    
-        public virtual Books Books { get; set; }
-        public virtual Users Users { get; set; }
-        public virtual DeliveredBooks DeliveredBooks { get; set; }
-        public virtual EntrustedBooks EntrustedBooks { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

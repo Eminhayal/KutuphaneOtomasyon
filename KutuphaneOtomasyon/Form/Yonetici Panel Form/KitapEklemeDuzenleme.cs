@@ -89,6 +89,7 @@ namespace KutuphaneOtomasyon
                         textBoxSaloonShelf.Text = kayit.SaloonShelf.ToString();
                         textBoxWriter.Text = kayit.Writer.ToString();
                         numericUpDownPageNo.Text = kayit.PageNo.ToString();
+                        comboBoxStatus.Text = kayit.Status.ToString();
                         textBoxBookId.Enabled = false;
                         buttonAra.Visible = false;
                         buttonBookEditUpdate.Visible = true;
@@ -120,6 +121,8 @@ namespace KutuphaneOtomasyon
             kayit.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             kayit.Category = comboBoxCategory.Text;
             kayit.SaloonShelf = textBoxSaloonShelf.Text;
+            kayit.Status = comboBoxStatus.Text;
+
             kayit.Image = image.imageToByteArray(pictureBox1.Image);
             db.SaveChanges();
         }
@@ -134,7 +137,8 @@ namespace KutuphaneOtomasyon
             book.PageNo = Convert.ToInt16(numericUpDownPageNo.Text);
             book.Category = comboBoxCategory.Text;
             book.SaloonShelf = textBoxSaloonShelf.Text;
-            //book.Image = pictureBox1.
+            book.Status = comboBoxStatus.Text;
+
             ImageAdd(book);
 
             db.Books.Add(book);
@@ -166,6 +170,7 @@ namespace KutuphaneOtomasyon
             textBoxSaloonShelf.Text = "";
             textBoxWriter.Text = "";
             numericUpDownPageNo.Text = "";
+            comboBoxStatus.Text = "";
             textBoxBookId.Enabled = true;
             buttonAra.Visible = true;
             

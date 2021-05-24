@@ -31,7 +31,7 @@ namespace KutuphaneOtomasyon
             users.RegisterDate = DateTime.Now;
             users.Mail = txtUserMail.Text;
             users.Telephone = Convert.ToInt64(txtUserNumber.Text);
-            users.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text));
+            users.Status = txtUserStatus.Text;
 
             db.Users.Add(users);
             db.SaveChanges();
@@ -123,7 +123,7 @@ namespace KutuphaneOtomasyon
             kayit.Tckn =Convert.ToInt64(txtUserTckn.Text) ;
             kayit.Mail = txtUserMail.Text;
             kayit.Telephone = Convert.ToInt64(txtUserNumber.Text); 
-            //kayit.Status = Convert.ToBoolean(Convert.ToInt32(txtUserStatus.Text)); 
+            kayit.Status = txtUserStatus.Text; 
             db.SaveChanges();
         }
 

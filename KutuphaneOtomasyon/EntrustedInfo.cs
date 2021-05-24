@@ -17,9 +17,5 @@ namespace KutuphaneOtomasyon
         public int DeliveredId { get; set; }
         public int BookId { get; set; }
         public int UserId { get; set; }
-    
-        public virtual Books Books { get; set; }
-        public virtual EntrustedBooks EntrustedBooks { get; set; }
-        public virtual Users Users { get; set; }
     }
 }

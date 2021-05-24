@@ -40,19 +40,14 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
         void GetData(String search = "")
         {
-            //var list = from item in db.Books
-            //    where item.Name.Contains(search) || item.Category.Contains(search)
-            //    select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status};
+            var list = from item in db.Books
+                       where item.Name.Contains(search) || item.Category.Contains(search)
+                       select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status };
 
-            //dataGridViewData.DataSource = list.ToList();
+            dataGridViewData.DataSource = list.ToList();
 
             dataGridViewData.DataSource = db.Books.ToList();
-            dataGridViewData.Columns[9].Visible = false;
-            dataGridViewData.Columns[10].Visible = false;
-            dataGridViewData.Columns[11].Visible = false;
-            dataGridViewData.Columns[12].Visible = false;
-            dataGridViewData.Columns[13].Visible = false;
-            dataGridViewData.Columns[14].Visible = false;
+
             dataGridViewData.RowTemplate.Height = 200;
 
 
@@ -83,17 +78,17 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             book = db.Books.Find(id);
 
             KitapAlma.id = book.BookId;
-            KitapAlma.name = book.Name;
-            KitapAlma.writer = book.Writer;
-            KitapAlma.publisher = book.Publisher;
-            KitapAlma.pageNo = book.PageNo; 
-            KitapAlma.category = book.Category;
-            KitapAlma.saloon = book.SaloonShelf;
-            KitapAlma.status = book.Status;
-            KitapAlma.image = image.byteArrayToImage(book.Image);
+            KitapAlma.bookName = book.Name;
+            KitapAlma.bookWriter = book.Writer;
+            KitapAlma.bookPublisher = book.Publisher;
+            KitapAlma.bookPageNo = book.PageNo; 
+            KitapAlma.bookCategory = book.Category;
+            KitapAlma.bookSaloon = book.SaloonShelf;
+            KitapAlma.bookStatus = book.Status;
+            KitapAlma.bookImage = image.byteArrayToImage(book.Image);
             KitapAlma kitapAlma = new KitapAlma();
             kitapAlma.ShowDialog();
-            //kitapAlma.Show();
+ 
 
 
 

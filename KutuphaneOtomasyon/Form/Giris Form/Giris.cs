@@ -47,13 +47,15 @@ namespace KutuphaneOtomasyon
                 user = context.Users.Find(loginId);
                 _userID = user.UserId;
                 FormProfil.id = user.UserId;
-                FormProfil.name = user.Name;
-                FormProfil.surname = user.Surname;
-                FormProfil.birthDate = user.BirthDate;
-                FormProfil.registerDate = user.RegisterDate;
-                FormProfil.mail = user.Mail;
+                FormProfil.userName = user.Name;
+                FormProfil.userSurname = user.Surname;
+                FormProfil.userBirthDate = user.BirthDate;
+                FormProfil.userRegisterDate = user.RegisterDate;
+                FormProfil.userMail = user.Mail;
                 FormProfil.tckn = user.Tckn;
-                FormProfil.phone = user.Telephone;
+                FormProfil.userPhone = user.Telephone;
+                KitapAlma._userID = _userID;
+                KitapAlma.userName = user.Name;
                 // FormProfil.status = user.Status;
 
 

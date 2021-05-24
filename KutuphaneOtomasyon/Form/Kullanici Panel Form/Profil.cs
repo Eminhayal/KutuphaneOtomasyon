@@ -18,26 +18,27 @@ namespace KutuphaneOtomasyon
         }
 
         public static int id;
-        public static string name;
-        public static string surname;
-        public static DateTime birthDate;
-        public static DateTime registerDate;
-        public static string mail;
-        public static Int64 phone;
+        public static string userName;
+        public static string userSurname;
+        public static DateTime userBirthDate;
+        public static DateTime userRegisterDate;
+        public static string userMail;
+        public static Int64 userPhone;
         public static Int64 tckn;
-        public static bool status;
+        public static bool userStatus;
+        
 
         private void FormProfil_Load(object sender, EventArgs e)
         {
             labelUserId.Text = id.ToString();
-            labelUserName.Text = name;
-            labelUserSurname.Text = surname;
-            labelUserBirthDate.Text = birthDate.ToShortDateString();
-            labelUserRegisterDate.Text = registerDate.ToLongDateString();
-            labelUserMail.Text = mail;
-            labelUserPhone.Text = phone.ToString();
+            labelUserName.Text = userName;
+            labelUserSurname.Text = userSurname;
+            labelUserBirthDate.Text = userBirthDate.ToShortDateString();
+            labelUserRegisterDate.Text = userRegisterDate.ToLongDateString();
+            labelUserMail.Text = userMail;
+            labelUserPhone.Text = userPhone.ToString();
             labelUserTckn.Text = tckn.ToString();
-            labelUserStatus.Text = status.ToString();
+            labelUserStatus.Text = userStatus.ToString();
             labelUserMail.Text = Giris.mail;
 
 
