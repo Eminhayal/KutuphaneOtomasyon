@@ -48,7 +48,9 @@ namespace KutuphaneOtomasyon
             this.labelBookId = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBoxConfirm = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonConfirm = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataConfirm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxConfirm)).BeginInit();
             this.SuspendLayout();
@@ -252,22 +254,42 @@ namespace KutuphaneOtomasyon
             this.pictureBoxConfirm.TabIndex = 24;
             this.pictureBoxConfirm.TabStop = false;
             // 
-            // button1
+            // buttonConfirm
             // 
-            this.button1.Location = new System.Drawing.Point(817, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonConfirm.Location = new System.Drawing.Point(736, 448);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(190, 80);
+            this.buttonConfirm.TabIndex = 25;
+            this.buttonConfirm.Text = "Onayla";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(863, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "label9";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(933, 44);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "label9";
             // 
             // KitapAlimOnayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 561);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.pictureBoxConfirm);
             this.Controls.Add(this.labelSaloon);
             this.Controls.Add(this.label8);
@@ -315,6 +337,8 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Label labelBookId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBoxConfirm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

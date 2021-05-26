@@ -17,7 +17,6 @@
         <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Books" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_Confirm_Users" ManuallyRouted="false" />
         <AssociationConnector Association="KutuphaneOtoModel.FK_DeliveredBooks_Confirm1" />
-        <AssociationConnector Association="KutuphaneOtoModel.FK_EntrustedBooks_Confirm1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

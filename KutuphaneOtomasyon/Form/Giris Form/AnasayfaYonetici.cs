@@ -80,7 +80,7 @@ namespace KutuphaneOtomasyon
         private void kullaniciEklemeButton_Click(object sender, EventArgs e)
         {
             panelYonetici.Controls.Clear();
-            KullaniciEklemeDuzenleme kullaniciEklemeDuzenleme = new KullaniciEklemeDuzenleme();
+            UserForm kullaniciEklemeDuzenleme = new UserForm();
             kullaniciEklemeDuzenleme.Dock = DockStyle.Fill;
             kullaniciEklemeDuzenleme.TopLevel = false;
             kullaniciEklemeDuzenleme.FormBorderStyle = FormBorderStyle.None;

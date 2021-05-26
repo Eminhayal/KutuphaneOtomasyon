@@ -145,18 +145,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_EntrustedBooks_Confirm1">
-          <End Role="Confirm" Type="Self.Confirm" Multiplicity="1" />
-          <End Role="EntrustedBooks" Type="Self.EntrustedBooks" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Confirm">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="EntrustedBooks">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="KutuphaneOtoModelStoreContainer">
           <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
@@ -178,10 +166,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <AssociationSet Name="FK_DeliveredBooks_Confirm1" Association="Self.FK_DeliveredBooks_Confirm1">
             <End Role="Confirm" EntitySet="Confirm" />
             <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
-          </AssociationSet>
-          <AssociationSet Name="FK_EntrustedBooks_Confirm1" Association="Self.FK_EntrustedBooks_Confirm1">
-            <End Role="Confirm" EntitySet="Confirm" />
-            <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -235,7 +219,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Confirm_Users" FromRole="Confirm" ToRole="Users" />
           <NavigationProperty Name="DeliveredBooks" Relationship="KutuphaneOtoModel.FK_DeliveredBooks_Confirm1" FromRole="Confirm" ToRole="DeliveredBooks" />
-          <NavigationProperty Name="EntrustedBooks" Relationship="KutuphaneOtoModel.FK_EntrustedBooks_Confirm1" FromRole="Confirm" ToRole="EntrustedBooks" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="DeliveredBooks">
@@ -260,7 +243,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeadLine" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Confirm" Relationship="KutuphaneOtoModel.FK_EntrustedBooks_Confirm1" FromRole="EntrustedBooks" ToRole="Confirm" />
         </EntityType>
         <EntityType Name="EntrustedInfo">
           <Key>
@@ -343,10 +325,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             <End Role="Confirm" EntitySet="Confirm" />
             <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
           </AssociationSet>
-          <AssociationSet Name="FK_EntrustedBooks_Confirm1" Association="KutuphaneOtoModel.FK_EntrustedBooks_Confirm1">
-            <End Role="Confirm" EntitySet="Confirm" />
-            <End Role="EntrustedBooks" EntitySet="EntrustedBooks" />
-          </AssociationSet>
         </EntityContainer>
         <Association Name="FK_DeliveredBooks_Confirm1">
           <End Type="KutuphaneOtoModel.Confirm" Role="Confirm" Multiplicity="1" />
@@ -356,18 +334,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="DeliveredBooks">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_EntrustedBooks_Confirm1">
-          <End Type="KutuphaneOtoModel.Confirm" Role="Confirm" Multiplicity="1" />
-          <End Type="KutuphaneOtoModel.EntrustedBooks" Role="EntrustedBooks" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Confirm">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="EntrustedBooks">
               <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>

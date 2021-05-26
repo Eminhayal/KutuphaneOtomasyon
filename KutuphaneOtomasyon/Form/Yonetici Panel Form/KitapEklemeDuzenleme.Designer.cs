@@ -206,8 +206,6 @@ namespace KutuphaneOtomasyon
             this.textBoxBookId.Name = "textBoxBookId";
             this.textBoxBookId.Size = new System.Drawing.Size(189, 20);
             this.textBoxBookId.TabIndex = 16;
-            this.textBoxBookId.TextChanged += new System.EventHandler(this.textBoxBookId_TextChanged);
-            this.textBoxBookId.Enter += new System.EventHandler(this.textBoxBookId_Enter);
             // 
             // textBoxBookName
             // 

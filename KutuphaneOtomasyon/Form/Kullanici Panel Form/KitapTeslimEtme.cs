@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LinqKit;
 
 namespace KutuphaneOtomasyon
 {
@@ -15,6 +16,65 @@ namespace KutuphaneOtomasyon
         public KitapTeslimEtme()
         {
             InitializeComponent();
+        }
+
+        public static int _userID;
+
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private Users user = new Users();
+        private void KitapTeslimEtme_Load(object sender, EventArgs e)
+        {
+            GetData();
+            
+            //MessageBox.Show("OK");
+        }
+        void GetData(String search = ""  )
+        {
+            if (_userID > 0 )
+            {
+                user = db.Users.Find(_userID);
+
+                //dataGridViewDataEn.DataSource = db.Confirm.Where((x) => x.UserId == _userID).ToList();
+
+                var sorgu = (from c in db.Confirm
+                    where c.UserName.Contains(user.Name)
+                    select new
+                    {
+                        c.Books,
+                        c.BookId,
+                        c.UserId,
+                        c.UserName,
+
+
+                    }).ToList();
+                dataGridViewDataEn.DataSource = sorgu;
+
+                //dataGridViewDataEn.DataSource = db.Confirm.ToList();
+
+
+                ////dataGridViewDataConfirm.Columns[3].Visible = false;
+                //dataGridViewDataEn.Columns[5].Visible = false;
+                //dataGridViewDataEn.Columns[6].Visible = false;
+
+                dataGridViewDataEn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewDataEn.RowTemplate.Height = 150;
+
+
+                //dataGridViewDataConfirm.Columns[0].HeaderText = "İşlem Numarası";
+                //dataGridViewDataConfirm.Columns[1].HeaderText = "Kitap ID";
+                //dataGridViewDataConfirm.Columns[2].HeaderText = "Kitap Alım Onayı ";
+                //dataGridViewDataConfirm.Columns[4].HeaderText = "Kullanıcı ID";
+
+                DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
+                dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+                dataGridViewDataEn.DefaultCellStyle = dataGridViewCellStyle;
+            }
+            else
+            {
+                MessageBox.Show("Hatalı iŞlem");
+            }
+            
+
         }
     }
 }

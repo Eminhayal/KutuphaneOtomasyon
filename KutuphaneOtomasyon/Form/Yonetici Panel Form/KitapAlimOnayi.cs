@@ -20,6 +20,7 @@ namespace KutuphaneOtomasyon
         }
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         Books book = new Books();
+        public static int _userID;
 
 
 
@@ -34,11 +35,14 @@ namespace KutuphaneOtomasyon
         }
         private void dataGridViewDataConfirm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //label9.Text = Convert.ToInt32(dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex[3]].Cells[1].Value);
             //var id = Convert.ToInt32(textBoxSearchId.Text);
             //var confirm = db.Confirm.Find(id);
             int bookId = Convert.ToInt32(dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex].Cells[1].Value);
             book = db.Books.Find(bookId);
 
+            label9.Text = dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            label10.Text = dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex].Cells[3].Value.ToString();
             labelBookId.Text = book.BookId.ToString();
             labelBookName.Text = book.Name;
             labelWriter.Text = book.Writer;
@@ -56,7 +60,7 @@ namespace KutuphaneOtomasyon
 
 
             dataGridViewDataConfirm.DataSource = db.Confirm.ToList();
-
+            
 
             //dataGridViewDataConfirm.Columns[3].Visible = false;
             dataGridViewDataConfirm.Columns[5].Visible = false;
@@ -87,11 +91,19 @@ namespace KutuphaneOtomasyon
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            EntrustedBooks entrustedBooks = new EntrustedBooks();
+            entrustedBooks.BookId = Convert.ToInt32(labelBookId.Text);
+            entrustedBooks.UserId = Convert.ToInt32(label9.Text);
+            entrustedBooks.BookName = labelBookName.Text;
+            entrustedBooks.UserName = label10.Text;
+            entrustedBooks.DeadLine = DateTime.Now;
+            db.EntrustedBooks.Add(entrustedBooks);
+            db.SaveChanges();
 
         }
-       
+
     }
 }
 

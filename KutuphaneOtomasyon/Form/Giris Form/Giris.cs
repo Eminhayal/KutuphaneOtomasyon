@@ -22,6 +22,9 @@ namespace KutuphaneOtomasyon
         
         public static string mail;
         public static int _userID;
+   
+
+
         private void Giris_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -54,9 +57,16 @@ namespace KutuphaneOtomasyon
                 FormProfil.userMail = user.Mail;
                 FormProfil.tckn = user.Tckn;
                 FormProfil.userPhone = user.Telephone;
+
                 KitapAlma._userID = _userID;
                 KitapAlma.userName = user.Name;
+
+                KitapTeslimEtme._userID = user.UserId;
+
                 // FormProfil.status = user.Status;
+
+
+
 
 
 

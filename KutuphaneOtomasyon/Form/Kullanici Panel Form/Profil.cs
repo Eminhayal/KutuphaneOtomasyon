@@ -26,7 +26,7 @@ namespace KutuphaneOtomasyon
         public static Int64 userPhone;
         public static Int64 tckn;
         public static bool userStatus;
-        
+        public static int _userIdConfirmTake;
 
         private void FormProfil_Load(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace KutuphaneOtomasyon
             labelUserTckn.Text = tckn.ToString();
             labelUserStatus.Text = userStatus.ToString();
             labelUserMail.Text = Giris.mail;
-
+            _userIdConfirmTake = id;
 
         }
         private void label4_Click(object sender, EventArgs e)

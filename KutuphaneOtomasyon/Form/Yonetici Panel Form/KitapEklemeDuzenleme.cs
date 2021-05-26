@@ -23,35 +23,12 @@ namespace KutuphaneOtomasyon
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
 
         private ImageConvert image = new ImageConvert();
-        private void buttonBookEdit_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void buttonBookEditUpdate_Click(object sender, EventArgs e)
-        {
-            ChanceInfo();
-        }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-            OpenFileDialog file = new OpenFileDialog();
-            file.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
-            file.Title = "ayemkutuphane ";
-            file.ShowDialog();
-            string filePath = file.FileName;
-            pictureBox1.ImageLocation = filePath;
-        }
-        private void button_Clear(object sender, EventArgs e)
-        {
-            textBoxBookId.Enabled = true;
-        }
-
+        
         private void buttonBookAdd_Click(object sender, EventArgs e)
         {
             AddBook();
         }
-
         private void buttonBookDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBoxBookId.Text);
@@ -63,15 +40,26 @@ namespace KutuphaneOtomasyon
                 return;
             }
 
-            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? " ,
+            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? ",
                 " Kayıt silme onayı",
-                MessageBoxButtons.YesNo)== DialogResult.Yes)
+                MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 db.Books.Remove(kayit);
                 db.SaveChanges();
             }
-           
-
+        }
+        private void buttonBookEditUpdate_Click(object sender, EventArgs e)
+        {
+            ChanceInfo();
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Filter = "Resim Dosyası |*.jpg;*.nef;*.png| Video|*.avi| Tüm Dosyalar |*.*";
+            file.Title = "ayemkutuphane ";
+            file.ShowDialog();
+            string filePath = file.FileName;
+            pictureBox1.ImageLocation = filePath;
         }
         private void buttonAra_Click(object sender, EventArgs e)
         {
@@ -99,17 +87,26 @@ namespace KutuphaneOtomasyon
                 
             
         }
-        
-
-        private void textBoxBookId_TextChanged(object sender, EventArgs e)
+        private void numericUpDownPageNo_ValueChanged(object sender, EventArgs e)
         {
-            
+            numericUpDownPageNo.Maximum = 2500;
         }
-
-        private void textBoxBookId_Enter(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
-           
-          
+            textBoxBookId.Text = "";
+            textBoxBookName.Text = "";
+            comboBoxCategory.Text = "";
+            textBoxPublisher.Text = "";
+            textBoxSaloonShelf.Text = "";
+            textBoxWriter.Text = "";
+            numericUpDownPageNo.Text = "";
+            comboBoxStatus.Text = "";
+            textBoxBookId.Enabled = true;
+            buttonAra.Visible = true;
+
+            pictureBox1.Image = Properties.Resources.Xbüyük;
+            buttonBookEditUpdate.Enabled = false;
+
         }
         public void ChanceInfo()
         {
@@ -126,7 +123,6 @@ namespace KutuphaneOtomasyon
             kayit.Image = image.imageToByteArray(pictureBox1.Image);
             db.SaveChanges();
         }
-
         public void AddBook()
         {
            
@@ -154,28 +150,6 @@ namespace KutuphaneOtomasyon
                 book.Image = ms1.ToArray();
 
             }
-
-        }
-        private void numericUpDownPageNo_ValueChanged(object sender, EventArgs e)
-        {
-            numericUpDownPageNo.Maximum = 2500;
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            textBoxBookId.Text = "";
-            textBoxBookName.Text = "";
-            comboBoxCategory.Text = "";
-            textBoxPublisher.Text = "";
-            textBoxSaloonShelf.Text = "";
-            textBoxWriter.Text = "";
-            numericUpDownPageNo.Text = "";
-            comboBoxStatus.Text = "";
-            textBoxBookId.Enabled = true;
-            buttonAra.Visible = true;
-            
-            pictureBox1.Image = Properties.Resources.Xbüyük;
-            buttonBookEditUpdate.Enabled = false;
 
         }
     }

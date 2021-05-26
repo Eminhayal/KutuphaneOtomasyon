@@ -22,6 +22,5 @@ namespace KutuphaneOtomasyon
         public virtual Books Books { get; set; }
         public virtual Users Users { get; set; }
         public virtual DeliveredBooks DeliveredBooks { get; set; }
-        public virtual EntrustedBooks EntrustedBooks { get; set; }
     }
 }
