@@ -360,6 +360,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "KitapEklemeDuzenleme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapEklemeDuzenleme";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPageNo)).EndInit();

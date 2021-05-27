@@ -134,6 +134,7 @@ namespace KutuphaneOtomasyon
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Giris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GİRİŞ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Giris_FormClosing);
             this.Load += new System.EventHandler(this.Giris_Load);

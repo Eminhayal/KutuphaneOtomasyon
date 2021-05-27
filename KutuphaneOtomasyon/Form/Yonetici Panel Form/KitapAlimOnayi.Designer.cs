@@ -309,6 +309,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.textBoxSearchId);
             this.Controls.Add(this.label1);
             this.Name = "KitapAlimOnayi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapAlimOnayi";
             this.Load += new System.EventHandler(this.KitapAlimOnayi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataConfirm)).EndInit();

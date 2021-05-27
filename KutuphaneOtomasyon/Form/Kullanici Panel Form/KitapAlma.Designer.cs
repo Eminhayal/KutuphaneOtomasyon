@@ -292,6 +292,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "KitapAlma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapAlma";
             this.Load += new System.EventHandler(this.KitapAlma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

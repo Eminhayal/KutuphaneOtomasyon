@@ -350,6 +350,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "UserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KullaniciEklemeDuzenleme";
             this.Load += new System.EventHandler(this.UserForm_load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

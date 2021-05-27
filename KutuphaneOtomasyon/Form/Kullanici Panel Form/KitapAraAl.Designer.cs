@@ -83,6 +83,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "KitapAraAl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapAraAl";
             this.Load += new System.EventHandler(this.KitapAraAl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).EndInit();

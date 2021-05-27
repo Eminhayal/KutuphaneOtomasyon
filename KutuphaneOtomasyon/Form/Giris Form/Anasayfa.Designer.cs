@@ -145,6 +145,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.button7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Anasayfa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
             this.ResumeLayout(false);
 

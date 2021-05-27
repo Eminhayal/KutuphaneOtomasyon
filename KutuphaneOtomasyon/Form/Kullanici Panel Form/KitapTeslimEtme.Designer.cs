@@ -68,6 +68,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
             this.Name = "KitapTeslimEtme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapTeslimEtme";
             this.Load += new System.EventHandler(this.KitapTeslimEtme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDataEn)).EndInit();
