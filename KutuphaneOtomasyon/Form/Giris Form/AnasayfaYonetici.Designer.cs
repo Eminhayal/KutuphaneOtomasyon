@@ -132,6 +132,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.kitapAlimOnayButton);
             this.Controls.Add(this.kitapEklemeDuzenlemeButton);
             this.Controls.Add(this.kitapTeslimOnayButton);
+            this.MaximizeBox = false;
             this.Name = "AnasayfaYonetici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YöneticiAnasayfa";

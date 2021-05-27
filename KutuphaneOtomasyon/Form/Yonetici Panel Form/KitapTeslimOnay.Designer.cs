@@ -252,6 +252,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "KitapTeslimOnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapTeslimOnayı";

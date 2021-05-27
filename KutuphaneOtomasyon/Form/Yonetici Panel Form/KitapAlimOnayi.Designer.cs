@@ -308,6 +308,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.dataGridViewDataConfirm);
             this.Controls.Add(this.textBoxSearchId);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "KitapAlimOnayi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitapAlimOnayi";

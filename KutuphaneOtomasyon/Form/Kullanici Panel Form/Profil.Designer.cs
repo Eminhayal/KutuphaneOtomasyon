@@ -320,6 +320,7 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.MaximizeBox = false;
             this.Name = "FormProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KullanıcıAl";
