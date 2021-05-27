@@ -23,7 +23,6 @@ namespace KutuphaneOtomasyon
             Giris giris = new Giris();
             giris.Show();
             this.Hide();
-
         }
         private void profilButton_Click(object sender, EventArgs e)
         {
