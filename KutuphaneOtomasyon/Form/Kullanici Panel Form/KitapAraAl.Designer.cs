@@ -50,10 +50,11 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.AcceptsTab = true;
             this.textBoxSearch.Location = new System.Drawing.Point(732, 33);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSearch.TabIndex = 38;
+            this.textBoxSearch.TabIndex = 1;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // dataGridViewData

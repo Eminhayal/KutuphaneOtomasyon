@@ -47,7 +47,7 @@ namespace KutuphaneOtomasyon
             this.btnGiris.Location = new System.Drawing.Point(762, 462);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(118, 37);
-            this.btnGiris.TabIndex = 1;
+            this.btnGiris.TabIndex = 3;
             this.btnGiris.Text = "GİRİŞ";
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
@@ -64,7 +64,7 @@ namespace KutuphaneOtomasyon
             this.cikisButton.Location = new System.Drawing.Point(766, 505);
             this.cikisButton.Name = "cikisButton";
             this.cikisButton.Size = new System.Drawing.Size(109, 29);
-            this.cikisButton.TabIndex = 3;
+            this.cikisButton.TabIndex = 4;
             this.cikisButton.Text = "ÇIKIŞ";
             this.cikisButton.UseVisualStyleBackColor = false;
             this.cikisButton.Click += new System.EventHandler(this.cikisButton_Click);
@@ -79,7 +79,7 @@ namespace KutuphaneOtomasyon
             this.txtLogPass.Name = "txtLogPass";
             this.txtLogPass.PasswordChar = '*';
             this.txtLogPass.Size = new System.Drawing.Size(152, 20);
-            this.txtLogPass.TabIndex = 4;
+            this.txtLogPass.TabIndex = 2;
             this.txtLogPass.Click += new System.EventHandler(this.txtLogPass_Click);
             // 
             // txtLogMail
@@ -91,12 +91,13 @@ namespace KutuphaneOtomasyon
             this.txtLogMail.Location = new System.Drawing.Point(743, 339);
             this.txtLogMail.Name = "txtLogMail";
             this.txtLogMail.Size = new System.Drawing.Size(152, 20);
-            this.txtLogMail.TabIndex = 4;
+            this.txtLogMail.TabIndex = 1;
             this.txtLogMail.Click += new System.EventHandler(this.txtLogMail_Click);
             this.txtLogMail.Leave += new System.EventHandler(this.txtLogMail_Leave);
             // 
             // Giris
             // 
+            this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

@@ -70,6 +70,7 @@ namespace KutuphaneOtomasyon
             // 
             // textBoxSearchId
             // 
+            this.textBoxSearchId.AcceptsTab = true;
             this.textBoxSearchId.Location = new System.Drawing.Point(466, 65);
             this.textBoxSearchId.Name = "textBoxSearchId";
             this.textBoxSearchId.Size = new System.Drawing.Size(205, 20);
@@ -259,7 +260,7 @@ namespace KutuphaneOtomasyon
             this.buttonConfirm.Location = new System.Drawing.Point(736, 448);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(190, 80);
-            this.buttonConfirm.TabIndex = 25;
+            this.buttonConfirm.TabIndex = 1;
             this.buttonConfirm.Text = "Onayla";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);

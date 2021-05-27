@@ -49,7 +49,7 @@ namespace KutuphaneOtomasyon
             this.profilButton.Location = new System.Drawing.Point(0, 99);
             this.profilButton.Name = "profilButton";
             this.profilButton.Size = new System.Drawing.Size(337, 30);
-            this.profilButton.TabIndex = 0;
+            this.profilButton.TabIndex = 1;
             this.profilButton.Text = "PROFİL";
             this.profilButton.UseVisualStyleBackColor = false;
             this.profilButton.Click += new System.EventHandler(this.profilButton_Click);
@@ -63,7 +63,7 @@ namespace KutuphaneOtomasyon
             this.kitapAraAlButton.Location = new System.Drawing.Point(327, 99);
             this.kitapAraAlButton.Name = "kitapAraAlButton";
             this.kitapAraAlButton.Size = new System.Drawing.Size(345, 30);
-            this.kitapAraAlButton.TabIndex = 1;
+            this.kitapAraAlButton.TabIndex = 2;
             this.kitapAraAlButton.Text = "KİTAP ARA / AL";
             this.kitapAraAlButton.UseVisualStyleBackColor = false;
             this.kitapAraAlButton.Click += new System.EventHandler(this.kitapAraAlButton_Click_1);
@@ -99,7 +99,7 @@ namespace KutuphaneOtomasyon
             // panelKullanici
             // 
             this.panelKullanici.Location = new System.Drawing.Point(0, 131);
-            this.panelKullanici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelKullanici.Margin = new System.Windows.Forms.Padding(2);
             this.panelKullanici.Name = "panelKullanici";
             this.panelKullanici.Size = new System.Drawing.Size(1350, 600);
             this.panelKullanici.TabIndex = 7;
@@ -127,13 +127,14 @@ namespace KutuphaneOtomasyon
             this.button2.Location = new System.Drawing.Point(1013, 99);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(337, 30);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 4;
             this.button2.Text = "ÇIKIŞ";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Anasayfa
             // 
+            this.AcceptButton = this.profilButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;

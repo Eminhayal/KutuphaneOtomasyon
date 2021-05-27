@@ -172,7 +172,7 @@ namespace KutuphaneOtomasyon
             this.labelBookName.Location = new System.Drawing.Point(204, 155);
             this.labelBookName.Name = "labelBookName";
             this.labelBookName.Size = new System.Drawing.Size(162, 24);
-            this.labelBookName.TabIndex = 1;
+            this.labelBookName.TabIndex = 2;
             this.labelBookName.Text = "İki Şehrin Hikayesi";
             // 
             // labelWriter
@@ -183,7 +183,7 @@ namespace KutuphaneOtomasyon
             this.labelWriter.Location = new System.Drawing.Point(204, 205);
             this.labelWriter.Name = "labelWriter";
             this.labelWriter.Size = new System.Drawing.Size(160, 24);
-            this.labelWriter.TabIndex = 1;
+            this.labelWriter.TabIndex = 3;
             this.labelWriter.Text = "Charles DICKENS";
             // 
             // labelPublisher
@@ -194,7 +194,7 @@ namespace KutuphaneOtomasyon
             this.labelPublisher.Location = new System.Drawing.Point(204, 255);
             this.labelPublisher.Name = "labelPublisher";
             this.labelPublisher.Size = new System.Drawing.Size(158, 24);
-            this.labelPublisher.TabIndex = 1;
+            this.labelPublisher.TabIndex = 4;
             this.labelPublisher.Text = "Anonim Yayıncılık";
             // 
             // labelPageNo
@@ -205,7 +205,7 @@ namespace KutuphaneOtomasyon
             this.labelPageNo.Location = new System.Drawing.Point(204, 305);
             this.labelPageNo.Name = "labelPageNo";
             this.labelPageNo.Size = new System.Drawing.Size(40, 24);
-            this.labelPageNo.TabIndex = 1;
+            this.labelPageNo.TabIndex = 5;
             this.labelPageNo.Text = "422";
             // 
             // labelCategory
@@ -216,7 +216,7 @@ namespace KutuphaneOtomasyon
             this.labelCategory.Location = new System.Drawing.Point(204, 345);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(142, 24);
-            this.labelCategory.TabIndex = 1;
+            this.labelCategory.TabIndex = 6;
             this.labelCategory.Text = "Dünya Klasikleri";
             // 
             // labelSaloon
@@ -227,7 +227,7 @@ namespace KutuphaneOtomasyon
             this.labelSaloon.Location = new System.Drawing.Point(204, 395);
             this.labelSaloon.Name = "labelSaloon";
             this.labelSaloon.Size = new System.Drawing.Size(155, 24);
-            this.labelSaloon.TabIndex = 1;
+            this.labelSaloon.TabIndex = 7;
             this.labelSaloon.Text = "12.Raf - C Salonu";
             // 
             // button1
@@ -239,7 +239,7 @@ namespace KutuphaneOtomasyon
             this.button1.Location = new System.Drawing.Point(1078, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 54);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 0;
             this.button1.Text = "Kitabı Al";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -263,11 +263,12 @@ namespace KutuphaneOtomasyon
             this.labelStatus.Location = new System.Drawing.Point(209, 443);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(81, 24);
-            this.labelStatus.TabIndex = 1;
+            this.labelStatus.TabIndex = 8;
             this.labelStatus.Text = "Alınabilir";
             // 
             // KitapAlma
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
