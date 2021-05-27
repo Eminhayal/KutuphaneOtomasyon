@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KutuphaneOtomasyon.Form;
@@ -31,7 +32,8 @@ namespace KutuphaneOtomasyon
 
         private void UserForm_load(object sender, EventArgs e)
         {
-
+            txtUserNumber.Text = "5XXXXXXXXX";
+            txtUserNumber.ForeColor = Color.Gray;
         }
 
         private void btnUsersRemove_Click(object sender, EventArgs e)
@@ -86,7 +88,7 @@ namespace KutuphaneOtomasyon
                     txtUserTckn.Text = kayit.Tckn.ToString();
                     txtUserMail.Text = kayit.Mail.ToString();
                     txtUserNumber.Text = kayit.Telephone.ToString();
-                    txtUserStatus.Text = kayit.Status.ToString();
+                    cmbUserStatus.Text = kayit.Status.ToString();
                     pictureBox1.Image = image.byteArrayToImage(kayit.Image);
 
                     txtUserID.Enabled = false;
@@ -113,7 +115,7 @@ namespace KutuphaneOtomasyon
             txtUserName.Text = "";
             txtUserNumber.Text = "";
             txtUserPassword.Text = "";
-            txtUserStatus.Text = "";
+            cmbUserStatus.Text = "";
             txtUserSurname.Text = "";
             txtUserID.Enabled = true;
             buttonSearch.Visible = true;
@@ -131,7 +133,7 @@ namespace KutuphaneOtomasyon
             kayit.Tckn = Convert.ToInt64(txtUserTckn.Text);
             kayit.Mail = txtUserMail.Text;
             kayit.Telephone = Convert.ToInt64(txtUserNumber.Text);
-            kayit.Status = txtUserStatus.Text;
+            kayit.Status = cmbUserStatus.Text;
             kayit.Image = image.imageToByteArray(pictureBox1.Image);
             db.SaveChanges();
         }
@@ -147,7 +149,7 @@ namespace KutuphaneOtomasyon
             user.RegisterDate = DateTime.Now;
             user.Mail = txtUserMail.Text;
             user.Telephone = Convert.ToInt64(txtUserNumber.Text);
-            user.Status = txtUserStatus.Text;
+            user.Status = cmbUserStatus.Text;
 
             ImageAdd(user);
             db.Users.Add(user);
@@ -168,7 +170,27 @@ namespace KutuphaneOtomasyon
 
         }
 
-       
+        private void txtUserTckn_Leave(object sender, EventArgs e)
+        {
+            if(!Regex.IsMatch(txtUserTckn.Text, @"^\d{11}$"))
+            {
+                MessageBox.Show("TC Kimlik Numarası 11 Haneli Rakamlardan Oluşmaldır!..");
+            }
+        }
+
+        private void txtUserNumber_Leave(object sender, EventArgs e)
+        {
+            if (!Regex.IsMatch(txtUserTckn.Text, @"^(5(\d{9}))$"))
+            {
+                MessageBox.Show("Telefon Numarası başında 0 olmadan ,9 haneli olacak şekilde girilmelidir");
+            }
+        }
+
+        private void txtUserNumber_TextChanged(object sender, EventArgs e)
+        {
+            txtUserNumber.Text = null;
+            txtUserNumber.ForeColor = Color.Black;
+        }
     }
 }
 

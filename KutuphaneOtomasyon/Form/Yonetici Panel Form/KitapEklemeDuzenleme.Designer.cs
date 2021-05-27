@@ -195,7 +195,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookAdd.Location = new System.Drawing.Point(120, 511);
             this.buttonBookAdd.Name = "buttonBookAdd";
             this.buttonBookAdd.Size = new System.Drawing.Size(153, 47);
-            this.buttonBookAdd.TabIndex = 3;
+            this.buttonBookAdd.TabIndex = 9;
             this.buttonBookAdd.Text = "Kitap Ekle";
             this.buttonBookAdd.UseVisualStyleBackColor = false;
             this.buttonBookAdd.Click += new System.EventHandler(this.buttonBookAdd_Click);
@@ -205,42 +205,42 @@ namespace KutuphaneOtomasyon
             this.textBoxBookId.Location = new System.Drawing.Point(384, 105);
             this.textBoxBookId.Name = "textBoxBookId";
             this.textBoxBookId.Size = new System.Drawing.Size(189, 20);
-            this.textBoxBookId.TabIndex = 16;
+            this.textBoxBookId.TabIndex = 1;
             // 
             // textBoxBookName
             // 
             this.textBoxBookName.Location = new System.Drawing.Point(384, 157);
             this.textBoxBookName.Name = "textBoxBookName";
             this.textBoxBookName.Size = new System.Drawing.Size(189, 20);
-            this.textBoxBookName.TabIndex = 16;
+            this.textBoxBookName.TabIndex = 2;
             // 
             // textBoxWriter
             // 
             this.textBoxWriter.Location = new System.Drawing.Point(384, 210);
             this.textBoxWriter.Name = "textBoxWriter";
             this.textBoxWriter.Size = new System.Drawing.Size(189, 20);
-            this.textBoxWriter.TabIndex = 16;
+            this.textBoxWriter.TabIndex = 3;
             // 
             // textBoxPublisher
             // 
             this.textBoxPublisher.Location = new System.Drawing.Point(384, 259);
             this.textBoxPublisher.Name = "textBoxPublisher";
             this.textBoxPublisher.Size = new System.Drawing.Size(189, 20);
-            this.textBoxPublisher.TabIndex = 16;
+            this.textBoxPublisher.TabIndex = 4;
             // 
             // textBoxSaloonShelf
             // 
             this.textBoxSaloonShelf.Location = new System.Drawing.Point(384, 419);
             this.textBoxSaloonShelf.Name = "textBoxSaloonShelf";
             this.textBoxSaloonShelf.Size = new System.Drawing.Size(189, 20);
-            this.textBoxSaloonShelf.TabIndex = 16;
+            this.textBoxSaloonShelf.TabIndex = 7;
             // 
             // numericUpDownPageNo
             // 
             this.numericUpDownPageNo.Location = new System.Drawing.Point(384, 309);
             this.numericUpDownPageNo.Name = "numericUpDownPageNo";
             this.numericUpDownPageNo.Size = new System.Drawing.Size(189, 20);
-            this.numericUpDownPageNo.TabIndex = 17;
+            this.numericUpDownPageNo.TabIndex = 5;
             this.numericUpDownPageNo.ValueChanged += new System.EventHandler(this.numericUpDownPageNo_ValueChanged);
             // 
             // buttonAra
@@ -264,7 +264,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookEditUpdate.Location = new System.Drawing.Point(312, 509);
             this.buttonBookEditUpdate.Name = "buttonBookEditUpdate";
             this.buttonBookEditUpdate.Size = new System.Drawing.Size(153, 47);
-            this.buttonBookEditUpdate.TabIndex = 19;
+            this.buttonBookEditUpdate.TabIndex = 10;
             this.buttonBookEditUpdate.Text = "Kitap Düzenle";
             this.buttonBookEditUpdate.UseVisualStyleBackColor = false;
             this.buttonBookEditUpdate.Click += new System.EventHandler(this.buttonBookEditUpdate_Click);
@@ -317,7 +317,7 @@ namespace KutuphaneOtomasyon
             this.comboBoxCategory.Location = new System.Drawing.Point(384, 360);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(189, 21);
-            this.comboBoxCategory.TabIndex = 21;
+            this.comboBoxCategory.TabIndex = 6;
             // 
             // comboBoxStatus
             // 
@@ -328,7 +328,7 @@ namespace KutuphaneOtomasyon
             this.comboBoxStatus.Location = new System.Drawing.Point(384, 463);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(189, 21);
-            this.comboBoxStatus.TabIndex = 22;
+            this.comboBoxStatus.TabIndex = 8;
             // 
             // KitapEklemeDuzenleme
             // 
