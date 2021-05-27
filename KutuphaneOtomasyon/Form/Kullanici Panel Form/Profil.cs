@@ -32,10 +32,12 @@ namespace KutuphaneOtomasyon
         private ImageConvert image = new ImageConvert();
         public static int _userIdConfirmTake;
 
+        public static int _userID;
+
         private void FormProfil_Load(object sender, EventArgs e)
         {
-            int userId = Convert.ToInt32(id);
-            var kayit = db.Users.Find(id);
+            int userId = Convert.ToInt32(_userID);
+            var kayit = db.Users.Find(userId);
 
             labelUserId.Text = id.ToString();
             labelUserName.Text = userName;

@@ -63,5 +63,10 @@ namespace KutuphaneOtomasyon
             giris.Show();
             this.Hide();
         }
+
+        private void Anasayfa_Load(object sender, EventArgs e)
+        {
+  
+        }
     }
 }

@@ -98,8 +98,8 @@ namespace KutuphaneOtomasyon
             // 
             // panelKullanici
             // 
-            this.panelKullanici.Location = new System.Drawing.Point(0, 134);
-            this.panelKullanici.Margin = new System.Windows.Forms.Padding(2);
+            this.panelKullanici.Location = new System.Drawing.Point(0, 131);
+            this.panelKullanici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelKullanici.Name = "panelKullanici";
             this.panelKullanici.Size = new System.Drawing.Size(1350, 600);
             this.panelKullanici.TabIndex = 7;
@@ -150,6 +150,7 @@ namespace KutuphaneOtomasyon
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
+            this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.ResumeLayout(false);
 
         }

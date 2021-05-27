@@ -21,7 +21,7 @@ namespace KutuphaneOtomasyon
 
         KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
         
-        public static string mail;
+        
         public static int _userID;
    
 
@@ -58,11 +58,14 @@ namespace KutuphaneOtomasyon
                 FormProfil.userMail = user.Mail;
                 FormProfil.tckn = user.Tckn;
                 FormProfil.userPhone = user.Telephone;
+                FormProfil._userID = user.UserId;
 
                 KitapAlma._userID = _userID;
                 KitapAlma.userName = user.Name;
 
+                
                 KitapTeslimEtme._userID = user.UserId;
+
 
                 // FormProfil.status = user.Status;
 
