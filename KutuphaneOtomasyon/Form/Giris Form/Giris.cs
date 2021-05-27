@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -142,6 +143,15 @@ namespace KutuphaneOtomasyon
             txtLogPass.Text = null;
             txtLogPass.ForeColor = Color.Black;
           
+        }
+
+        private void txtLogMail_Leave(object sender, EventArgs e)
+        {
+            if(!Regex.IsMatch(txtLogMail.Text, @"^\d{4}$"))
+            {
+                MessageBox.Show("Giriş yapmak istediğiniz ID en az 4 haneli rakamlardan oluşmalıdır!..");
+                txtLogMail.Focus();
+            }
         }
     }
 }

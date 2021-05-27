@@ -93,6 +93,7 @@ namespace KutuphaneOtomasyon
             this.txtLogMail.Size = new System.Drawing.Size(152, 20);
             this.txtLogMail.TabIndex = 4;
             this.txtLogMail.Click += new System.EventHandler(this.txtLogMail_Click);
+            this.txtLogMail.Leave += new System.EventHandler(this.txtLogMail_Leave);
             // 
             // Giris
             // 
