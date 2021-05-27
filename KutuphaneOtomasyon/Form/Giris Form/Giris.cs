@@ -84,19 +84,6 @@ namespace KutuphaneOtomasyon
                 MessageBox.Show("E posta yada şifre hatalı");
             }
 
-            // giris e posta ile olacak
-            if (rdUsers.Checked)
-            {
-            Anasayfa anasayfa = new Anasayfa();
-            anasayfa.Show();
-            this.Hide();
-            }
-            if (rdAdmins.Checked)
-            {
-            AnasayfaYonetici anasayfaYonetici = new AnasayfaYonetici();
-            anasayfaYonetici.Show();
-             this.Hide();
-            }
         }
 
         private bool girisdoğrula(int kId, string kSifre  )
@@ -138,9 +125,9 @@ namespace KutuphaneOtomasyon
 
         private void Giris_Load(object sender, EventArgs e)
         {
-            txtLogMail.Text = "e-posta";
+            txtLogMail.Text = "ID Giriniz...";
             txtLogMail.ForeColor = Color.Gray;
-            txtLogPass.Text = "şifre";
+            txtLogPass.Text = "Şifre Giriniz...";
             txtLogPass.ForeColor = Color.Gray;
         }
 

@@ -31,8 +31,6 @@ namespace KutuphaneOtomasyon
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
             this.btnGiris = new System.Windows.Forms.Button();
-            this.rdUsers = new System.Windows.Forms.RadioButton();
-            this.rdAdmins = new System.Windows.Forms.RadioButton();
             this.cikisButton = new System.Windows.Forms.Button();
             this.txtLogPass = new System.Windows.Forms.TextBox();
             this.txtLogMail = new System.Windows.Forms.TextBox();
@@ -54,35 +52,12 @@ namespace KutuphaneOtomasyon
             this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
-            // rdUsers
-            // 
-            this.rdUsers.AutoSize = true;
-            this.rdUsers.BackColor = System.Drawing.Color.Transparent;
-            this.rdUsers.Location = new System.Drawing.Point(728, 295);
-            this.rdUsers.Name = "rdUsers";
-            this.rdUsers.Size = new System.Drawing.Size(67, 17);
-            this.rdUsers.TabIndex = 2;
-            this.rdUsers.TabStop = true;
-            this.rdUsers.Text = "Kullanıcı ";
-            this.rdUsers.UseVisualStyleBackColor = false;
-            // 
-            // rdAdmins
-            // 
-            this.rdAdmins.AutoSize = true;
-            this.rdAdmins.BackColor = System.Drawing.Color.Transparent;
-            this.rdAdmins.Location = new System.Drawing.Point(833, 295);
-            this.rdAdmins.Name = "rdAdmins";
-            this.rdAdmins.Size = new System.Drawing.Size(63, 17);
-            this.rdAdmins.TabIndex = 2;
-            this.rdAdmins.TabStop = true;
-            this.rdAdmins.Text = "Yönetici";
-            this.rdAdmins.UseVisualStyleBackColor = false;
-            // 
             // cikisButton
             // 
             this.cikisButton.AutoEllipsis = true;
             this.cikisButton.BackColor = System.Drawing.Color.White;
             this.cikisButton.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.cikisButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cikisButton.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.cikisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisButton.ForeColor = System.Drawing.Color.White;
@@ -124,12 +99,11 @@ namespace KutuphaneOtomasyon
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.CancelButton = this.cikisButton;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.txtLogMail);
             this.Controls.Add(this.txtLogPass);
             this.Controls.Add(this.cikisButton);
-            this.Controls.Add(this.rdAdmins);
-            this.Controls.Add(this.rdUsers);
             this.Controls.Add(this.btnGiris);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -146,8 +120,6 @@ namespace KutuphaneOtomasyon
         #endregion
 
         private System.Windows.Forms.Button btnGiris;
-        private System.Windows.Forms.RadioButton rdUsers;
-        private System.Windows.Forms.RadioButton rdAdmins;
         private System.Windows.Forms.Button cikisButton;
         private System.Windows.Forms.TextBox txtLogPass;
         private System.Windows.Forms.TextBox txtLogMail;

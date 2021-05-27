@@ -119,6 +119,7 @@ namespace KutuphaneOtomasyon
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::KutuphaneOtomasyon.Properties.Resources.exit_butonu0;
@@ -136,6 +137,7 @@ namespace KutuphaneOtomasyon
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.kitapTeslimButton);
