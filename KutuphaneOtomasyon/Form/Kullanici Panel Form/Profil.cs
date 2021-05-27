@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KutuphaneOtomasyon.Form;
 
 namespace KutuphaneOtomasyon
 {
@@ -25,11 +26,17 @@ namespace KutuphaneOtomasyon
         public static string userMail;
         public static Int64 userPhone;
         public static Int64 tckn;
-        public static bool userStatus;
+        public static string userStatus;
+
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private ImageConvert image = new ImageConvert();
         public static int _userIdConfirmTake;
 
         private void FormProfil_Load(object sender, EventArgs e)
         {
+            int userId = Convert.ToInt32(id);
+            var kayit = db.Users.Find(id);
+
             labelUserId.Text = id.ToString();
             labelUserName.Text = userName;
             labelUserSurname.Text = userSurname;
@@ -38,9 +45,13 @@ namespace KutuphaneOtomasyon
             labelUserMail.Text = userMail;
             labelUserPhone.Text = userPhone.ToString();
             labelUserTckn.Text = tckn.ToString();
-            labelUserStatus.Text = userStatus.ToString();
-            labelUserMail.Text = Giris.mail;
+            labelUserStatus.Text = userStatus;
+            labelUserMail.Text = kayit.Mail;
+            labelUserStatus.Text = kayit.Status;
+            pictureBoxImage.Image = image.byteArrayToImage(kayit.Image);
             _userIdConfirmTake = id;
+
+
 
         }
         private void label4_Click(object sender, EventArgs e)
@@ -53,10 +64,7 @@ namespace KutuphaneOtomasyon
 
         }
 
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
        
     }

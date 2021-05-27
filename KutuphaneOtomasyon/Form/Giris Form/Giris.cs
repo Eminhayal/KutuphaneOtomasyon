@@ -147,10 +147,10 @@ namespace KutuphaneOtomasyon
 
         private void txtLogMail_Leave(object sender, EventArgs e)
         {
-            if(!Regex.IsMatch(txtLogMail.Text, @"^\d{4}$"))
+            if(!Regex.IsMatch(txtLogMail.Text, @"^\d{4,10}$"))
             {
                 MessageBox.Show("Giriş yapmak istediğiniz ID en az 4 haneli rakamlardan oluşmalıdır!..");
-                txtLogMail.Focus();
+               
             }
         }
     }
