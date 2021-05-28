@@ -65,6 +65,7 @@ namespace KutuphaneOtomasyon
                 EmanetBilgileri._userID = _userID;
                 KitapTeslimEtme._userID = user.UserId;
                 FormProfil._userID = user.UserId;
+                KitapTeslimEtme.usname = user.Name;
 
 
                 //FormProfil.status = user.Status;
