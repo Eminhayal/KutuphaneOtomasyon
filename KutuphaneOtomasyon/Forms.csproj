@@ -190,9 +190,6 @@
     <Compile Include="EntrustedBooks.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntrustedInfo.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form\ImageConvert.cs" />
     <Compile Include="Form\Kullanici Panel Form\KitapAraAl.cs">
       <SubType>Form</SubType>

@@ -270,18 +270,18 @@ namespace KutuphaneOtomasyon
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(863, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 26;
-            this.label9.Text = "label9";
+            this.label9.Visible = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(933, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 26;
-            this.label10.Text = "label9";
+            this.label10.Visible = false;
             // 
             // KitapAlimOnayi
             // 

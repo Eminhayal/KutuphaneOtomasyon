@@ -58,16 +58,16 @@ namespace KutuphaneOtomasyon
                 FormProfil.userMail = user.Mail;
                 FormProfil.tckn = user.Tckn;
                 FormProfil.userPhone = user.Telephone;
-                FormProfil._userID = user.UserId;
 
-                KitapAlma._userID = _userID;
                 KitapAlma.userName = user.Name;
 
-                
+                KitapAlma._userID = _userID;
+                EmanetBilgileri._userID = _userID;
                 KitapTeslimEtme._userID = user.UserId;
+                FormProfil._userID = user.UserId;
 
 
-                // FormProfil.status = user.Status;
+                //FormProfil.status = user.Status;
 
 
 
