@@ -134,6 +134,18 @@
         ADERASD2FZHfDxUSAFhg9/EXT9IP12qgAvsAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="lblaciklama.Text" xml:space="preserve">
+    <value>*Profil kısmından kullanıcı bilgilerinize erişebilirsiniz.
+
+*Kitap almak için KİTAP ARA/AL kısmından almak istediğiniz kitabı seçiniz ve açılan sayfada onayladıktan sonra 
+danışmaya giderek kitap alım işlemini onaylatınız.
+
+*Kitap teslim etmek için KİTAP TESLİM ETME kısmına girerek teslim etmek istediğiniz kitabın ID'bilgisini seçiniz ,
+ilgili kitabın teslimi için onay butonuna basınız ve danışmaya giderek teslim etme işlemini onaylatınız.
+
+
+   </value>
+  </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAABfCAYAAAAptPonAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

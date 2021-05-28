@@ -37,6 +37,8 @@ namespace KutuphaneOtomasyon
             this.panelKullanici = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblaciklama = new System.Windows.Forms.Label();
+            this.panelKullanici.SuspendLayout();
             this.SuspendLayout();
             // 
             // profilButton
@@ -98,6 +100,8 @@ namespace KutuphaneOtomasyon
             // 
             // panelKullanici
             // 
+            this.panelKullanici.Controls.Add(this.lblaciklama);
+            this.panelKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelKullanici.Location = new System.Drawing.Point(0, 131);
             this.panelKullanici.Margin = new System.Windows.Forms.Padding(2);
             this.panelKullanici.Name = "panelKullanici";
@@ -132,6 +136,16 @@ namespace KutuphaneOtomasyon
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lblaciklama
+            // 
+            this.lblaciklama.AutoSize = true;
+            this.lblaciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaciklama.Location = new System.Drawing.Point(3, 47);
+            this.lblaciklama.Name = "lblaciklama";
+            this.lblaciklama.Size = new System.Drawing.Size(1329, 290);
+            this.lblaciklama.TabIndex = 0;
+            this.lblaciklama.Text = resources.GetString("lblaciklama.Text");
+            // 
             // Anasayfa
             // 
             this.AcceptButton = this.profilButton;
@@ -152,6 +166,8 @@ namespace KutuphaneOtomasyon
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
             this.Load += new System.EventHandler(this.Anasayfa_Load);
+            this.panelKullanici.ResumeLayout(false);
+            this.panelKullanici.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +181,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Panel panelKullanici;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblaciklama;
     }
 }

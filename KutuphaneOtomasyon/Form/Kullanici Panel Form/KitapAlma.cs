@@ -42,6 +42,15 @@ namespace KutuphaneOtomasyon
             labelSaloon.Text = bookSaloon;
             labelStatus.Text = bookStatus.ToString();
             pictureBox1.Image = bookImage;
+             if(labelStatus.Text=="Alınabilir")
+            {
+                labelStatus.BackColor = Color.Green;
+            }
+            else
+            {
+                labelStatus.BackColor = Color.Red;
+            }
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -64,5 +73,6 @@ namespace KutuphaneOtomasyon
 
 
         }
+
     }
 }
