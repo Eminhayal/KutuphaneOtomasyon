@@ -46,7 +46,6 @@ namespace KutuphaneOtomasyon
             this.txtUserTckn = new System.Windows.Forms.TextBox();
             this.txtUserMail = new System.Windows.Forms.TextBox();
             this.txtUserNumber = new System.Windows.Forms.TextBox();
-            this.txtUserStatus = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserPassword = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -213,15 +212,8 @@ namespace KutuphaneOtomasyon
             this.txtUserNumber.Name = "txtUserNumber";
             this.txtUserNumber.Size = new System.Drawing.Size(100, 20);
             this.txtUserNumber.TabIndex = 8;
-            this.txtUserNumber.TextChanged += new System.EventHandler(this.txtUserNumber_TextChanged);
+            this.txtUserNumber.Click += new System.EventHandler(this.txtUserNumber_Click);
             this.txtUserNumber.Leave += new System.EventHandler(this.txtUserNumber_Leave);
-            // 
-            // txtUserStatus
-            // 
-            this.txtUserStatus.Location = new System.Drawing.Point(566, 484);
-            this.txtUserStatus.Name = "txtUserStatus";
-            this.txtUserStatus.Size = new System.Drawing.Size(100, 20);
-            this.txtUserStatus.TabIndex = 9;
             // 
             // label1
             // 
@@ -346,7 +338,6 @@ namespace KutuphaneOtomasyon
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtUserPassword);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtUserStatus);
             this.Controls.Add(this.txtUserNumber);
             this.Controls.Add(this.txtUserMail);
             this.Controls.Add(this.txtUserTckn);
@@ -395,7 +386,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.TextBox txtUserTckn;
         private System.Windows.Forms.TextBox txtUserMail;
         private System.Windows.Forms.TextBox txtUserNumber;
-        private System.Windows.Forms.TextBox txtUserStatus;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUserPassword;
         private System.Windows.Forms.Label label11;

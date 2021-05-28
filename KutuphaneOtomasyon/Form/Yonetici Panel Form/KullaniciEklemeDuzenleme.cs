@@ -180,13 +180,14 @@ namespace KutuphaneOtomasyon
 
         private void txtUserNumber_Leave(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(txtUserTckn.Text, @"^(5(\d{9}))$"))
+            if (!Regex.IsMatch(txtUserNumber.Text, @"^(5(\d{9}))$"))
             {
                 MessageBox.Show("Telefon Numarası başında 0 olmadan ,9 haneli olacak şekilde girilmelidir");
             }
         }
 
-        private void txtUserNumber_TextChanged(object sender, EventArgs e)
+
+        private void txtUserNumber_Click(object sender, EventArgs e)
         {
             txtUserNumber.Text = null;
             txtUserNumber.ForeColor = Color.Black;
