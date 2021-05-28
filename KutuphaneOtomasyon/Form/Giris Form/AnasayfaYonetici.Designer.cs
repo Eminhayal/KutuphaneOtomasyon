@@ -36,6 +36,7 @@ namespace KutuphaneOtomasyon
             this.kitapAlimOnayButton = new System.Windows.Forms.Button();
             this.kitapTeslimOnayButton = new System.Windows.Forms.Button();
             this.kitapEklemeDuzenlemeButton = new System.Windows.Forms.Button();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button7
@@ -47,9 +48,9 @@ namespace KutuphaneOtomasyon
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::KutuphaneOtomasyon.Properties.Resources.exit_butonu0;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1068, 94);
+            this.button7.Location = new System.Drawing.Point(1115, 12);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(278, 29);
+            this.button7.Size = new System.Drawing.Size(154, 29);
             this.button7.TabIndex = 5;
             this.button7.Text = "ÇIKIŞ";
             this.button7.UseVisualStyleBackColor = false;
@@ -121,6 +122,22 @@ namespace KutuphaneOtomasyon
             this.kitapEklemeDuzenlemeButton.UseVisualStyleBackColor = false;
             this.kitapEklemeDuzenlemeButton.Click += new System.EventHandler(this.kitapEklemeDuzenlemeButton_Click);
             // 
+            // buttonInfo
+            // 
+            this.buttonInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonInfo.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.giriş_butonu0_400x94;
+            this.buttonInfo.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInfo.ForeColor = System.Drawing.Color.White;
+            this.buttonInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonInfo.Location = new System.Drawing.Point(1072, 94);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(278, 29);
+            this.buttonInfo.TabIndex = 5;
+            this.buttonInfo.Text = "EMANET BİLGİLERİ";
+            this.buttonInfo.UseVisualStyleBackColor = false;
+            this.buttonInfo.Click += new System.EventHandler(this.emanetBilgileriButton_Click);
+            // 
             // AnasayfaYonetici
             // 
             this.AcceptButton = this.kitapEklemeDuzenlemeButton;
@@ -129,6 +146,7 @@ namespace KutuphaneOtomasyon
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.button7;
             this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.panelYonetici);
             this.Controls.Add(this.kullaniciEklemeButton);
@@ -152,5 +170,6 @@ namespace KutuphaneOtomasyon
         private System.Windows.Forms.Button kitapAlimOnayButton;
         private System.Windows.Forms.Button kitapEklemeDuzenlemeButton;
         private System.Windows.Forms.Button kitapTeslimOnayButton;
+        private System.Windows.Forms.Button buttonInfo;
     }
 }

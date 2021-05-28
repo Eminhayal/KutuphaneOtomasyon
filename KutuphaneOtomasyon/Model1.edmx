@@ -63,22 +63,13 @@
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BookId" Type="int" Nullable="false" />
+          <Property Name="BookId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="BookName" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="DeadLine" Type="date" Nullable="false" />
-        </EntityType>
-        <EntityType Name="EntrustedInfo">
-          <Key>
-            <PropertyRef Name="DeliveredId" />
-          </Key>
-          <Property Name="DeliveredId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BookId" Type="int" Nullable="false" />
-          <Property Name="UserId" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -152,7 +143,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <EntitySet Name="Confirm" EntityType="Self.Confirm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="EntrustedInfo" EntityType="Self.EntrustedInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
@@ -216,10 +206,10 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookId" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Confirm_Users" FromRole="Confirm" ToRole="Users" />
-          <NavigationProperty Name="DeliveredBooks" Relationship="KutuphaneOtoModel.FK_DeliveredBooks_Confirm1" FromRole="Confirm" ToRole="DeliveredBooks" />
-          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_Confirm1" FromRole="Confirm" ToRole="DeliveredBooks" />
         </EntityType>
         <EntityType Name="DeliveredBooks">
           <Key>
@@ -231,26 +221,17 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Confirm" Relationship="KutuphaneOtoModel.FK_DeliveredBooks_Confirm1" FromRole="DeliveredBooks" ToRole="Confirm" />
+          <NavigationProperty Name="Confirm" Relationship="Self.FK_DeliveredBooks_Confirm1" FromRole="DeliveredBooks" ToRole="Confirm" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BookName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DeadLine" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
-        <EntityType Name="EntrustedInfo">
-          <Key>
-            <PropertyRef Name="DeliveredId" />
-          </Key>
-          <Property Name="DeliveredId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BookId" Type="Int32" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -303,6 +284,18 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DeliveredBooks_Confirm1">
+          <End Role="Confirm" Type="Self.Confirm" Multiplicity="1" />
+          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Confirm">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DeliveredBooks">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="KutuphaneOtoEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Books" EntityType="Self.Books" />
@@ -310,7 +303,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <EntitySet Name="Confirm" EntityType="Self.Confirm" />
           <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
-          <EntitySet Name="EntrustedInfo" EntityType="Self.EntrustedInfo" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_Confirm_Books" Association="Self.FK_Confirm_Books">
@@ -321,23 +313,11 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             <End Role="Users" EntitySet="Users" />
             <End Role="Confirm" EntitySet="Confirm" />
           </AssociationSet>
-          <AssociationSet Name="FK_DeliveredBooks_Confirm1" Association="KutuphaneOtoModel.FK_DeliveredBooks_Confirm1">
+          <AssociationSet Name="FK_DeliveredBooks_Confirm1" Association="Self.FK_DeliveredBooks_Confirm1">
             <End Role="Confirm" EntitySet="Confirm" />
             <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
           </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_DeliveredBooks_Confirm1">
-          <End Type="KutuphaneOtoModel.Confirm" Role="Confirm" Multiplicity="1" />
-          <End Type="KutuphaneOtoModel.DeliveredBooks" Role="DeliveredBooks" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Confirm">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="DeliveredBooks">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -386,10 +366,10 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <EntitySetMapping Name="Confirm">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Confirm">
               <MappingFragment StoreEntitySet="Confirm">
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -408,21 +388,11 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <EntitySetMapping Name="EntrustedBooks">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedBooks">
               <MappingFragment StoreEntitySet="EntrustedBooks">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="BookId" ColumnName="BookId" />
                 <ScalarProperty Name="BookName" ColumnName="BookName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="DeadLine" ColumnName="DeadLine" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EntrustedInfo">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedInfo">
-              <MappingFragment StoreEntitySet="EntrustedInfo">
-                <ScalarProperty Name="DeliveredId" ColumnName="DeliveredId" />
-                <ScalarProperty Name="BookId" ColumnName="BookId" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
