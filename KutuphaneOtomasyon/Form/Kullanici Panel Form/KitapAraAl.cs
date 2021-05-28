@@ -23,7 +23,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private ImageConvert image = new ImageConvert();
         private void KitapAraAl_Load(object sender, EventArgs e)
         {
-            //GetData();
+           GetData();
  
 
 
@@ -38,23 +38,23 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             }
         }
 
-        //void GetData(String search = "")
-        //{
-        //    var list = from item in db.Books
-        //               where item.Name.Contains(search) || item.Category.Contains(search)
-        //               select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status };
+        void GetData(String search = "")
+        {
+            var list = from item in db.Books
+                       where item.Name.Contains(search) || item.Category.Contains(search)
+                       select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status };
 
-        //    dataGridViewData.DataSource = list.ToList();
+            dataGridViewData.DataSource = list.ToList();
 
-        //    dataGridViewData.DataSource = db.Books.ToList();
+            dataGridViewData.DataSource = db.Books.ToList();
 
-        //    dataGridViewData.RowTemplate.Height = 200;
-
-
-        //}
+            dataGridViewData.RowTemplate.Height = 200;
 
 
-        
+        }
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -100,34 +100,18 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            
-            //dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
 
-            //if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
-            //{
-            //    dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
-            //    //GetData(textBoxSearch.Text);
-            //}
-
+            dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
+            dataGridViewData.DataSource = db.Books.Where(book => book.Category.Contains(textBoxSearch.Text));
 
             if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
             {
-                categorysearch();
+                dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
+                dataGridViewData.DataSource = db.Books.Where(book => book.Category == textBoxSearch.Text).ToList();
+                //GetData(textBoxSearch.Text);
             }
+
         }
-          private void categorysearch( string tarama="")
-        {
 
-            var cat_list = from item in db.Books
-                           where item.Category.Contains(tarama) || item.Name.Contains(tarama)
-                           select new { item.BookId,item.Name,item.Writer,item.Publisher,item.PageNo,item.Category,item.SaloonShelf,item.Status,item.Image};
-
-            dataGridViewData.DataSource = cat_list.ToList();
-           
-
-           dataGridViewData.DataSource = db.Books.ToList();
-
-           dataGridViewData.RowTemplate.Height = 200;
-        }
     }
 }
