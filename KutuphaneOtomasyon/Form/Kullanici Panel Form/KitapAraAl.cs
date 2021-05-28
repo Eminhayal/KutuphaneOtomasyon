@@ -24,7 +24,7 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private void KitapAraAl_Load(object sender, EventArgs e)
         {
             GetData();
-            
+ 
 
 
         }
@@ -108,14 +108,21 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
                 dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
                 //GetData(textBoxSearch.Text);
             }
+
+
+            if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
+            {
+                categorysearch();
+            }
         }
           private void categorysearch( string tarama="")
         {
-            var cat_list = from item db.Category
-                           where item.Name.Contains(tarama)
-                           select new { item.ID,item.Name};
 
-            dataGridViewData.DataSource = cat_list.Tolist();
+            var cat_list = from item in db.Category
+                           where item.Name.Contains(tarama)
+                           select new { item.Id,item.Name};
+
+            dataGridViewData.DataSource = cat_list.ToList();
         }
     }
 }

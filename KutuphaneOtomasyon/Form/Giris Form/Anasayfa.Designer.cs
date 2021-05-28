@@ -35,9 +35,9 @@ namespace KutuphaneOtomasyon
             this.kitapTeslimButton = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panelKullanici = new System.Windows.Forms.Panel();
+            this.lblaciklama = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblaciklama = new System.Windows.Forms.Label();
             this.panelKullanici.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +108,16 @@ namespace KutuphaneOtomasyon
             this.panelKullanici.Size = new System.Drawing.Size(1350, 600);
             this.panelKullanici.TabIndex = 7;
             // 
+            // lblaciklama
+            // 
+            this.lblaciklama.AutoSize = true;
+            this.lblaciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblaciklama.Location = new System.Drawing.Point(3, 47);
+            this.lblaciklama.Name = "lblaciklama";
+            this.lblaciklama.Size = new System.Drawing.Size(1329, 290);
+            this.lblaciklama.TabIndex = 0;
+            this.lblaciklama.Text = resources.GetString("lblaciklama.Text");
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -136,19 +146,8 @@ namespace KutuphaneOtomasyon
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblaciklama
-            // 
-            this.lblaciklama.AutoSize = true;
-            this.lblaciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblaciklama.Location = new System.Drawing.Point(3, 47);
-            this.lblaciklama.Name = "lblaciklama";
-            this.lblaciklama.Size = new System.Drawing.Size(1329, 290);
-            this.lblaciklama.TabIndex = 0;
-            this.lblaciklama.Text = resources.GetString("lblaciklama.Text");
-            // 
             // Anasayfa
             // 
-            this.AcceptButton = this.profilButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
