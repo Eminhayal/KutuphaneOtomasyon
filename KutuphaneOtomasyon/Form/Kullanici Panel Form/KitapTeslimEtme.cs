@@ -80,7 +80,7 @@ namespace KutuphaneOtomasyon
 
         private void dataGridViewDataEn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = Convert.ToInt32(dataGridViewDataEn.Rows[dataGridViewDataEn.CurrentCell.RowIndex].Cells[0].Value);
+            int id = Convert.ToInt32(dataGridViewDataEn.Rows[dataGridViewDataEn.CurrentCell.RowIndex].Cells[1].Value);
             
             var book = db.Books.Find(id);
 
