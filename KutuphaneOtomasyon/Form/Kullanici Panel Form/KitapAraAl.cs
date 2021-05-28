@@ -107,8 +107,12 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
             {
                 dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
-                dataGridViewData.DataSource = db.Books.Where(book => book.Category == textBoxSearch.Text).ToList();
+                
                 //GetData(textBoxSearch.Text);
+            }
+            else
+            {
+                dataGridViewData.DataSource = db.Books.Where(book => book.Category == textBoxSearch.Text).ToList();
             }
 
         }
