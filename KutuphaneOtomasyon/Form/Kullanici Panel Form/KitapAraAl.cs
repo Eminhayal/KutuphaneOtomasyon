@@ -123,6 +123,11 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
                            select new { item.BookId,item.Name,item.Writer,item.Publisher,item.PageNo,item.Category,item.SaloonShelf,item.Status,item.Image};
 
             dataGridViewData.DataSource = cat_list.ToList();
+           
+
+           dataGridViewData.DataSource = db.Books.ToList();
+
+           dataGridViewData.RowTemplate.Height = 200;
         }
     }
 }
