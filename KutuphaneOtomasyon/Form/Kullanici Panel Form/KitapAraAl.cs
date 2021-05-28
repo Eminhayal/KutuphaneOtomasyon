@@ -109,5 +109,13 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
                 //GetData(textBoxSearch.Text);
             }
         }
+          private void categorysearch( string tarama="")
+        {
+            var cat_list = from item db.Category
+                           where item.Name.Contains(tarama)
+                           select new { item.ID,item.Name};
+
+            dataGridViewData.DataSource = cat_list.Tolist();
+        }
     }
 }
