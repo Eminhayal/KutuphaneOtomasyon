@@ -18,7 +18,7 @@ namespace KutuphaneOtomasyon
         {
             InitializeComponent();
         }
-        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
         Books book = new Books();
         public static int _userID;
 
@@ -64,7 +64,7 @@ namespace KutuphaneOtomasyon
 
             //dataGridViewDataConfirm.Columns[3].Visible = false;
             dataGridViewDataConfirm.Columns[5].Visible = false;
-            dataGridViewDataConfirm.Columns[6].Visible = false;
+            //dataGridViewDataConfirm.Columns[6].Visible = false;
 
             dataGridViewDataConfirm.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewDataConfirm.RowTemplate.Height = 100;
@@ -98,8 +98,13 @@ namespace KutuphaneOtomasyon
             entrustedBooks.UserId = Convert.ToInt32(label9.Text);
             entrustedBooks.BookName = labelBookName.Text;
             entrustedBooks.UserName = label10.Text;
-            entrustedBooks.DeadLine = DateTime.Now;
+            entrustedBooks.DeadLine = DateTime.Now.AddDays(15);
             db.EntrustedBooks.Add(entrustedBooks);
+            db.SaveChanges();
+
+
+            var sorgu = (from p in db.Confirm where p.BookId.ToString() == labelBookId.Text select p).First();//onay silme
+            db.Confirm.Remove(sorgu);
             db.SaveChanges();
 
         }

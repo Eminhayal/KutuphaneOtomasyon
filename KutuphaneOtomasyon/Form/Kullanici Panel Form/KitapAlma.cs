@@ -30,7 +30,7 @@ namespace KutuphaneOtomasyon
         public static string userName;
 
 
-        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
         private void KitapAlma_Load(object sender, EventArgs e)
         {
             labelBookId.Text = id.ToString();

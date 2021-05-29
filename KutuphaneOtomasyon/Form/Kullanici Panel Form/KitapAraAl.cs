@@ -19,12 +19,12 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             InitializeComponent();
         }
 
-        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
         private ImageConvert image = new ImageConvert();
         private void KitapAraAl_Load(object sender, EventArgs e)
         {
            GetData();
- 
+            dataGridViewData.Columns[9].Visible = false;
 
 
         }
@@ -101,8 +101,9 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
 
-            dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
-            dataGridViewData.DataSource = db.Books.Where(book => book.Category.Contains(textBoxSearch.Text));
+            //dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
+            //dataGridViewData.DataSource = db.Books.Where(book => book.Category.Contains(textBoxSearch.Text));
+            
 
             if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
             {

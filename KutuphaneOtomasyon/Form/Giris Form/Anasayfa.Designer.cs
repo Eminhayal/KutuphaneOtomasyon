@@ -148,8 +148,7 @@ namespace KutuphaneOtomasyon
             // 
             // Anasayfa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::KutuphaneOtomasyon.Properties.Resources.arkaplan_50;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(1350, 729);

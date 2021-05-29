@@ -329,8 +329,7 @@ namespace KutuphaneOtomasyon
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.cmbUserStatus);
             this.Controls.Add(this.dateTimePickerUserBirthdate);

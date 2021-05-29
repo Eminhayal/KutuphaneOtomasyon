@@ -52,9 +52,8 @@
         </EntityType>
         <EntityType Name="DeliveredBooks">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="BookName" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
@@ -65,7 +64,7 @@
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="BookName" Type="varchar" MaxLength="150" Nullable="false" />
           <Property Name="UserId" Type="int" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="150" Nullable="false" />
@@ -124,18 +123,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DeliveredBooks_Confirm1">
-          <End Role="Confirm" Type="Self.Confirm" Multiplicity="1" />
-          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Confirm">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="DeliveredBooks">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="KutuphaneOtoModelStoreContainer">
           <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
@@ -152,10 +139,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <AssociationSet Name="FK_Confirm_Users" Association="Self.FK_Confirm_Users">
             <End Role="Users" EntitySet="Users" />
             <End Role="Confirm" EntitySet="Confirm" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DeliveredBooks_Confirm1" Association="Self.FK_DeliveredBooks_Confirm1">
-            <End Role="Confirm" EntitySet="Confirm" />
-            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -209,25 +192,12 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Confirm_Users" FromRole="Confirm" ToRole="Users" />
-          <NavigationProperty Name="DeliveredBooks" Relationship="Self.FK_DeliveredBooks_Confirm1" FromRole="Confirm" ToRole="DeliveredBooks" />
-        </EntityType>
-        <EntityType Name="DeliveredBooks">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BookId" Type="Int32" Nullable="false" />
-          <Property Name="BookName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
-          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Confirm" Relationship="Self.FK_DeliveredBooks_Confirm1" FromRole="DeliveredBooks" ToRole="Confirm" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
             <PropertyRef Name="BookId" />
           </Key>
-          <Property Name="BookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookId" Type="Int32" Nullable="false" />
           <Property Name="BookName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="UserId" Type="Int32" Nullable="false" />
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
@@ -284,24 +254,11 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_DeliveredBooks_Confirm1">
-          <End Role="Confirm" Type="Self.Confirm" Multiplicity="1" />
-          <End Role="DeliveredBooks" Type="Self.DeliveredBooks" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Confirm">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="DeliveredBooks">
-              <PropertyRef Name="Id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="KutuphaneOtoEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KutuphaneOtoEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Books" EntityType="Self.Books" />
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Confirm" EntityType="Self.Confirm" />
-          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Users" EntityType="Self.Users" />
@@ -313,17 +270,24 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             <End Role="Users" EntitySet="Users" />
             <End Role="Confirm" EntitySet="Confirm" />
           </AssociationSet>
-          <AssociationSet Name="FK_DeliveredBooks_Confirm1" Association="Self.FK_DeliveredBooks_Confirm1">
-            <End Role="Confirm" EntitySet="Confirm" />
-            <End Role="DeliveredBooks" EntitySet="DeliveredBooks" />
-          </AssociationSet>
+          <EntitySet Name="DeliveredBooks" EntityType="KutuphaneOtoModel.DeliveredBooks" />
         </EntityContainer>
+        <EntityType Name="DeliveredBooks">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="BookName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities3">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities4">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Admins">
               <MappingFragment StoreEntitySet="Admins">
@@ -373,18 +337,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="DeliveredBooks">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
-              <MappingFragment StoreEntitySet="DeliveredBooks">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="BookId" ColumnName="BookId" />
-                <ScalarProperty Name="BookName" ColumnName="BookName" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="EntrustedBooks">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedBooks">
               <MappingFragment StoreEntitySet="EntrustedBooks">
@@ -421,6 +373,17 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeliveredBooks">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
+              <MappingFragment StoreEntitySet="DeliveredBooks">
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

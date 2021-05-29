@@ -249,7 +249,7 @@ namespace KutuphaneOtomasyon
             // 
             this.pictureBoxConfirm.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxConfirm.ErrorImage")));
             this.pictureBoxConfirm.Image = global::KutuphaneOtomasyon.Properties.Resources.Xbüyük;
-            this.pictureBoxConfirm.Location = new System.Drawing.Point(1105, 90);
+            this.pictureBoxConfirm.Location = new System.Drawing.Point(1074, 91);
             this.pictureBoxConfirm.Name = "pictureBoxConfirm";
             this.pictureBoxConfirm.Size = new System.Drawing.Size(217, 324);
             this.pictureBoxConfirm.TabIndex = 24;
@@ -285,8 +285,7 @@ namespace KutuphaneOtomasyon
             // 
             // KitapAlimOnayi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1334, 561);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);

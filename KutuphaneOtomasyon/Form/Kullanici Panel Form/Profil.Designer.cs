@@ -298,9 +298,8 @@ namespace KutuphaneOtomasyon
             // 
             // FormProfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 561);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.pictureBoxImage);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
