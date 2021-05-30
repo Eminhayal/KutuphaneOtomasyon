@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="KutuphaneOtoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="KutuphaneOtoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="AdminId" />
@@ -141,7 +141,8 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             <End Role="Confirm" EntitySet="Confirm" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KutuphaneOtoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -192,6 +193,16 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
           <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Confirm_Books" FromRole="Confirm" ToRole="Books" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Confirm_Users" FromRole="Confirm" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="DeliveredBooks">
+          <Key>
+            <PropertyRef Name="BookId" />
+          </Key>
+          <Property Name="BookId" Type="Int32" Nullable="false" />
+          <Property Name="BookName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="EntrustedBooks">
           <Key>
@@ -254,11 +265,12 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KutuphaneOtoEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KutuphaneOtoEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Books" EntityType="Self.Books" />
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Confirm" EntityType="Self.Confirm" />
+          <EntitySet Name="DeliveredBooks" EntityType="Self.DeliveredBooks" />
           <EntitySet Name="EntrustedBooks" EntityType="Self.EntrustedBooks" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Users" EntityType="Self.Users" />
@@ -270,24 +282,13 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
             <End Role="Users" EntitySet="Users" />
             <End Role="Confirm" EntitySet="Confirm" />
           </AssociationSet>
-          <EntitySet Name="DeliveredBooks" EntityType="KutuphaneOtoModel.DeliveredBooks" />
         </EntityContainer>
-        <EntityType Name="DeliveredBooks">
-          <Key>
-            <PropertyRef Name="BookId" />
-          </Key>
-          <Property Name="BookId" Type="Int32" Nullable="false" />
-          <Property Name="BookName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="UserId" Type="Int32" Nullable="false" />
-          <Property Name="UserName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
-          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="0" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities4">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities3">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.Admins">
               <MappingFragment StoreEntitySet="Admins">
@@ -337,6 +338,17 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DeliveredBooks">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
+              <MappingFragment StoreEntitySet="DeliveredBooks">
+                <ScalarProperty Name="BookId" ColumnName="BookId" />
+                <ScalarProperty Name="BookName" ColumnName="BookName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="EntrustedBooks">
             <EntityTypeMapping TypeName="KutuphaneOtoModel.EntrustedBooks">
               <MappingFragment StoreEntitySet="EntrustedBooks">
@@ -373,17 +385,6 @@ warning 6035: The relationship 'FK_Books_category' has columns that are not part
                 <ScalarProperty Name="Telephone" ColumnName="Telephone" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DeliveredBooks">
-            <EntityTypeMapping TypeName="KutuphaneOtoModel.DeliveredBooks">
-              <MappingFragment StoreEntitySet="DeliveredBooks">
-                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="BookName" ColumnName="BookName" />
-                <ScalarProperty Name="BookId" ColumnName="BookId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,8 +30,7 @@ namespace KutuphaneOtomasyon
         public static int _userID;
         public static string userName;
 
-
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private void KitapAlma_Load(object sender, EventArgs e)
         {
             labelBookId.Text = id.ToString();
@@ -42,7 +42,10 @@ namespace KutuphaneOtomasyon
             labelSaloon.Text = bookSaloon;
             labelStatus.Text = bookStatus.ToString();
             pictureBox1.Image = bookImage;
-             if(labelStatus.Text=="Alınabilir")
+        
+
+
+            if(labelStatus.Text=="Alınabilir")
             {
                 labelStatus.BackColor = Color.Green;
             }
@@ -51,10 +54,19 @@ namespace KutuphaneOtomasyon
                 labelStatus.BackColor = Color.Red;
             }
 
+             if (labelStatus.BackColor == Color.Green)
+             {
+                 button1.Enabled = true;
+             }
+             else
+             {
+                button1.Enabled = false;
+            }
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            //
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,12 +79,21 @@ namespace KutuphaneOtomasyon
             db.Confirm.Add(confirm);
             db.SaveChanges();
 
-           
+            //var user = (from p in db.Books where p.Status == "Alınabilir" select p).First();
+            //user.Status = "Alınamaz";
+            //db.SaveChanges();
 
+            //var x = db.Books.Find(id);
 
+            string al = "Alınamaz";
+
+            int idx = Convert.ToInt32(labelBookId.Text);
+            var kayit = db.Books.Find(idx);
+            kayit.Status = al;
+            db.Books.AddOrUpdate(kayit);
+            db.SaveChanges();
 
 
         }
-
     }
 }

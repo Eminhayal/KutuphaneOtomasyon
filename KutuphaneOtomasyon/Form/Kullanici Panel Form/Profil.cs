@@ -28,7 +28,7 @@ namespace KutuphaneOtomasyon
         public static Int64 tckn;
         public static string userStatus;
 
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private ImageConvert image = new ImageConvert();
         public static int _userIdConfirmTake;
 

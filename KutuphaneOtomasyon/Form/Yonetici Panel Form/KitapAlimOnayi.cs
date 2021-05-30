@@ -18,7 +18,7 @@ namespace KutuphaneOtomasyon
         {
             InitializeComponent();
         }
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         Books book = new Books();
         public static int _userID;
 
@@ -67,28 +67,18 @@ namespace KutuphaneOtomasyon
             //dataGridViewDataConfirm.Columns[6].Visible = false;
 
             dataGridViewDataConfirm.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewDataConfirm.RowTemplate.Height = 100;
+
 
 
             //dataGridViewDataConfirm.Columns[0].HeaderText = "İşlem Numarası";
             //dataGridViewDataConfirm.Columns[1].HeaderText = "Kitap ID";
             //dataGridViewDataConfirm.Columns[2].HeaderText = "Kitap Alım Onayı ";
-            //dataGridViewDataConfirm.Columns[4].HeaderText = "Kullanıcı ID";
-
-            DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
-            dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            dataGridViewDataConfirm.DefaultCellStyle = dataGridViewCellStyle;
-
-
-
 
         }
 
         private void KitapAlimOnayi_Load(object sender, EventArgs e)
         {
             GetData();
-           
-
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -102,13 +92,11 @@ namespace KutuphaneOtomasyon
             db.EntrustedBooks.Add(entrustedBooks);
             db.SaveChanges();
 
-
-            var sorgu = (from p in db.Confirm where p.BookId.ToString() == labelBookId.Text select p).First();//onay silme
+            var sorgu = (from p in db.Confirm where p.BookId.ToString() == labelBookId.Text select p).First();
             db.Confirm.Remove(sorgu);
             db.SaveChanges();
 
         }
-
     }
 }
 

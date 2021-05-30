@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace KutuphaneOtomasyon
         {
             InitializeComponent();
         }
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
 
         Books book = new Books();
         Users user = new Users();
@@ -85,6 +86,13 @@ namespace KutuphaneOtomasyon
 
 
 
+            string al = "Alınabilir";
+
+            int idx = Convert.ToInt32(labelBookId.Text);
+            var kayit = db.Books.Find(idx);
+            kayit.Status = al;
+            db.Books.AddOrUpdate(kayit);
+            db.SaveChanges();
         }
 
     }

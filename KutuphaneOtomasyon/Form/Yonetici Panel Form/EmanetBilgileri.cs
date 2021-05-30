@@ -18,7 +18,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private Books book = new Books();
         private EntrustedBooks entrustedBooks = new EntrustedBooks();
         private ImageConvert image = new ImageConvert();
@@ -81,10 +81,11 @@ namespace KutuphaneOtomasyon
                         labelEntUserDeadLine.Text = kayit.DeadLine.ToString();
 
 
-
+                        var picture = kayit.BookId;
+                        var xPicture = db.Books.Find(picture);
                         labelEntUserSurname.Text = xFind.Surname;
                         labelEntUserPhone.Text = xFind.Telephone.ToString();
-                        pictureBox1.Image = image.byteArrayToImage(xFind.Image);
+                        pictureBox1.Image = image.byteArrayToImage(xPicture.Image);
 
 
                     }
@@ -93,6 +94,11 @@ namespace KutuphaneOtomasyon
                         MessageBox.Show("asdsade saq");
                     }
                 }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

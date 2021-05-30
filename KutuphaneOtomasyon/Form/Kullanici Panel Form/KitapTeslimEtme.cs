@@ -20,7 +20,7 @@ namespace KutuphaneOtomasyon
         }
 
         
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private Users user = new Users();
 
         ImageConvert image = new ImageConvert();

@@ -19,7 +19,7 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        KutuphaneOtoEntities4 context = new KutuphaneOtoEntities4();
+        KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
         
         
         public static int _userID;
@@ -111,7 +111,7 @@ namespace KutuphaneOtomasyon
         }
          private bool girisdoğrulaiki(int yId, string ySifre)
         {
-            KutuphaneOtoEntities4 context = new KutuphaneOtoEntities4();
+            KutuphaneOtoEntities3 context = new KutuphaneOtoEntities3();
             var sorgus = from p in context.Admins
                          where p.AdminId == yId
                          && p.Password == ySifre

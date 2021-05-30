@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.OleDb;
+
 
 namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 {
@@ -19,55 +21,13 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             InitializeComponent();
         }
 
-        private KutuphaneOtoEntities4 db = new KutuphaneOtoEntities4();
+        private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
         private ImageConvert image = new ImageConvert();
+
         private void KitapAraAl_Load(object sender, EventArgs e)
         {
            GetData();
             dataGridViewData.Columns[9].Visible = false;
-
-
-        }
-        private void verilerigoster()
-        {
-       
-
-            Books book = new Books();
-            while (textBoxSearch != null)
-            {
-            }
-        }
-
-        void GetData(String search = "")
-        {
-            var list = from item in db.Books
-                       where item.Name.Contains(search) || item.Category.Contains(search)
-                       select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status };
-
-            dataGridViewData.DataSource = list.ToList();
-
-            dataGridViewData.DataSource = db.Books.ToList();
-
-            dataGridViewData.RowTemplate.Height = 200;
-
-
-        }
-
-
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            verilerigoster();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridViewData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
             
         }
 
@@ -88,35 +48,70 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             KitapAlma.bookImage = image.byteArrayToImage(book.Image);
             KitapAlma kitapAlma = new KitapAlma();
             kitapAlma.ShowDialog();
- 
-
-
-
-
-
-
 
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-
-            //dataGridViewData.DataSource = db.Books.Where(book => book.Name.Contains(textBoxSearch.Text));
-            //dataGridViewData.DataSource = db.Books.Where(book => book.Category.Contains(textBoxSearch.Text));
-            
-
-            if (textBoxSearch.Text.Length > 2 || textBoxSearch.Text.Length == 0)
+            if (radioButtonBook.Checked)
             {
-                dataGridViewData.DataSource = db.Books.Where(book => book.Name == textBoxSearch.Text).ToList();
-                
-                //GetData(textBoxSearch.Text);
-            }
-            else
-            {
-                dataGridViewData.DataSource = db.Books.Where(book => book.Category == textBoxSearch.Text).ToList();
+                Filtre(textBoxSearch.Text);
             }
 
+            if (radioButtonCategory.Checked)
+            {
+                FiltreCategory(textBoxSearch.Text);
+            }
         }
 
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //FiltreCategory(comboBoxCategory.Text);
+        }
+        void GetData(String search = "")
+        {
+            var list = from item in db.Books
+                where item.Name.Contains(search) || item.Category.Contains(search)
+                select new { item.BookId, item.Name, item.Category, item.PageNo, item.Writer, item.Publisher, item.SaloonShelf, item.Status };
+
+            dataGridViewData.DataSource = list.ToList();
+
+            dataGridViewData.DataSource = db.Books.ToList();
+
+            dataGridViewData.Columns[0].HeaderText = "Kitap Numarası";
+            dataGridViewData.Columns[1].HeaderText = "Kitap İsmi";
+            dataGridViewData.Columns[2].HeaderText = "Kategori ";
+            dataGridViewData.Columns[3].HeaderText = "Yayın Evi";
+            dataGridViewData.Columns[4].HeaderText = "Yazar";
+            dataGridViewData.Columns[5].HeaderText = "Yazar";
+            dataGridViewData.Columns[6].HeaderText = "Sayfa Sayısı";
+            dataGridViewData.Columns[7].HeaderText = "Salon / Raf";
+            dataGridViewData.Columns[8].HeaderText = "Durumu";
+            dataGridViewData.Columns[9].HeaderText = "Resim";
+
+
+            dataGridViewData.RowTemplate.Height = 200;
+
+
+        }
+        void FiltreCategory(string bName)
+        {
+
+            var filtreCategory = from dbCategory in db.Books
+                where dbCategory.Category.Contains(bName)
+                select dbCategory;
+            dataGridViewData.DataSource = filtreCategory.ToList();
+
+        }
+        void Filtre(string bName)
+        {
+            
+            var filtreBook = from dbBook in db.Books
+                where dbBook.Name.Contains(bName)
+                select dbBook;
+            dataGridViewData.DataSource = filtreBook.ToList();
+
+        
+        }
     }
 }
