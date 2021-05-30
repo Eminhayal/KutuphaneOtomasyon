@@ -63,9 +63,5 @@ namespace KutuphaneOtomasyon
             this.Hide();
         }
 
-        private void Anasayfa_Load(object sender, EventArgs e)
-        {
-  
-        }
     }
 }

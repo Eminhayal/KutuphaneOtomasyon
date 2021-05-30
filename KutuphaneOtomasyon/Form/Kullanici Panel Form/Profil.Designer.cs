@@ -92,7 +92,6 @@ namespace KutuphaneOtomasyon
             this.label4.Size = new System.Drawing.Size(92, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "SOYİSİM";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -186,10 +185,8 @@ namespace KutuphaneOtomasyon
             this.labelUserName.ForeColor = System.Drawing.Color.Black;
             this.labelUserName.Location = new System.Drawing.Point(363, 106);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(65, 24);
+            this.labelUserName.Size = new System.Drawing.Size(0, 24);
             this.labelUserName.TabIndex = 0;
-            this.labelUserName.Text = "YASİN";
-            this.labelUserName.Click += new System.EventHandler(this.label12_Click);
             // 
             // labelUserSurname
             // 
@@ -199,9 +196,8 @@ namespace KutuphaneOtomasyon
             this.labelUserSurname.ForeColor = System.Drawing.Color.Black;
             this.labelUserSurname.Location = new System.Drawing.Point(363, 161);
             this.labelUserSurname.Name = "labelUserSurname";
-            this.labelUserSurname.Size = new System.Drawing.Size(53, 24);
+            this.labelUserSurname.Size = new System.Drawing.Size(0, 24);
             this.labelUserSurname.TabIndex = 0;
-            this.labelUserSurname.Text = "KILIÇ";
             // 
             // labelUserBirthDate
             // 
@@ -211,9 +207,8 @@ namespace KutuphaneOtomasyon
             this.labelUserBirthDate.ForeColor = System.Drawing.Color.Black;
             this.labelUserBirthDate.Location = new System.Drawing.Point(363, 211);
             this.labelUserBirthDate.Name = "labelUserBirthDate";
-            this.labelUserBirthDate.Size = new System.Drawing.Size(100, 24);
+            this.labelUserBirthDate.Size = new System.Drawing.Size(0, 24);
             this.labelUserBirthDate.TabIndex = 0;
-            this.labelUserBirthDate.Text = "25.03.1998";
             // 
             // labelUserTckn
             // 
@@ -223,9 +218,8 @@ namespace KutuphaneOtomasyon
             this.labelUserTckn.ForeColor = System.Drawing.Color.Black;
             this.labelUserTckn.Location = new System.Drawing.Point(363, 267);
             this.labelUserTckn.Name = "labelUserTckn";
-            this.labelUserTckn.Size = new System.Drawing.Size(120, 24);
+            this.labelUserTckn.Size = new System.Drawing.Size(0, 24);
             this.labelUserTckn.TabIndex = 0;
-            this.labelUserTckn.Text = "72919084358";
             // 
             // labelUserId
             // 
@@ -235,9 +229,8 @@ namespace KutuphaneOtomasyon
             this.labelUserId.ForeColor = System.Drawing.Color.Black;
             this.labelUserId.Location = new System.Drawing.Point(363, 314);
             this.labelUserId.Name = "labelUserId";
-            this.labelUserId.Size = new System.Drawing.Size(116, 24);
+            this.labelUserId.Size = new System.Drawing.Size(0, 24);
             this.labelUserId.TabIndex = 0;
-            this.labelUserId.Text = "m195036049";
             // 
             // labelUserMail
             // 
@@ -247,9 +240,8 @@ namespace KutuphaneOtomasyon
             this.labelUserMail.ForeColor = System.Drawing.Color.Black;
             this.labelUserMail.Location = new System.Drawing.Point(363, 415);
             this.labelUserMail.Name = "labelUserMail";
-            this.labelUserMail.Size = new System.Drawing.Size(191, 24);
+            this.labelUserMail.Size = new System.Drawing.Size(0, 24);
             this.labelUserMail.TabIndex = 0;
-            this.labelUserMail.Text = "kilic.yasn@gmail.com";
             // 
             // labelUserPhone
             // 
@@ -259,9 +251,8 @@ namespace KutuphaneOtomasyon
             this.labelUserPhone.ForeColor = System.Drawing.Color.Black;
             this.labelUserPhone.Location = new System.Drawing.Point(363, 462);
             this.labelUserPhone.Name = "labelUserPhone";
-            this.labelUserPhone.Size = new System.Drawing.Size(130, 24);
+            this.labelUserPhone.Size = new System.Drawing.Size(0, 24);
             this.labelUserPhone.TabIndex = 0;
-            this.labelUserPhone.Text = "0534 697 0287";
             // 
             // labelUserStatus
             // 
@@ -271,9 +262,8 @@ namespace KutuphaneOtomasyon
             this.labelUserStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(37)))), ((int)(((byte)(87)))));
             this.labelUserStatus.Location = new System.Drawing.Point(363, 508);
             this.labelUserStatus.Name = "labelUserStatus";
-            this.labelUserStatus.Size = new System.Drawing.Size(128, 24);
+            this.labelUserStatus.Size = new System.Drawing.Size(0, 24);
             this.labelUserStatus.TabIndex = 0;
-            this.labelUserStatus.Text = "Devam Ediyor";
             // 
             // pictureBoxImage
             // 
@@ -292,9 +282,8 @@ namespace KutuphaneOtomasyon
             this.labelUserRegisterDate.ForeColor = System.Drawing.Color.Black;
             this.labelUserRegisterDate.Location = new System.Drawing.Point(363, 367);
             this.labelUserRegisterDate.Name = "labelUserRegisterDate";
-            this.labelUserRegisterDate.Size = new System.Drawing.Size(100, 24);
+            this.labelUserRegisterDate.Size = new System.Drawing.Size(0, 24);
             this.labelUserRegisterDate.TabIndex = 0;
-            this.labelUserRegisterDate.Text = "15.04.2021";
             // 
             // FormProfil
             // 

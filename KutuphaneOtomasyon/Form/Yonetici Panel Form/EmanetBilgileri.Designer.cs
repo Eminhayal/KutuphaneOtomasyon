@@ -147,9 +147,8 @@ namespace KutuphaneOtomasyon
             this.labelBookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelBookId.Location = new System.Drawing.Point(503, 98);
             this.labelBookId.Name = "labelBookId";
-            this.labelBookId.Size = new System.Drawing.Size(97, 29);
+            this.labelBookId.Size = new System.Drawing.Size(0, 29);
             this.labelBookId.TabIndex = 0;
-            this.labelBookId.Text = "Kitap ID";
             // 
             // labelBookName
             // 
@@ -158,9 +157,8 @@ namespace KutuphaneOtomasyon
             this.labelBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelBookName.Location = new System.Drawing.Point(503, 148);
             this.labelBookName.Name = "labelBookName";
-            this.labelBookName.Size = new System.Drawing.Size(109, 29);
+            this.labelBookName.Size = new System.Drawing.Size(0, 29);
             this.labelBookName.TabIndex = 0;
-            this.labelBookName.Text = "Kitap Adı";
             // 
             // labelEntUserId
             // 
@@ -169,9 +167,8 @@ namespace KutuphaneOtomasyon
             this.labelEntUserId.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelEntUserId.Location = new System.Drawing.Point(503, 198);
             this.labelEntUserId.Name = "labelEntUserId";
-            this.labelEntUserId.Size = new System.Drawing.Size(274, 29);
+            this.labelEntUserId.Size = new System.Drawing.Size(0, 29);
             this.labelEntUserId.TabIndex = 0;
-            this.labelEntUserId.Text = "Emanet Alan Kullanıcı ID";
             // 
             // labelEntUserName
             // 
@@ -180,9 +177,8 @@ namespace KutuphaneOtomasyon
             this.labelEntUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelEntUserName.Location = new System.Drawing.Point(503, 252);
             this.labelEntUserName.Name = "labelEntUserName";
-            this.labelEntUserName.Size = new System.Drawing.Size(286, 29);
+            this.labelEntUserName.Size = new System.Drawing.Size(0, 29);
             this.labelEntUserName.TabIndex = 0;
-            this.labelEntUserName.Text = "Emanet Alan Kullanıcı Adı";
             // 
             // labelEntUserSurname
             // 
@@ -191,9 +187,8 @@ namespace KutuphaneOtomasyon
             this.labelEntUserSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelEntUserSurname.Location = new System.Drawing.Point(503, 307);
             this.labelEntUserSurname.Name = "labelEntUserSurname";
-            this.labelEntUserSurname.Size = new System.Drawing.Size(325, 29);
+            this.labelEntUserSurname.Size = new System.Drawing.Size(0, 29);
             this.labelEntUserSurname.TabIndex = 0;
-            this.labelEntUserSurname.Text = "Emanet Alan Kullanıcı Soyadı";
             // 
             // labelEntUserPhone
             // 
@@ -202,9 +197,8 @@ namespace KutuphaneOtomasyon
             this.labelEntUserPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelEntUserPhone.Location = new System.Drawing.Point(503, 352);
             this.labelEntUserPhone.Name = "labelEntUserPhone";
-            this.labelEntUserPhone.Size = new System.Drawing.Size(160, 29);
+            this.labelEntUserPhone.Size = new System.Drawing.Size(0, 29);
             this.labelEntUserPhone.TabIndex = 0;
-            this.labelEntUserPhone.Text = "Cep Telefonu";
             // 
             // labelEntUserDeadLine
             // 
@@ -213,9 +207,8 @@ namespace KutuphaneOtomasyon
             this.labelEntUserDeadLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelEntUserDeadLine.Location = new System.Drawing.Point(503, 407);
             this.labelEntUserDeadLine.Name = "labelEntUserDeadLine";
-            this.labelEntUserDeadLine.Size = new System.Drawing.Size(204, 29);
+            this.labelEntUserDeadLine.Size = new System.Drawing.Size(0, 29);
             this.labelEntUserDeadLine.TabIndex = 0;
-            this.labelEntUserDeadLine.Text = "Son Teslim Tarihi";
             // 
             // textBoxTakeId
             // 
@@ -223,7 +216,6 @@ namespace KutuphaneOtomasyon
             this.textBoxTakeId.Name = "textBoxTakeId";
             this.textBoxTakeId.Size = new System.Drawing.Size(194, 20);
             this.textBoxTakeId.TabIndex = 3;
-            this.textBoxTakeId.TextChanged += new System.EventHandler(this.textBoxTakeId_TextChanged);
             // 
             // pictureBox1
             // 
@@ -235,7 +227,6 @@ namespace KutuphaneOtomasyon
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // buttonClear
             // 
@@ -284,7 +275,6 @@ namespace KutuphaneOtomasyon
             this.Name = "EmanetBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmanetBilgileri";
-            this.Load += new System.EventHandler(this.EmanetBilgileri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

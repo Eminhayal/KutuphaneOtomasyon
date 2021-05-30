@@ -68,13 +68,6 @@ namespace KutuphaneOtomasyon
                 KitapTeslimEtme.usname = user.Name;
 
 
-                //FormProfil.status = user.Status;
-
-
-
-
-
-
             }
 
             else if(girisdoğrulaiki(Convert.ToInt32(txtLogMail.Text) , txtLogPass.Text))

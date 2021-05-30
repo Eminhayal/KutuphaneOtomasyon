@@ -31,11 +31,11 @@ namespace KutuphaneOtomasyon
 
             dataGridViewDataDel.DataSource = db.DeliveredBooks.ToList();
             dataGridViewDataDel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //dataGridViewDataDel.RowTemplate.Height = 100;
-            //DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
-            //dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            //dataGridViewDataDel.DefaultCellStyle = dataGridViewCellStyle;
-
+            dataGridViewDataDel.Columns[0].HeaderText = "Kitap ID";
+            dataGridViewDataDel.Columns[1].HeaderText = "Kitap Adı";
+            dataGridViewDataDel.Columns[2].HeaderText = "Kullanıcı ID";
+            dataGridViewDataDel.Columns[3].HeaderText = "Kullanıcı Adı";
+            dataGridViewDataDel.Columns[4].HeaderText = "Teslim Tarihi";
 
         }
 

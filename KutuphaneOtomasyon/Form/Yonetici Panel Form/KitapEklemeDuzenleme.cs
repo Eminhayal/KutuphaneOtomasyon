@@ -36,11 +36,11 @@ namespace KutuphaneOtomasyon
 
             if (kayit == null)
             {
-                MessageBox.Show("Bos");
+                MessageBox.Show("Kitap Bulunamadı.");
                 return;
             }
 
-            if (MessageBox.Show(kayit.Name + "kitap silinecek onaylıyor musunuz ? ",
+            if (MessageBox.Show(kayit.Name + " isimli kitap silinecek onaylıyor musunuz ? ",
                 " Kayıt silme onayı",
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -139,7 +139,7 @@ namespace KutuphaneOtomasyon
 
             db.Books.Add(book);
             db.SaveChanges();
-            MessageBox.Show("ekle");
+            MessageBox.Show("Kitap Ekleme Başarılı.");
         }
         public void ImageAdd(Books book)
         {

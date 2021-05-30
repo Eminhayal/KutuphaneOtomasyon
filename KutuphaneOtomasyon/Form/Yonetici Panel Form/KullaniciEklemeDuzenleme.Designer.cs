@@ -258,7 +258,7 @@ namespace KutuphaneOtomasyon
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonClear.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonClear.Location = new System.Drawing.Point(607, 173);
+            this.buttonClear.Location = new System.Drawing.Point(548, 173);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(244, 49);
             this.buttonClear.TabIndex = 12;
@@ -272,7 +272,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserAdd.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserAdd.Location = new System.Drawing.Point(607, 228);
+            this.buttonUserAdd.Location = new System.Drawing.Point(548, 229);
             this.buttonUserAdd.Name = "buttonUserAdd";
             this.buttonUserAdd.Size = new System.Drawing.Size(244, 49);
             this.buttonUserAdd.TabIndex = 10;
@@ -286,7 +286,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserRemove.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserRemove.Location = new System.Drawing.Point(607, 283);
+            this.buttonUserRemove.Location = new System.Drawing.Point(548, 284);
             this.buttonUserRemove.Name = "buttonUserRemove";
             this.buttonUserRemove.Size = new System.Drawing.Size(244, 49);
             this.buttonUserRemove.TabIndex = 13;
@@ -300,7 +300,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserEdit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserEdit.Location = new System.Drawing.Point(607, 339);
+            this.buttonUserEdit.Location = new System.Drawing.Point(548, 339);
             this.buttonUserEdit.Name = "buttonUserEdit";
             this.buttonUserEdit.Size = new System.Drawing.Size(244, 49);
             this.buttonUserEdit.TabIndex = 14;

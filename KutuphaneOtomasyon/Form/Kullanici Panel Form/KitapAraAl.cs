@@ -64,10 +64,6 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             }
         }
 
-        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //FiltreCategory(comboBoxCategory.Text);
-        }
         void GetData(String search = "")
         {
             var list = from item in db.Books
