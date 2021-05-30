@@ -79,11 +79,10 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             dataGridViewData.Columns[2].HeaderText = "Kategori ";
             dataGridViewData.Columns[3].HeaderText = "Yayın Evi";
             dataGridViewData.Columns[4].HeaderText = "Yazar";
-            dataGridViewData.Columns[5].HeaderText = "Yazar";
-            dataGridViewData.Columns[6].HeaderText = "Sayfa Sayısı";
-            dataGridViewData.Columns[7].HeaderText = "Salon / Raf";
-            dataGridViewData.Columns[8].HeaderText = "Durumu";
-            dataGridViewData.Columns[9].HeaderText = "Resim";
+            dataGridViewData.Columns[5].HeaderText = "Sayfa Sayısı";
+            dataGridViewData.Columns[6].HeaderText = "Salon / Raf";
+            dataGridViewData.Columns[7].HeaderText = "Durumu";
+            dataGridViewData.Columns[8].HeaderText = "Resim";
 
 
             dataGridViewData.RowTemplate.Height = 200;
