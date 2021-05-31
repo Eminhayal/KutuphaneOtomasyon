@@ -150,9 +150,10 @@ namespace KutuphaneOtomasyon
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(936, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(951, 134);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -236,7 +237,7 @@ namespace KutuphaneOtomasyon
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(911, 276);
+            this.label11.Location = new System.Drawing.Point(977, 434);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(202, 13);
             this.label11.TabIndex = 27;
