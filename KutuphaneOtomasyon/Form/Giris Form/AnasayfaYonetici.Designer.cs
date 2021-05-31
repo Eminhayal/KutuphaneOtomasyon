@@ -140,7 +140,6 @@ namespace KutuphaneOtomasyon
             // 
             // AnasayfaYonetici
             // 
-            this.AcceptButton = this.kitapEklemeDuzenlemeButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.button7;
