@@ -19,25 +19,12 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
         private KutuphaneOtoEntities3 db = new KutuphaneOtoEntities3();
+
         Books book = new Books();
         public static int _userID;
 
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void textBoxSearchId_KeyDown(object sender, KeyEventArgs e)
-        {
-           
-
-        }
         private void dataGridViewDataConfirm_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //label9.Text = Convert.ToInt32(dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex[3]].Cells[1].Value);
-            //var id = Convert.ToInt32(textBoxSearchId.Text);
-            //var confirm = db.Confirm.Find(id);
             int bookId = Convert.ToInt32(dataGridViewDataConfirm.Rows[dataGridViewDataConfirm.CurrentCell.RowIndex].Cells[1].Value);
             book = db.Books.Find(bookId);
 
@@ -57,28 +44,19 @@ namespace KutuphaneOtomasyon
         }
         void GetData(String search = "")
         {
-
-
             dataGridViewDataConfirm.DataSource = db.Confirm.ToList();
-            
-
-            //dataGridViewDataConfirm.Columns[3].Visible = false;
             dataGridViewDataConfirm.Columns[5].Visible = false;
-            //dataGridViewDataConfirm.Columns[6].Visible = false;
-
             dataGridViewDataConfirm.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-
-            //dataGridViewDataConfirm.Columns[0].HeaderText = "İşlem Numarası";
-            //dataGridViewDataConfirm.Columns[1].HeaderText = "Kitap ID";
-            //dataGridViewDataConfirm.Columns[2].HeaderText = "Kitap Alım Onayı ";
 
         }
 
         private void KitapAlimOnayi_Load(object sender, EventArgs e)
         {
             GetData();
+            dataGridViewDataConfirm.Columns[0].HeaderText = "İşlem ID";
+            dataGridViewDataConfirm.Columns[1].HeaderText = "Kitap ID";
+            dataGridViewDataConfirm.Columns[2].HeaderText = "Kullanıcı ID";
+            dataGridViewDataConfirm.Columns[3].HeaderText = "Kullanıcı Adı";
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)

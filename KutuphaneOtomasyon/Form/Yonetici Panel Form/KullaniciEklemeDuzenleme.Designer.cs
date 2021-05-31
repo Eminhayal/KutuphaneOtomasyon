@@ -150,9 +150,10 @@ namespace KutuphaneOtomasyon
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(936, 98);
+            this.pictureBox1.Location = new System.Drawing.Point(951, 134);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(239, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -236,7 +237,7 @@ namespace KutuphaneOtomasyon
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(911, 276);
+            this.label11.Location = new System.Drawing.Point(977, 434);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(202, 13);
             this.label11.TabIndex = 27;
@@ -258,7 +259,7 @@ namespace KutuphaneOtomasyon
             this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonClear.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonClear.Location = new System.Drawing.Point(607, 173);
+            this.buttonClear.Location = new System.Drawing.Point(548, 173);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(244, 49);
             this.buttonClear.TabIndex = 12;
@@ -272,7 +273,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserAdd.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserAdd.Location = new System.Drawing.Point(607, 228);
+            this.buttonUserAdd.Location = new System.Drawing.Point(548, 229);
             this.buttonUserAdd.Name = "buttonUserAdd";
             this.buttonUserAdd.Size = new System.Drawing.Size(244, 49);
             this.buttonUserAdd.TabIndex = 10;
@@ -286,7 +287,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserRemove.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserRemove.Location = new System.Drawing.Point(607, 283);
+            this.buttonUserRemove.Location = new System.Drawing.Point(548, 284);
             this.buttonUserRemove.Name = "buttonUserRemove";
             this.buttonUserRemove.Size = new System.Drawing.Size(244, 49);
             this.buttonUserRemove.TabIndex = 13;
@@ -300,7 +301,7 @@ namespace KutuphaneOtomasyon
             this.buttonUserEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUserEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonUserEdit.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUserEdit.Location = new System.Drawing.Point(607, 339);
+            this.buttonUserEdit.Location = new System.Drawing.Point(548, 339);
             this.buttonUserEdit.Name = "buttonUserEdit";
             this.buttonUserEdit.Size = new System.Drawing.Size(244, 49);
             this.buttonUserEdit.TabIndex = 14;

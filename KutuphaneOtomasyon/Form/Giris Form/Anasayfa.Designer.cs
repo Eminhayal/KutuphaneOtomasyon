@@ -163,7 +163,6 @@ namespace KutuphaneOtomasyon
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
-            this.Load += new System.EventHandler(this.Anasayfa_Load);
             this.panelKullanici.ResumeLayout(false);
             this.panelKullanici.PerformLayout();
             this.ResumeLayout(false);

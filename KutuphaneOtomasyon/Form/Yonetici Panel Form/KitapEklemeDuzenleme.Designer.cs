@@ -166,6 +166,7 @@ namespace KutuphaneOtomasyon
             this.pictureBox1.Location = new System.Drawing.Point(891, 151);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(217, 324);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -177,7 +178,7 @@ namespace KutuphaneOtomasyon
             this.buttonBookDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBookDelete.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBookDelete.Location = new System.Drawing.Point(491, 511);
+            this.buttonBookDelete.Location = new System.Drawing.Point(586, 315);
             this.buttonBookDelete.Name = "buttonBookDelete";
             this.buttonBookDelete.Size = new System.Drawing.Size(133, 45);
             this.buttonBookDelete.TabIndex = 3;
@@ -192,9 +193,9 @@ namespace KutuphaneOtomasyon
             this.buttonBookAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBookAdd.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBookAdd.Location = new System.Drawing.Point(120, 511);
+            this.buttonBookAdd.Location = new System.Drawing.Point(586, 157);
             this.buttonBookAdd.Name = "buttonBookAdd";
-            this.buttonBookAdd.Size = new System.Drawing.Size(153, 47);
+            this.buttonBookAdd.Size = new System.Drawing.Size(153, 45);
             this.buttonBookAdd.TabIndex = 9;
             this.buttonBookAdd.Text = "Kitap Ekle";
             this.buttonBookAdd.UseVisualStyleBackColor = false;
@@ -261,9 +262,9 @@ namespace KutuphaneOtomasyon
             this.buttonBookEditUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBookEditUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBookEditUpdate.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBookEditUpdate.Location = new System.Drawing.Point(312, 509);
+            this.buttonBookEditUpdate.Location = new System.Drawing.Point(586, 236);
             this.buttonBookEditUpdate.Name = "buttonBookEditUpdate";
-            this.buttonBookEditUpdate.Size = new System.Drawing.Size(153, 47);
+            this.buttonBookEditUpdate.Size = new System.Drawing.Size(153, 45);
             this.buttonBookEditUpdate.TabIndex = 10;
             this.buttonBookEditUpdate.Text = "Kitap Düzenle";
             this.buttonBookEditUpdate.UseVisualStyleBackColor = false;
@@ -289,7 +290,7 @@ namespace KutuphaneOtomasyon
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.buttonBack.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonBack.Location = new System.Drawing.Point(605, 419);
+            this.buttonBack.Location = new System.Drawing.Point(586, 394);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(133, 45);
             this.buttonBack.TabIndex = 3;

@@ -63,7 +63,6 @@ namespace KutuphaneOtomasyon
             this.label1.Size = new System.Drawing.Size(154, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kitap Alma";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -160,9 +159,8 @@ namespace KutuphaneOtomasyon
             this.labelBookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelBookId.Location = new System.Drawing.Point(204, 105);
             this.labelBookId.Name = "labelBookId";
-            this.labelBookId.Size = new System.Drawing.Size(86, 24);
+            this.labelBookId.Size = new System.Drawing.Size(0, 24);
             this.labelBookId.TabIndex = 1;
-            this.labelBookId.Text = "123456-1";
             // 
             // labelBookName
             // 
@@ -171,9 +169,8 @@ namespace KutuphaneOtomasyon
             this.labelBookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelBookName.Location = new System.Drawing.Point(204, 155);
             this.labelBookName.Name = "labelBookName";
-            this.labelBookName.Size = new System.Drawing.Size(162, 24);
+            this.labelBookName.Size = new System.Drawing.Size(0, 24);
             this.labelBookName.TabIndex = 2;
-            this.labelBookName.Text = "İki Şehrin Hikayesi";
             // 
             // labelWriter
             // 
@@ -182,9 +179,8 @@ namespace KutuphaneOtomasyon
             this.labelWriter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelWriter.Location = new System.Drawing.Point(204, 205);
             this.labelWriter.Name = "labelWriter";
-            this.labelWriter.Size = new System.Drawing.Size(160, 24);
+            this.labelWriter.Size = new System.Drawing.Size(0, 24);
             this.labelWriter.TabIndex = 3;
-            this.labelWriter.Text = "Charles DICKENS";
             // 
             // labelPublisher
             // 
@@ -193,20 +189,18 @@ namespace KutuphaneOtomasyon
             this.labelPublisher.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelPublisher.Location = new System.Drawing.Point(204, 255);
             this.labelPublisher.Name = "labelPublisher";
-            this.labelPublisher.Size = new System.Drawing.Size(158, 24);
+            this.labelPublisher.Size = new System.Drawing.Size(0, 24);
             this.labelPublisher.TabIndex = 4;
-            this.labelPublisher.Text = "Anonim Yayıncılık";
             // 
             // labelPageNo
             // 
             this.labelPageNo.AutoSize = true;
             this.labelPageNo.BackColor = System.Drawing.Color.White;
             this.labelPageNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelPageNo.Location = new System.Drawing.Point(204, 305);
+            this.labelPageNo.Location = new System.Drawing.Point(204, 301);
             this.labelPageNo.Name = "labelPageNo";
-            this.labelPageNo.Size = new System.Drawing.Size(40, 24);
+            this.labelPageNo.Size = new System.Drawing.Size(0, 24);
             this.labelPageNo.TabIndex = 5;
-            this.labelPageNo.Text = "422";
             // 
             // labelCategory
             // 
@@ -215,9 +209,8 @@ namespace KutuphaneOtomasyon
             this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelCategory.Location = new System.Drawing.Point(204, 345);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(142, 24);
+            this.labelCategory.Size = new System.Drawing.Size(0, 24);
             this.labelCategory.TabIndex = 6;
-            this.labelCategory.Text = "Dünya Klasikleri";
             // 
             // labelSaloon
             // 
@@ -226,9 +219,8 @@ namespace KutuphaneOtomasyon
             this.labelSaloon.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelSaloon.Location = new System.Drawing.Point(204, 395);
             this.labelSaloon.Name = "labelSaloon";
-            this.labelSaloon.Size = new System.Drawing.Size(155, 24);
+            this.labelSaloon.Size = new System.Drawing.Size(0, 24);
             this.labelSaloon.TabIndex = 7;
-            this.labelSaloon.Text = "12.Raf - C Salonu";
             // 
             // button1
             // 
@@ -263,9 +255,8 @@ namespace KutuphaneOtomasyon
             this.labelStatus.ForeColor = System.Drawing.Color.White;
             this.labelStatus.Location = new System.Drawing.Point(209, 443);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(81, 24);
+            this.labelStatus.Size = new System.Drawing.Size(0, 24);
             this.labelStatus.TabIndex = 8;
-            this.labelStatus.Text = "Alınabilir";
             // 
             // KitapAlma
             // 

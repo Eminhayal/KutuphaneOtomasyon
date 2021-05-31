@@ -43,11 +43,11 @@ namespace KutuphaneOtomasyon
 
             if (kayit == null)
             {
-                MessageBox.Show("Bos");
+                MessageBox.Show("Kullanıcı ID Bulunamadı.");
                 return;
             }
 
-            if (MessageBox.Show(kayit.Name + "Kullanıcı silinecek onaylıyor musunuz ? ",
+            if (MessageBox.Show(kayit.Name + "isimli kullanıcı silinecek onaylıyor musunuz ? ",
                 " Kayıt silme onayı",
                 MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -154,7 +154,7 @@ namespace KutuphaneOtomasyon
             ImageAdd(user);
             db.Users.Add(user);
             db.SaveChanges();
-            MessageBox.Show("Kullanıcı Eklendi");
+            MessageBox.Show("Kullanıcı Ekleme Başarılı");
 
         }
 
@@ -182,7 +182,7 @@ namespace KutuphaneOtomasyon
         {
             if (!Regex.IsMatch(txtUserNumber.Text, @"^(5(\d{9}))$"))
             {
-                MessageBox.Show("Telefon Numarası başında 0 olmadan ,9 haneli olacak şekilde girilmelidir");
+                MessageBox.Show("Telefon Numarası başında 0 olmadan ,9 haneli olarak girilmelidir");
             }
         }
 

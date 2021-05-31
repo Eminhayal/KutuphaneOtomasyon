@@ -26,16 +26,6 @@ namespace KutuphaneOtomasyon
         public static int _userID;
         
 
-        private void EmanetBilgileri_Load(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void textBoxTakeId_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void buttonClear_Click(object sender, EventArgs e)
         {
             if (textBoxTakeId.Enabled = true) 
@@ -63,7 +53,7 @@ namespace KutuphaneOtomasyon
                 var kayit = db.EntrustedBooks.Find(textboxId);
                 if (kayit == null)
                 {
-                     MessageBox.Show("asdsade saq");
+                     MessageBox.Show("Kayıt Bulunamadı.");
                 }
                 else
                 {
@@ -91,14 +81,10 @@ namespace KutuphaneOtomasyon
                     }
                     else
                     {
-                        MessageBox.Show("asdsade saq");
+                        MessageBox.Show("Kayıt Bulunamadı.");
                     }
                 }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -18,10 +18,6 @@ namespace KutuphaneOtomasyon
             InitializeComponent();
         }
 
-        private void AnasayfaYonetici_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button7_Click(object sender, EventArgs e)
         {

@@ -34,12 +34,11 @@ namespace KutuphaneOtomasyon
         private void KitapTeslimEtme_Load(object sender, EventArgs e)
         {
             GetData();
-            //dataGridViewDataEn.Columns[0].Visible = false;
-            //dataGridViewDataEn.Columns[1].HeaderText = "Kitap ID";
-            //dataGridViewDataEn.Columns[2].HeaderText = "Kullanıcı ID";
-            //dataGridViewDataEn.Columns[3].HeaderText = "Kullanıcı Adı";
-
-           
+            dataGridViewDataEn.Columns[0].HeaderText ="Kitap ID";
+            dataGridViewDataEn.Columns[1].HeaderText = "Kitap Adı";
+            dataGridViewDataEn.Columns[2].HeaderText = "Kullanıcı ID";
+            dataGridViewDataEn.Columns[3].HeaderText = "Kullanıcı Adı";
+            dataGridViewDataEn.Columns[4].HeaderText = "Teslim Tarihi";
         }
         void GetData(String search = ""  )
         {
@@ -49,33 +48,7 @@ namespace KutuphaneOtomasyon
 
                 dataGridViewDataEn.DataSource = db.EntrustedBooks.Where((x) => x.UserId == _userID).ToList();
 
-            //    var sorgu = (from c in db.EntrustedBooks
-            //        where c.UserName.Contains(user.Name)
-            //        select new
-            //        {
-            //            c.BookName,
-            //            c.BookId,
-            //            c.UserId,
-            //            c.UserName,
-            //            c.DeadLine,
-
-            //        }).ToList();
-            //    dataGridViewDataEn.DataSource = sorgu;
-
-               
-
-
-            //    dataGridViewDataEn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //    dataGridViewDataEn.RowTemplate.Height = 150;
-
-            //    DataGridViewCellStyle dataGridViewCellStyle = new DataGridViewCellStyle();
-            //    dataGridViewCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            //    dataGridViewDataEn.DefaultCellStyle = dataGridViewCellStyle;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Hatalı iŞlem");
-            }
+            } 
             
 
         }
@@ -121,5 +94,6 @@ namespace KutuphaneOtomasyon
 
 
         }
+
     }
 }

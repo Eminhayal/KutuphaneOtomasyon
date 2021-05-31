@@ -140,7 +140,6 @@ namespace KutuphaneOtomasyon
             // 
             // AnasayfaYonetici
             // 
-            this.AcceptButton = this.kitapEklemeDuzenlemeButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.button7;
@@ -156,7 +155,6 @@ namespace KutuphaneOtomasyon
             this.Name = "AnasayfaYonetici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YöneticiAnasayfa";
-            this.Load += new System.EventHandler(this.AnasayfaYonetici_Load);
             this.ResumeLayout(false);
 
         }

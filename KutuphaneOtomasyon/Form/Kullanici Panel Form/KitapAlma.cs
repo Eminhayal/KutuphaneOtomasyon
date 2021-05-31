@@ -64,10 +64,6 @@ namespace KutuphaneOtomasyon
             }
 
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -79,11 +75,6 @@ namespace KutuphaneOtomasyon
             db.Confirm.Add(confirm);
             db.SaveChanges();
 
-            //var user = (from p in db.Books where p.Status == "Alınabilir" select p).First();
-            //user.Status = "Alınamaz";
-            //db.SaveChanges();
-
-            //var x = db.Books.Find(id);
 
             string al = "Alınamaz";
 
@@ -92,6 +83,7 @@ namespace KutuphaneOtomasyon
             kayit.Status = al;
             db.Books.AddOrUpdate(kayit);
             db.SaveChanges();
+            this.Close();
 
 
         }

@@ -64,10 +64,6 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
             }
         }
 
-        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //FiltreCategory(comboBoxCategory.Text);
-        }
         void GetData(String search = "")
         {
             var list = from item in db.Books
@@ -80,10 +76,10 @@ namespace KutuphaneOtomasyon.Form.Kullanici_Panel_Form
 
             dataGridViewData.Columns[0].HeaderText = "Kitap Numarası";
             dataGridViewData.Columns[1].HeaderText = "Kitap İsmi";
-            dataGridViewData.Columns[2].HeaderText = "Kategori ";
-            dataGridViewData.Columns[3].HeaderText = "Yayın Evi";
-            dataGridViewData.Columns[4].HeaderText = "Yazar";
-            dataGridViewData.Columns[5].HeaderText = "Sayfa Sayısı";
+            dataGridViewData.Columns[2].HeaderText = "Yayın Evi ";
+            dataGridViewData.Columns[3].HeaderText = "Yazar";
+            dataGridViewData.Columns[4].HeaderText = "Sayfa Sayısı";
+            dataGridViewData.Columns[5].HeaderText = "Kategori";
             dataGridViewData.Columns[6].HeaderText = "Salon / Raf";
             dataGridViewData.Columns[7].HeaderText = "Durumu";
             dataGridViewData.Columns[8].HeaderText = "Resim";
