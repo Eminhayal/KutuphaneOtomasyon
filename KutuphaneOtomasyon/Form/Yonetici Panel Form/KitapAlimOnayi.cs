@@ -57,6 +57,7 @@ namespace KutuphaneOtomasyon
             dataGridViewDataConfirm.Columns[1].HeaderText = "Kitap ID";
             dataGridViewDataConfirm.Columns[2].HeaderText = "Kullanıcı ID";
             dataGridViewDataConfirm.Columns[3].HeaderText = "Kullanıcı Adı";
+            dataGridViewDataConfirm.Columns[4].Visible = false;
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
