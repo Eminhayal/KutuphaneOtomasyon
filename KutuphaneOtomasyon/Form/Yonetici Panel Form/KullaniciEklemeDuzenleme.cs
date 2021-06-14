@@ -94,9 +94,6 @@ namespace KutuphaneOtomasyon
                     txtUserID.Enabled = false;
                     buttonSearch.Visible = false;
                     buttonUserEdit.Visible = true;
-
-
-
                 }
                 catch
                 {

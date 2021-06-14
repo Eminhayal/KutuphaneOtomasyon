@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,9 +83,6 @@ namespace KutuphaneOtomasyon
                         buttonBookEditUpdate.Visible = true;
                         pictureBox1.Image = image.byteArrayToImage(kayit.Image);
             }
-                
-                
-            
         }
         private void numericUpDownPageNo_ValueChanged(object sender, EventArgs e)
         {

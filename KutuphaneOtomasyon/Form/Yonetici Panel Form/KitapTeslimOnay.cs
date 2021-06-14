@@ -25,32 +25,11 @@ namespace KutuphaneOtomasyon
 
         ImageConvert imageConvert = new ImageConvert();
 
-        void GetData(String search = "")
-        {
-
-
-            dataGridViewDataDel.DataSource = db.DeliveredBooks.ToList();
-            dataGridViewDataDel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewDataDel.Columns[0].HeaderText = "Kitap ID";
-            dataGridViewDataDel.Columns[1].HeaderText = "Kitap Adı";
-            dataGridViewDataDel.Columns[2].HeaderText = "Kullanıcı ID";
-            dataGridViewDataDel.Columns[3].HeaderText = "Kullanıcı Adı";
-            dataGridViewDataDel.Columns[4].HeaderText = "Teslim Tarihi";
-
-        }
-
-        private void KitapTeslimOnay_Load(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
+     
         private void dataGridViewDataDel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int bookId = Convert.ToInt32(dataGridViewDataDel.Rows[dataGridViewDataDel.CurrentCell.RowIndex].Cells[0].Value);
             book = db.Books.Find(bookId);
-
-
-
 
             labelBookId.Text = book.BookId.ToString();
             labelBookName.Text = book.Name;
@@ -60,13 +39,24 @@ namespace KutuphaneOtomasyon
             labelCategory.Text = book.Category;
             labelSaloon.Text = book.SaloonShelf;
 
-            
             pictureBox1.Image = imageConvert.byteArrayToImage(book.Image);
 
-
+        }
+        void GetData(String search = "")
+        {
+            dataGridViewDataDel.DataSource = db.DeliveredBooks.ToList();
+            dataGridViewDataDel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewDataDel.Columns[0].HeaderText = "Kitap ID";
+            dataGridViewDataDel.Columns[1].HeaderText = "Kitap Adı";
+            dataGridViewDataDel.Columns[2].HeaderText = "Kullanıcı ID";
+            dataGridViewDataDel.Columns[3].HeaderText = "Kullanıcı Adı";
+            dataGridViewDataDel.Columns[4].HeaderText = "Teslim Tarihi";
 
         }
-
+        private void KitapTeslimOnay_Load(object sender, EventArgs e)
+        {
+            GetData();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             int user_Id = Convert.ToInt32(dataGridViewDataDel.Rows[dataGridViewDataDel.CurrentCell.RowIndex].Cells[2].Value);
@@ -85,7 +75,6 @@ namespace KutuphaneOtomasyon
             db.SaveChanges();
 
 
-
             string al = "Alınabilir";
 
             int idx = Convert.ToInt32(labelBookId.Text);
@@ -93,6 +82,7 @@ namespace KutuphaneOtomasyon
             kayit.Status = al;
             db.Books.AddOrUpdate(kayit);
             db.SaveChanges();
+       
         }
 
     }

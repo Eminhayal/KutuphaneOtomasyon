@@ -42,8 +42,6 @@ namespace KutuphaneOtomasyon
             labelSaloon.Text = bookSaloon;
             labelStatus.Text = bookStatus.ToString();
             pictureBox1.Image = bookImage;
-        
-
 
             if(labelStatus.Text=="Alınabilir")
             {
@@ -62,7 +60,6 @@ namespace KutuphaneOtomasyon
              {
                 button1.Enabled = false;
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

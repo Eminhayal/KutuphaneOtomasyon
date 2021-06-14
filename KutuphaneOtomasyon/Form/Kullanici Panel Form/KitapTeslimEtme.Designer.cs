@@ -73,6 +73,7 @@ namespace KutuphaneOtomasyon
             this.dataGridViewDataEn.Size = new System.Drawing.Size(659, 458);
             this.dataGridViewDataEn.TabIndex = 8;
             this.dataGridViewDataEn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDataEn_CellClick);
+            this.dataGridViewDataEn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDataEn_CellContentClick);
             // 
             // labelCategory
             // 

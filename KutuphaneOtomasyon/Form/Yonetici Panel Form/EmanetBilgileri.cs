@@ -41,7 +41,6 @@ namespace KutuphaneOtomasyon
                 labelEntUserId.Text = "";
                 labelEntUserName.Text = "";
                 pictureBox1.Image = default;
-
             }
         }
 
@@ -86,5 +85,9 @@ namespace KutuphaneOtomasyon
                 }
         }
 
+        private void EmanetBilgileri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

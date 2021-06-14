@@ -74,7 +74,6 @@ namespace KutuphaneOtomasyon
             var sorgu = (from p in db.Confirm where p.BookId.ToString() == labelBookId.Text select p).First();
             db.Confirm.Remove(sorgu);
             db.SaveChanges();
-
         }
     }
 }

@@ -48,19 +48,14 @@ namespace KutuphaneOtomasyon
 
                 dataGridViewDataEn.DataSource = db.EntrustedBooks.Where((x) => x.UserId == _userID).ToList();
 
-            } 
-            
-
+            }
         }
-
         private void dataGridViewDataEn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = Convert.ToInt32(dataGridViewDataEn.Rows[dataGridViewDataEn.CurrentCell.RowIndex].Cells[0].Value);
             _bookId = id;
             
-            
             var book = db.Books.Find(id);
-            
 
             labelBookId.Text =book.BookId.ToString();
             labelBookName.Text = book.Name;
@@ -69,7 +64,6 @@ namespace KutuphaneOtomasyon
             labelPageNo.Text = book.PageNo.ToString();
             labelCategory.Text = book.Category;
             pictureBox1.Image =image.byteArrayToImage(book.Image);
-            
         }
 
         private void btnOnay_Click(object sender, EventArgs e)
@@ -90,10 +84,15 @@ namespace KutuphaneOtomasyon
             var sorgu = (from p in db.EntrustedBooks where p.BookId.ToString() == labelBookId.Text select p).First();
             db.EntrustedBooks.Remove(sorgu);
             db.SaveChanges();
+     
 
 
 
         }
 
+        private void dataGridViewDataEn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
