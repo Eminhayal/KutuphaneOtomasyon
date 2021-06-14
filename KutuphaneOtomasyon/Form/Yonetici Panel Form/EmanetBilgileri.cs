@@ -65,7 +65,7 @@ namespace KutuphaneOtomasyon
                         var x = kayit.UserId;
                         var xFind = db.Users.Find(x);
                         labelBookId.Text = kayit.BookId.ToString();
-                        labelBookName.Text = kayit.UserName;
+                        labelBookName.Text = kayit.BookName;
                         labelEntUserId.Text = kayit.UserId.ToString();
                         labelEntUserName.Text = kayit.UserName;
                         labelEntUserDeadLine.Text = kayit.DeadLine.ToString();
